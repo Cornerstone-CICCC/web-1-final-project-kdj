@@ -1,9 +1,9 @@
 body {
   margin: 0;
-  font-family: "Baskervville", serif;
 }
 
 footer {
+  font-family: "Baskervville", serif;
   text-align: center;
   padding: 20px 0;
   background-color: #F8F6F4;
@@ -21,6 +21,7 @@ footer .logo img {
 }
 
 footer .logo h1 {
+  font-family: "Avenir", serif;
   font-size: 24px;
   margin: 10px 0 5px;
   color: #4a4a4a;
@@ -28,10 +29,11 @@ footer .logo h1 {
 
 footer .logo p {
   font-size: 14px;
-  color: #a3a3a3;
+  color: #535353;
 }
 
 footer .contact-icons {
+  margin-top: 0px;
   display: flex;
   justify-content: center;
   gap: 20px;
@@ -48,20 +50,28 @@ footer nav ul {
   gap: 10vw;
   list-style: none;
   padding: 0;
-  margin: 50px;
-  border-top: 1px solid #e5e5e5;
-  border-bottom: 1px solid #e5e5e5;
+  margin-right: 50px;
+  margin-left: 50px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  border-top: 0.5px solid black;
+  border-bottom: 0.5px solid black;
   padding: 10px 0;
 }
 
 footer nav ul li a {
   text-decoration: none;
-  color: #4a4a4a;
+  color: #B99692;
   font-size: 16px;
 }
 
 footer nav ul li a:hover {
   color: #c9a499;
+}
+
+footer .copyright {
+  font-size: 14px;
+  color: #B99692;
 }
 
 /*# sourceMappingURL=styles.css.map */
