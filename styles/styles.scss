@@ -20,15 +20,8 @@ footer .logo img {
     max-width: 100px;
 }
 
-footer .logo h1 {
-    font-family: "Avenir", serif;
-    font-size: 24px;
-    margin: 10px 0 5px;
-    color: #4a4a4a;
-}
-
 footer .logo p {
-    font-size: 14px;
+    font-size: 18px;
     color: #535353;
 }
 
@@ -67,6 +60,24 @@ footer nav ul li a {
 
 footer nav ul li a:hover {
     color: #c9a499;
+}
+@media (max-width: 600px) {
+    footer nav ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        padding: 0 20px;
+    }
+    
+    footer nav ul li {
+        margin: 0;
+        text-align: center;
+    }
+    
+    footer nav ul li a {
+        display: block;
+        padding: 5px 0;
+    }
 }
 
 footer .copyright{
