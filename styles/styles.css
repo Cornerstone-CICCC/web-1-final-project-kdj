@@ -21,6 +21,86 @@ body {
   width: 100%;
 }
 
+.container {
+  text-align: center;
+}
+
+.portfolioTitle h1 {
+  font-family: "Baskervville", serif;
+  color: #725A58;
+  font-weight: lighter;
+  letter-spacing: 0.15em;
+  font-size: 4em;
+  margin: 20px 0;
+  margin-bottom: 0px;
+}
+
+.portfolioTitle hr {
+  margin-top: 0px;
+  width: 10%;
+  border: 1px solid #E3B6B1;
+}
+
+.portfolioTitle p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  color: #777;
+}
+
+.tabs {
+  margin-top: 20px;
+}
+
+.tablink {
+  font-family: "Baskervville", serif;
+  background-color: transparent;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  margin-right: 10px;
+  font-size: 32px;
+  position: relative;
+  color: #A3A3A3;
+  border-bottom: 3px solid #A3A3A3;
+}
+
+.tablink:hover {
+  color: black;
+  border-bottom: 3px solid black;
+}
+
+.tablink.active {
+  color: black;
+  border-bottom: 3px solid black;
+}
+
+.tabcontent {
+  display: none;
+}
+
+.makeupContainer {
+  margin-top: 0px;
+  background-color: #FAE9E7;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.makeup {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  justify-items: center;
+}
+
+.makeup img {
+  margin-right: 10px;
+  margin-bottom: 10px;
+  width: 430px;
+  height: 430px;
+}
+
 footer {
   font-family: "Baskervville", serif;
   text-align: center;
