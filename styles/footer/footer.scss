@@ -6,7 +6,7 @@ footer {
   font-family: "Baskervville", serif;
   text-align: center;
   padding: 20px 0;
-  background-color: #F8F6F4;
+  background-color: #f8f6f4;
 }
 
 footer .logo {
@@ -54,14 +54,13 @@ footer nav ul {
 
 footer nav ul li a {
   text-decoration: none;
-  color: #B99692;
+  color: #b99692;
   font-size: 16px;
 }
 
 footer nav ul li a:hover {
   color: #c9a499;
 }
-
 @media (max-width: 600px) {
   footer nav ul {
     display: grid;
@@ -69,18 +68,19 @@ footer nav ul li a:hover {
     gap: 10px;
     padding: 0 20px;
   }
+
   footer nav ul li {
     margin: 0;
     text-align: center;
   }
+
   footer nav ul li a {
     display: block;
     padding: 5px 0;
   }
 }
+
 footer .copyright {
   font-size: 14px;
-  color: #B99692;
+  color: #b99692;
 }
-
-/*# sourceMappingURL=styles.css.map */
