@@ -4,7 +4,7 @@ body {
 }
 
 #hero {
-  background-image: url(../img/home_img.png);
+  background-image: url(../img/homePage/home_img.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
