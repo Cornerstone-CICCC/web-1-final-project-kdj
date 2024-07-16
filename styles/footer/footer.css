@@ -10,17 +10,15 @@ body {
   background-position: center;
   width: 100%;
   height: 625px;
-
-  .signature {
-    color: #fff;
-  }
-
-  p {
-    color: #fff;
-  }
-  &img {
-    width: 100%;
-  }
+}
+#hero .signature {
+  color: #fff;
+}
+#hero p {
+  color: #fff;
+}
+#heroimg {
+  width: 100%;
 }
 
 footer {
@@ -82,6 +80,7 @@ footer nav ul li a {
 footer nav ul li a:hover {
   color: #c9a499;
 }
+
 @media (max-width: 600px) {
   footer nav ul {
     display: grid;
@@ -89,19 +88,18 @@ footer nav ul li a:hover {
     gap: 10px;
     padding: 0 20px;
   }
-
   footer nav ul li {
     margin: 0;
     text-align: center;
   }
-
   footer nav ul li a {
     display: block;
     padding: 5px 0;
   }
 }
-
 footer .copyright {
   font-size: 14px;
   color: #b99692;
 }
+
+/*# sourceMappingURL=footer.css.map */
