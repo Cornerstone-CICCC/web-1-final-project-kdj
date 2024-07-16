@@ -1,5 +1,26 @@
 body {
   margin: 0;
+  font-family: "Baskervville", serif;
+}
+
+#hero {
+  background-image: url(../img/homePage/home_img.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 625px;
+
+  .signature {
+    color: #fff;
+  }
+
+  p {
+    color: #fff;
+  }
+  &img {
+    width: 100%;
+  }
 }
 
 footer {
