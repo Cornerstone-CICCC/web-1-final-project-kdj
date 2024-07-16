@@ -3,24 +3,6 @@ body {
   font-family: "Baskervville", serif;
 }
 
-#hero {
-  background-image: url(../img/homePage/home_img.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 100%;
-  height: 625px;
-}
-#hero .signature {
-  color: #fff;
-}
-#hero p {
-  color: #fff;
-}
-#heroimg {
-  width: 100%;
-}
-
 .container {
   text-align: center;
 }
@@ -76,6 +58,18 @@ body {
 
 .tabcontent {
   display: none;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  justify-items: center;
+}
+
+.tabcontent img {
+  margin-right: 10px;
+  margin-bottom: 10px;
+  width: 430px;
+  height: 430px;
 }
 
 .makeupContainer {
@@ -88,6 +82,7 @@ body {
 }
 
 .makeup {
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
@@ -99,6 +94,23 @@ body {
   margin-bottom: 10px;
   width: 430px;
   height: 430px;
+}
+
+.viewMore {
+  margin-bottom: 50px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.viewMoreButton {
+  background-color: #FAE9E7;
+  font-family: "Baskervville", serif;
+  color: #725A58;
+  border: 2px solid #725A58;
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  align-content: center;
 }
 
 footer {
