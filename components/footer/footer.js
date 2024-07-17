@@ -1,5 +1,5 @@
-fetch("./components/header/header.html")
+fetch("./components/footer/footer.html")
   .then((response) => response.text())
   .then((data) => {
-    document.querySelector("#header").innerHTML = data;
+    document.querySelector("#footer").innerHTML = data;
   });
