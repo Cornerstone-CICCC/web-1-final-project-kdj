@@ -41,8 +41,83 @@ body {
 
 .servicesColumns {
   display: grid;
-  grid-template-columns: 30% 70%;
+  grid-template-columns: 20% 80%;
   grid-template-rows: 33% 33% 33%;
+  margin-bottom: 150px;
+}
+
+.servicesColumns #picture {
+  margin-top: 70px;
+  width: 300px;
+  height: auto;
+  gap: 50px;
+}
+
+span {
+  font-size: 1.1em;
+}
+
+.service-details {
+  margin-top: 50px;
+  width: 100%;
+  margin-left: 120px;
+  font-size: 1.5em;
+}
+
+.service-details h2 {
+  font-family: "Baskervville", serif;
+  color: #725A58;
+  font-weight: lighter;
+  margin: 0;
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+.service-details p {
+  margin: 0;
+  width: 100%;
+}
+
+.service-details .description {
+  margin-top: 20px;
+  font-family: "Baskervville", serif;
+  font-size: 1.5em;
+}
+
+.quote-btn {
+  padding: 10px 20px;
+  font-family: "Baskervville", serif;
+  font-size: 1em;
+  background-color: transparent;
+  color: #725A58;
+  border: 2px solid #725A58;
+  cursor: pointer;
+  margin-top: 10px;
+  width: 20%;
+  height: 15%;
+}
+
+@media (max-width: 768px) {
+  .servicesColumns {
+    display: block;
+  }
+  .servicesColumns #picture {
+    margin-top: 20px;
+    width: 100%;
+  }
+  .service-details .description {
+    margin-top: 0px;
+  }
+  .service-details {
+    margin-left: 5%;
+    margin-top: 10px;
+    text-align: left;
+  }
+  .quote-btn {
+    width: 80%;
+    height: 8%;
+    margin-left: 10%;
+  }
 }
 
 /*# sourceMappingURL=services.css.map */
