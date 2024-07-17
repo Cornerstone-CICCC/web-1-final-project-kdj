@@ -1,9 +1,18 @@
+@mixin btn($color) {
+  font-size: 20px;
+  padding: 24px 32px;
+  font-family: "Baskervville", serif;
+  font-weight: 400;
+  border: solid 0.8px $color;
+  background-color: rgba(255, 255, 255, 0);
+  color: $color;
+}
+
 body {
   margin: 0;
   font-family: "Baskervville", serif;
 
   main {
-    // height: 100vh;
     background-color: #f8f6f4;
 
     #hero {
@@ -12,47 +21,83 @@ body {
       background-repeat: no-repeat;
       background-position: center;
       width: 100%;
-      // height: 625px;
+      height: 625px;
 
       .home-container {
-        // position: relative;
-        // display: flex;
-        // flex-direction: column;
+        // height: 625px;
+        display: flex;
+        flex-direction: column;
         text-align: center;
-        vertical-align: middle;
-        // align-items: center;
-        height: 625px;
+        align-items: center;
+        padding-top: 250px;
 
         .signature {
-          // position: absolute;
           color: #fff;
           width: 500px;
-          // top: 50%;
-          // left: 50%;
         }
 
         p {
           color: #fff;
           font-size: 18px;
+          // font-family: "Avenir Black";
         }
-        img {
-          // width: 100%;
+        button {
+          // border: solid 0.8px white;
+          // background-color: rgba(255, 255, 255, 0);
+          // color: #fff;
+          // font-size: 20px;
+          // padding: 24px 32px;
+          // font-family: "Baskervville", serif;
+          // font-weight: 400;
+          @include btn(#fff);
+          &:hover {
+            transition: all 0.5s;
+            background-color: rgba(255, 255, 255, 0.5);
+            color: #000;
+          }
         }
       }
     }
 
     #artist {
-      background-color: #f8f6f4;
-      display: flex;
-      flex-direction: row;
+      #artist-container {
+        background-color: #f8f6f4;
+        display: flex;
+        flex-direction: row;
+        margin: 5% 20% 0;
+        gap: 24px;
+        .artist-image {
+          width: 258px;
+          height: auto;
 
-      .artist-img {
-        background: linear-gradient(#ae7872 0%, #ae7872 50%);
-        width: 258px;
-        height: auto;
-      }
+          img {
+            background: linear-gradient(to left top, #ae7872 0%, #ae7872 50%);
+          }
+        }
 
-      .artist-description {
+        .artist-container {
+          .artist-img {
+            // background: linear-gradient(#ae7872 0%, #ae7872 50%);
+            // width: 258px;
+            // height: auto;
+          }
+
+          .artist-description {
+            font-family: "Baskervville", serif;
+            font-weight: 400;
+            // font-size: 48px;
+          }
+
+          button {
+            @include btn(#5e4a49);
+
+            &:hover {
+              transition: all 0.5s;
+              background-color: #5e4a49;
+              color: #fff;
+            }
+          }
+        }
       }
     }
   }
