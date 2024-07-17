@@ -39,17 +39,10 @@ body {
         p {
           color: #fff;
           font-size: 18px;
-          // font-family: "Avenir Black";
         }
         button {
-          // border: solid 0.8px white;
-          // background-color: rgba(255, 255, 255, 0);
-          // color: #fff;
-          // font-size: 20px;
-          // padding: 24px 32px;
-          // font-family: "Baskervville", serif;
-          // font-weight: 400;
           @include btn(#fff);
+
           &:hover {
             transition: all 0.5s;
             background-color: rgba(255, 255, 255, 0.5);
@@ -60,22 +53,39 @@ body {
     }
 
     #artist {
+      margin: 5% 20% 0;
+
       #artist-container {
         background-color: #f8f6f4;
         display: flex;
         flex-direction: row;
-        margin: 5% 20% 0;
         gap: 24px;
         .artist-image {
-          width: 258px;
+          width: 285px;
           height: auto;
+          position: relative;
 
           img {
             background: linear-gradient(to left top, #ae7872 0%, #ae7872 50%);
           }
+
+          .container {
+            position: absolute;
+            top: 289px;
+            width: 285px;
+            height: 77px;
+            background-color: #fff;
+
+            span {
+              font-size: 14px;
+              font-weight: 300;
+              font-family: "Baskervville", serif;
+            }
+          }
         }
 
         .artist-container {
+          margin-bottom: 200px;
           .artist-img {
             // background: linear-gradient(#ae7872 0%, #ae7872 50%);
             // width: 258px;
@@ -96,6 +106,19 @@ body {
               background-color: #5e4a49;
               color: #fff;
             }
+          }
+        }
+
+        #brand-logo {
+          p {
+            border-right: solid 0.8px #000;
+            border-left: solid 0.8px #000;
+            color: #535353;
+          }
+
+          .logos {
+            display: flex;
+            flex-wrap: wrap;
           }
         }
       }

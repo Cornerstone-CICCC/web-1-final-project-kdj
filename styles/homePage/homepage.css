@@ -42,19 +42,37 @@ body main #hero .home-container button:hover {
   background-color: rgba(255, 255, 255, 0.5);
   color: #000;
 }
+body main #artist {
+  margin: 5% 20% 0;
+}
 body main #artist #artist-container {
   background-color: #f8f6f4;
   display: flex;
   flex-direction: row;
-  margin: 5% 20% 0;
   gap: 24px;
 }
 body main #artist #artist-container .artist-image {
-  width: 258px;
+  width: 285px;
   height: auto;
+  position: relative;
 }
 body main #artist #artist-container .artist-image img {
   background: linear-gradient(to left top, #ae7872 0%, #ae7872 50%);
+}
+body main #artist #artist-container .artist-image .container {
+  position: absolute;
+  top: 289px;
+  width: 285px;
+  height: 77px;
+  background-color: #fff;
+}
+body main #artist #artist-container .artist-image .container span {
+  font-size: 14px;
+  font-weight: 300;
+  font-family: "Baskervville", serif;
+}
+body main #artist #artist-container .artist-container {
+  margin-bottom: 200px;
 }
 body main #artist #artist-container .artist-container .artist-description {
   font-family: "Baskervville", serif;
@@ -73,6 +91,15 @@ body main #artist #artist-container .artist-container button:hover {
   transition: all 0.5s;
   background-color: #5e4a49;
   color: #fff;
+}
+body main #artist #artist-container #brand-logo p {
+  border-right: solid 0.8px #000;
+  border-left: solid 0.8px #000;
+  color: #535353;
+}
+body main #artist #artist-container #brand-logo .logos {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 /*# sourceMappingURL=homepage.css.map */
