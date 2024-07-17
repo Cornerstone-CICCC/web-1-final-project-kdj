@@ -4,6 +4,7 @@ body {
 
   main {
     // height: 100vh;
+    background-color: #f8f6f4;
 
     #hero {
       background-image: url("../../images/homePage/home_img.png");
@@ -11,37 +12,47 @@ body {
       background-repeat: no-repeat;
       background-position: center;
       width: 100%;
-      height: 625px;
-      // z-index: 2;
-      // color: #000;
+      // height: 625px;
 
       .home-container {
         // position: relative;
+        // display: flex;
+        // flex-direction: column;
         text-align: center;
-        align-items: center;
+        vertical-align: middle;
+        // align-items: center;
+        height: 625px;
 
         .signature {
           // position: absolute;
           color: #fff;
-          width: 300px;
+          width: 500px;
           // top: 50%;
           // left: 50%;
         }
 
         p {
           color: #fff;
+          font-size: 18px;
         }
         img {
-          width: 100%;
+          // width: 100%;
         }
       }
     }
 
     #artist {
       background-color: #f8f6f4;
+      display: flex;
+      flex-direction: row;
 
       .artist-img {
-        background: linear-gradient(#ae7872, #ae7872);
+        background: linear-gradient(#ae7872 0%, #ae7872 50%);
+        width: 258px;
+        height: auto;
+      }
+
+      .artist-description {
       }
     }
   }
