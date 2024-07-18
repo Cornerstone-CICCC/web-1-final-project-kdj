@@ -319,5 +319,31 @@ body {
         }
       }
     }
+
+    #diy {
+      color: #725a58;
+      text-align: center;
+      padding: 5% 10%;
+      h1 {
+        font-size: 48px;
+        font-weight: 100;
+      }
+
+      .diy-container {
+        display: flex;
+        // gap: 10px;
+        margin-bottom: 50px;
+
+        img {
+          width: 300px;
+          justify-content: space-between;
+        }
+      }
+
+      button {
+        margin-top: 50px;
+        @include btn(#725a58);
+      }
+    }
   }
 }
