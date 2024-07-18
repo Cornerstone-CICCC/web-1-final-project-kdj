@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../styles/contact/contact.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <title>Document</title>
 </head>
 <body>
@@ -32,68 +33,79 @@
             <button class="contactTab">Classes</button>
         </div>
         <form class="contact-form">
-            <div class="form-group">
-                <label for="event-type">Event Type</label>
-                <div id="event-type" class="radio-group">
-                    <label><input type="radio" name="event-type" value="wedding" checked> Wedding</label>
-                    <label><input type="radio" name="event-type" value="party"> Party</label>
-                    <label><input type="radio" name="event-type" value="photoshoot"> Photoshoot</label>
+            <div class="event">
+                <label for="eventType">Event Type</label>
+                <div id="eventSelector" class="radio-group">
+                    <button type="button" class="eventButton" id="button1" onclick="toggleSelect(this)">Wedding<span class="circle"></span></button>
+        <button type="button" class="eventButton" id="button2" onclick="toggleSelect(this)">Party<span class="circle"></span></button>
+        <button type="button" class="eventButton" id="button3" onclick="toggleSelect(this)">Photoshoot<span class="circle"></span></button>
                 </div>
             </div>
-            <div class="form-group">
-                <label for="event-date">Event Date</label>
-                <input type="date" id="event-date" name="event-date">
-                <label><input type="checkbox" name="date-not-decided"> Not decided</label>
+            <div class="dateTime">
+            <div class="eventDate">
+                <label for="dateLabel">Event Date</label>
+                <div class="datePicker">
+                <input type="text" id="date" name="event-date" placeholder="Select date" readonly>
+                <img src="../../images/contact/calendar.png" alt="Calendar Icon" class="calendar">
             </div>
-            <div class="form-group">
-                <label for="event-time">Event Time</label>
-                <select id="event-time" name="event-time">
+            <div class="notDecided">
+                    <input type="checkbox" name="date-not-decided"> 
+                    <label>Not decided</label>
+            </div>
+            </div>
+            <div class="eventTime">
+                <label for="timeLabel">Event Time</label>
+                <select id="eventSelect" name="eventSelect">
                     <option value="full-day">Full day</option>
                     <option value="morning">Morning</option>
                     <option value="afternoon">Afternoon</option>
                     <option value="evening">Evening</option>
                 </select>
-                <label><input type="checkbox" name="time-not-decided"> Not decided</label>
+                <div class="notDecided">
+                    <input type="checkbox" name="date-not-decided"> 
+                    <label>Not decided</label>
             </div>
-            <div class="form-group">
-                <label for="name">Name</label>
+            </div>
+        </div>
+            <div class="eventName">
+                <label for="nameLabel">Name</label>
                 <input type="text" id="name" name="name" placeholder="Your name">
             </div>
             <fieldset class="group">
-                <legend>When do you want us to call?</legend>
+                <legend>Contact</legend>
                 <div>
                     <input type="radio" id="anytime" name="call_time" value="anytime" checked>
-                    <label for="anytime">I don't mind</label>
+                    <label for="anytime">Call</label>
                 </div>
                 <div>
                     <input type="radio" id="morning" name="call_time" value="morning">
-                    <label for="morning">Morning</label>
+                    <label for="morning">Whatsapp</label>
                 </div>
                 <div>
                     <input type="radio" id="afternoon" name="call_time" value="afternoon">
-                    <label for="afternoon">Afternoon</label>
+                    <label for="afternoon">SMS</label>
                 </div>
                 <div>
                     <input type="radio" id="evening" name="call_time" value="evening">
-                    <label for="evening">Evening</label>
+                    <label for="evening">Email</label>
                 </div>
             </fieldset>
-            <fieldset class="group">
+            <fieldset class="groupCall">
                 <legend>When do you want us to call?</legend>
                 <div>
-                    <input type="radio" id="anytime" name="call_time" value="anytime" checked>
+                    <input type="radio" id="Callanytime" name="call_time" value="anytime" checked>
                     <label for="anytime">I don't mind</label>
                 </div>
                 <div>
-                    <input type="radio" id="morning" name="call_time" value="morning">
+                    <input type="radio" id="Callmorning" name="call_time" value="morning">
                     <label for="morning">Morning</label>
                 </div>
                 <div>
-                    <input type="radio" id="afternoon" name="call_time" value="afternoon">
+                    <input type="radio" id="Callafternoon" name="call_time" value="afternoon">
                     <label for="afternoon">Afternoon</label>
                 </div>
                 <div>
-                    <input type="radio" id="evening" name="call_time" value="evening">
+                    <input type="radio" id="Callevening" name="call_time" value="evening">
                     <label for="evening">Evening</label>
                 </div>
             </fieldset>
@@ -104,5 +116,7 @@
     <div id="footer"></div> 
     <script src="./components/header/header.js"></script>
     <script src="./components/footer/footer.js"></script>
+    <script src="contact.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 </body>
 </html>
