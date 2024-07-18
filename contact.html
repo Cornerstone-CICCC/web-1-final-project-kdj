@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../styles/contact/contact.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="header"></div>
+    <div class="contactContainer">
+    <div class="contactTitle">
+        <h1>CONTACT</h1>
+        <hr>
+        <p>Get a quote and book a free consultation for your</p>
+        <p>special day or our academy services</p>
+      </div> 
+      <div class="contacticons">
+        <a href="#"
+          ><img src="../../images/contact/phone.png" alt="Phone Icon"
+        />+1 0000000000</a>
+        <a href="#"
+          ><img src="../../images/contact/whatsapp.png" alt="Whatsapp Icon"
+        />+1 0000000000</a>
+        <a href="#"
+          ><img src="../../images/contact/instagram.png" alt="Instagram Icon"
+        />carlabeatrizs</a>
+    </div>
+    <div class="contactFormContainer">
+        <div class="contactTabs">
+            <button class="contactTab active">Services</button>
+            <button class="contactTab">Classes</button>
+        </div>
+        <form class="contact-form">
+            <div class="form-group">
+                <label for="event-type">Event Type</label>
+                <div id="event-type" class="radio-group">
+                    <label><input type="radio" name="event-type" value="wedding" checked> Wedding</label>
+                    <label><input type="radio" name="event-type" value="party"> Party</label>
+                    <label><input type="radio" name="event-type" value="photoshoot"> Photoshoot</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="event-date">Event Date</label>
+                <input type="date" id="event-date" name="event-date">
+                <label><input type="checkbox" name="date-not-decided"> Not decided</label>
+            </div>
+            <div class="form-group">
+                <label for="event-time">Event Time</label>
+                <select id="event-time" name="event-time">
+                    <option value="full-day">Full day</option>
+                    <option value="morning">Morning</option>
+                    <option value="afternoon">Afternoon</option>
+                    <option value="evening">Evening</option>
+                </select>
+                <label><input type="checkbox" name="time-not-decided"> Not decided</label>
+            </div>
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your name">
+            </div>
+            <fieldset class="group">
+                <legend>When do you want us to call?</legend>
+                <div>
+                    <input type="radio" id="anytime" name="call_time" value="anytime" checked>
+                    <label for="anytime">I don't mind</label>
+                </div>
+                <div>
+                    <input type="radio" id="morning" name="call_time" value="morning">
+                    <label for="morning">Morning</label>
+                </div>
+                <div>
+                    <input type="radio" id="afternoon" name="call_time" value="afternoon">
+                    <label for="afternoon">Afternoon</label>
+                </div>
+                <div>
+                    <input type="radio" id="evening" name="call_time" value="evening">
+                    <label for="evening">Evening</label>
+                </div>
+            </fieldset>
+            <fieldset class="group">
+                <legend>When do you want us to call?</legend>
+                <div>
+                    <input type="radio" id="anytime" name="call_time" value="anytime" checked>
+                    <label for="anytime">I don't mind</label>
+                </div>
+                <div>
+                    <input type="radio" id="morning" name="call_time" value="morning">
+                    <label for="morning">Morning</label>
+                </div>
+                <div>
+                    <input type="radio" id="afternoon" name="call_time" value="afternoon">
+                    <label for="afternoon">Afternoon</label>
+                </div>
+                <div>
+                    <input type="radio" id="evening" name="call_time" value="evening">
+                    <label for="evening">Evening</label>
+                </div>
+            </fieldset>
+            <button type="submit" class="submit-btn">Next</button>
+        </form>
+    </div>  
+    </div>   
+    <div id="footer"></div> 
+    <script src="./components/header/header.js"></script>
+    <script src="./components/footer/footer.js"></script>
+</body>
+</html>
