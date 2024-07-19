@@ -1,3 +1,4 @@
+@use "screensize";
 @mixin btn($color) {
   font-size: 20px;
   padding: 24px 32px;
@@ -9,7 +10,7 @@
   box-sizing: border-box;
 }
 
-body {
+#body {
   margin: 0;
   font-family: "Baskervville", serif;
 

@@ -1,18 +1,23 @@
-body {
+@media screen and (max-width: 360px) {
+  body {
+    background-color: red;
+  }
+}
+#body {
   margin: 0;
   font-family: "Baskervville", serif;
 }
-body main {
+#body main {
   background-color: #f8f6f4;
 }
-body main #hero {
+#body main #hero {
   background-image: url("../../images/homePage/home_img.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   height: 625px;
 }
-body main #hero .home-container {
+#body main #hero .home-container {
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -20,15 +25,15 @@ body main #hero .home-container {
   justify-content: center;
   padding-top: 250px;
 }
-body main #hero .home-container .signature {
+#body main #hero .home-container .signature {
   color: #fff;
   width: 500px;
 }
-body main #hero .home-container p {
+#body main #hero .home-container p {
   color: #fff;
   font-size: 18px;
 }
-body main #hero .home-container button {
+#body main #hero .home-container button {
   font-size: 20px;
   padding: 24px 32px;
   font-family: "Baskervville", serif;
@@ -38,15 +43,15 @@ body main #hero .home-container button {
   color: #fff;
   box-sizing: border-box;
 }
-body main #hero .home-container button:hover {
+#body main #hero .home-container button:hover {
   transition: all 0.5s;
   background-color: rgba(255, 255, 255, 0.5);
   color: #000;
 }
-body main #artist {
+#body main #artist {
   padding: 5% 15%;
 }
-body main #artist #artist-img-container {
+#body main #artist #artist-img-container {
   background-color: #f8f6f4;
   display: flex;
   flex-direction: row;
@@ -55,17 +60,17 @@ body main #artist #artist-img-container {
   height: 395px;
   justify-content: space-between;
 }
-body main #artist #artist-img-container .artist-card {
+#body main #artist #artist-img-container .artist-card {
   position: relative;
   z-index: 1;
 }
-body main #artist #artist-img-container .artist-card img {
+#body main #artist #artist-img-container .artist-card img {
   background-image: linear-gradient(45deg, #ae7872, white);
   width: 285px;
   height: 321px;
   object-fit: cover;
 }
-body main #artist #artist-img-container .artist-card::before {
+#body main #artist #artist-img-container .artist-card::before {
   content: "";
   position: absolute;
   top: -20px;
@@ -75,7 +80,7 @@ body main #artist #artist-img-container .artist-card::before {
   border: solid 2px #e3b6b1;
   z-index: -1;
 }
-body main #artist #artist-img-container .artist-card .card-text {
+#body main #artist #artist-img-container .artist-card .card-text {
   position: absolute;
   top: 321px;
   width: 285px;
@@ -85,42 +90,42 @@ body main #artist #artist-img-container .artist-card .card-text {
   justify-content: space-around;
   align-items: center;
 }
-body main #artist #artist-img-container .artist-card .card-text img {
+#body main #artist #artist-img-container .artist-card .card-text img {
   width: 90px;
   height: auto;
 }
-body main #artist #artist-img-container .artist-card .card-text p {
+#body main #artist #artist-img-container .artist-card .card-text p {
   font-size: 14px;
   font-weight: 300;
   font-family: "Baskervville", serif;
   width: 35%;
 }
-body main #artist #artist-img-container .artist-description-container {
+#body main #artist #artist-img-container .artist-description-container {
   width: 65%;
 }
-body main #artist #artist-img-container .artist-description-container .artist-description {
+#body main #artist #artist-img-container .artist-description-container .artist-description {
   font-family: "Baskervville", serif;
   margin: 5%;
 }
-body main #artist #artist-img-container .artist-description-container .artist-description img {
+#body main #artist #artist-img-container .artist-description-container .artist-description img {
   margin-bottom: 8px;
 }
-body main #artist #artist-img-container .artist-description-container .artist-description h3 {
+#body main #artist #artist-img-container .artist-description-container .artist-description h3 {
   font-weight: 400;
   font-size: 48px;
   margin: 0;
 }
-body main #artist #artist-img-container .artist-description-container .artist-description p {
+#body main #artist #artist-img-container .artist-description-container .artist-description p {
   font-size: 18px;
   line-height: 27px;
 }
-body main #artist #artist-img-container .artist-description-container .artist-btn-sign {
+#body main #artist #artist-img-container .artist-description-container .artist-btn-sign {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   width: 85%;
 }
-body main #artist #artist-img-container .artist-description-container .artist-btn-sign button {
+#body main #artist #artist-img-container .artist-description-container .artist-btn-sign button {
   font-size: 20px;
   padding: 24px 32px;
   font-family: "Baskervville", serif;
@@ -130,19 +135,19 @@ body main #artist #artist-img-container .artist-description-container .artist-bt
   color: #5e4a49;
   box-sizing: border-box;
 }
-body main #artist #artist-img-container .artist-description-container .artist-btn-sign button:hover {
+#body main #artist #artist-img-container .artist-description-container .artist-btn-sign button:hover {
   transition: all 0.5s;
   background-color: #5e4a49;
   color: #fff;
 }
-body main #artist #artist-img-container .artist-description-container .artist-btn-sign button img {
+#body main #artist #artist-img-container .artist-description-container .artist-btn-sign button img {
   transform: rotate(10deg);
 }
-body main #artist #brand-logo {
+#body main #artist #brand-logo {
   font-size: 18px;
   justify-content: center;
 }
-body main #artist #brand-logo .our-brand {
+#body main #artist #brand-logo .our-brand {
   display: flex;
   align-items: center;
   font-size: 30px;
@@ -152,19 +157,19 @@ body main #artist #brand-logo .our-brand {
   width: 100%;
   color: #5e4a49;
 }
-body main #artist #brand-logo .our-brand::before, body main #artist #brand-logo .our-brand::after {
+#body main #artist #brand-logo .our-brand::before, #body main #artist #brand-logo .our-brand::after {
   color: #5e4a49;
   border-top: 1px solid;
   content: "";
   width: 12em;
 }
-body main #artist #brand-logo .our-brand::before {
+#body main #artist #brand-logo .our-brand::before {
   margin-right: 1em;
 }
-body main #artist #brand-logo .our-brand::after {
+#body main #artist #brand-logo .our-brand::after {
   margin-left: 1em;
 }
-body main #artist #brand-logo .logos {
+#body main #artist #brand-logo .logos {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -172,34 +177,34 @@ body main #artist #brand-logo .logos {
   gap: 60px;
   padding: 5% 3% 0;
 }
-body main #artist #brand-logo .logos img {
+#body main #artist #brand-logo .logos img {
   width: 100px;
 }
-body main #star {
+#body main #star {
   background-color: #fae9e7;
   font-family: "Baskervville", serif;
   text-align: center;
   color: #5e4a49;
 }
-body main #star .star-intro {
+#body main #star .star-intro {
   margin-bottom: 50px;
 }
-body main #star .star-intro h1 {
+#body main #star .star-intro h1 {
   padding: 5% 15%;
   font-size: 60px;
   width: 100%;
   font-weight: 100;
 }
-body main #star .star-intro h1::before {
+#body main #star .star-intro h1::before {
   content: "";
   border-top: solid 1px #ae7872;
 }
-body main #star .star-intro p {
+#body main #star .star-intro p {
   line-height: 27px;
   width: 25%;
   margin: 0 auto;
 }
-body main #star .star-intro button {
+#body main #star .star-intro button {
   font-size: 20px;
   padding: 24px 32px;
   font-family: "Baskervville", serif;
@@ -210,38 +215,38 @@ body main #star .star-intro button {
   box-sizing: border-box;
   margin-top: 5%;
 }
-body main #star .star-characters {
+#body main #star .star-characters {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
-body main #star .star-description {
+#body main #star .star-description {
   padding: 5% 25%;
 }
-body main #star .star-description h5 {
+#body main #star .star-description h5 {
   font-size: 32px;
   line-height: 41.6px;
 }
-body main #makeup {
+#body main #makeup {
   color: #5e4a49;
   text-align: center;
   margin-bottom: 5%;
 }
-body main #makeup .makeup-title {
+#body main #makeup .makeup-title {
   padding: 0 25% 10%;
 }
-body main #makeup .makeup-title h1 {
+#body main #makeup .makeup-title h1 {
   font-size: 80px;
   font-weight: 100;
   line-height: 104px;
 }
-body main #makeup .makeup-title h1::after {
+#body main #makeup .makeup-title h1::after {
   border-bottom: solid 1px black;
 }
-body main #makeup .makeup-title p {
+#body main #makeup .makeup-title p {
   margin-bottom: 50px;
 }
-body main #makeup .makeup-title button {
+#body main #makeup .makeup-title button {
   font-size: 20px;
   padding: 24px 32px;
   font-family: "Baskervville", serif;
@@ -251,48 +256,48 @@ body main #makeup .makeup-title button {
   color: #5e4a49;
   box-sizing: border-box;
 }
-body main #makeup .offer-images-container {
+#body main #makeup .offer-images-container {
   align-items: center;
 }
-body main #makeup .offer-images-container .offer-image {
+#body main #makeup .offer-images-container .offer-image {
   height: auto;
 }
-body main #makeup101 {
+#body main #makeup101 {
   margin: 0 3%;
   padding: 5%;
   background-color: #fae9e7;
   color: #725a58;
   font-weight: 100;
 }
-body main #makeup101 h1 {
+#body main #makeup101 h1 {
   font-size: 80px;
   font-weight: 100;
   text-align: center;
 }
-body main #makeup101 #makeup101-container {
+#body main #makeup101 #makeup101-container {
   display: flex;
 }
-body main #makeup101 #makeup101-container aside .makeup101-btn {
+#body main #makeup101 #makeup101-container aside .makeup101-btn {
   color: #725a58;
   font-family: "Baskervville", serif;
   background-color: rgba(255, 255, 255, 0);
   border: none;
 }
-body main #makeup101 #makeup101-container aside .makeup-btn {
+#body main #makeup101 #makeup101-container aside .makeup-btn {
   width: 90%;
   text-align: left;
 }
-body main #makeup101 #makeup101-container aside .makeup-btn:hover {
+#body main #makeup101 #makeup101-container aside .makeup-btn:hover {
   background-color: yellow;
 }
-body main #makeup101 #makeup101-container aside .makeup-btn h2::before {
+#body main #makeup101 #makeup101-container aside .makeup-btn h2::before {
   padding-left: 20px;
   background: url(../../images/homePage/Vector.png);
 }
-body main #makeup101 #makeup101-container aside .makeup-btn p {
+#body main #makeup101 #makeup101-container aside .makeup-btn p {
   color: #000;
 }
-body main #makeup101 #makeup101-container aside .allclasses {
+#body main #makeup101 #makeup101-container aside .allclasses {
   font-size: 20px;
   padding: 24px 32px;
   font-family: "Baskervville", serif;
@@ -302,14 +307,14 @@ body main #makeup101 #makeup101-container aside .allclasses {
   color: #725a58;
   box-sizing: border-box;
 }
-body main #makeup101 #makeup101-container aside .allclasses:hover {
+#body main #makeup101 #makeup101-container aside .allclasses:hover {
   background-color: yellow;
 }
-body main #makeup101 #makeup101-container .makeupProImage {
+#body main #makeup101 #makeup101-container .makeupProImage {
   position: relative;
   z-index: 1;
 }
-body main #makeup101 #makeup101-container .makeupProImage::before {
+#body main #makeup101 #makeup101-container .makeupProImage::before {
   content: "";
   position: absolute;
   width: 90%;
@@ -317,24 +322,24 @@ body main #makeup101 #makeup101-container .makeupProImage::before {
   border: solid 1px #fff;
   z-index: -1;
 }
-body main #diy {
+#body main #diy {
   color: #725a58;
   text-align: center;
   padding: 5% 10%;
 }
-body main #diy h1 {
+#body main #diy h1 {
   font-size: 48px;
   font-weight: 100;
 }
-body main #diy .diy-container {
+#body main #diy .diy-container {
   display: flex;
   margin-bottom: 50px;
 }
-body main #diy .diy-container img {
+#body main #diy .diy-container img {
   width: 300px;
   justify-content: space-between;
 }
-body main #diy button {
+#body main #diy button {
   margin-top: 50px;
   font-size: 20px;
   padding: 24px 32px;
