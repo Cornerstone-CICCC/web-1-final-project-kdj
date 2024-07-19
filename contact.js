@@ -10,3 +10,16 @@ document.addEventListener('DOMContentLoaded', function() {
         allowInput: true
     });
 });
+
+function toggleWedding() {
+    const weddingDiv = document.getElementById('wedding');
+    if (weddingDiv.style.display === 'none' || weddingDiv.style.display === '') {
+        weddingDiv.style.display = 'block';
+    } else {
+        weddingDiv.style.display = 'none';
+    }
+}
+
+document.getElementById('button1').addEventListener('click', toggleWedding);
+document.getElementById('button2').addEventListener('click', toggleWedding);
+document.getElementById('button3').addEventListener('click', toggleWedding);
