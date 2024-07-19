@@ -1,47 +1,497 @@
+@use "screensize";
+@mixin btn($color) {
+  font-size: 20px;
+  padding: 24px 32px;
+  font-family: "Baskervville", serif;
+  font-weight: 400;
+  border: solid 0.8px $color;
+  background-color: rgba(255, 255, 255, 0);
+  color: $color;
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: "Baskervville", serif;
 
   main {
-    // height: 100vh;
+    background-color: #f8f6f4;
 
     #hero {
       background-image: url("../../images/homePage/home_img.png");
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
-      width: 100%;
+      // width: 100%;
       height: 625px;
-      // z-index: 2;
-      // color: #000;
 
       .home-container {
-        // position: relative;
+        // height: 625px;
+        display: flex;
+        flex-direction: column;
         text-align: center;
         align-items: center;
+        justify-content: center;
+        padding-top: 250px;
 
         .signature {
-          // position: absolute;
           color: #fff;
-          width: 300px;
-          // top: 50%;
-          // left: 50%;
+          width: 500px;
         }
 
         p {
           color: #fff;
+          font-size: 18px;
         }
-        img {
-          width: 100%;
+        button {
+          @include btn(#fff);
+
+          &:hover {
+            transition: all 0.5s;
+            background-color: rgba(255, 255, 255, 0.5);
+            color: #000;
+          }
         }
       }
     }
 
     #artist {
-      background-color: #f8f6f4;
+      padding: 5% 15%;
 
-      .artist-img {
-        background: linear-gradient(#ae7872, #ae7872);
+      #artist-img-container {
+        background-color: #f8f6f4;
+        display: flex;
+        flex-direction: row;
+        gap: 24px;
+        margin-bottom: 100px;
+        height: 395px;
+        justify-content: space-between;
+
+        .artist-card {
+          // box-shadow: 10px 10px 0 1px red;
+          position: relative;
+          z-index: 1;
+
+          img {
+            // background-image: linear-gradient(to left, #ae7872 0%, #ae7872 50%);
+            background-image: linear-gradient(
+              45deg,
+              lighten(#ae7872, 0%),
+              lighten(#ae7872, 50%)
+            );
+            width: 285px;
+            height: 321px;
+            object-fit: cover;
+          }
+
+          &::before {
+            content: "";
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            width: 100%;
+            height: 100%;
+            border: solid 2px #e3b6b1;
+            z-index: -1;
+          }
+
+          .card-text {
+            position: absolute;
+            top: 321px;
+            width: 285px;
+            height: 77px;
+            background-color: #fff;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+            img {
+              width: 90px;
+              height: auto;
+            }
+
+            p {
+              font-size: 14px;
+              font-weight: 300;
+              font-family: "Baskervville", serif;
+              width: 35%;
+            }
+          }
+        }
+
+        .artist-description-container {
+          width: 65%;
+
+          .artist-img {
+            // background: linear-gradient(#ae7872 0%, #ae7872 50%);
+            // width: 258px;
+            // height: auto;
+          }
+
+          .artist-description {
+            font-family: "Baskervville", serif;
+            margin: 5%;
+
+            img {
+              margin-bottom: 8px;
+            }
+
+            h3 {
+              font-weight: 400;
+              font-size: 48px;
+              margin: 0;
+            }
+
+            p {
+              font-size: 18px;
+              line-height: 27px;
+            }
+          }
+
+          .artist-btn-sign {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 85%;
+
+            button {
+              @include btn(#5e4a49);
+
+              &:hover {
+                transition: all 0.5s;
+                background-color: #5e4a49;
+                color: #fff;
+              }
+
+              img {
+                transform: rotate(10deg);
+              }
+            }
+          }
+        }
+      }
+
+      #brand-logo {
+        font-size: 18px;
+        justify-content: center;
+
+        .our-brand {
+          display: flex;
+          align-items: center;
+          // background: #535353;
+          font-size: 30px;
+          line-height: 27px;
+          font-family: "Avenir", sans-serif;
+          font-weight: 100;
+          width: 100%;
+          color: #5e4a49;
+
+          &::before,
+          &::after {
+            color: #5e4a49;
+            border-top: 1px solid;
+            content: "";
+            width: 12em;
+          }
+
+          &::before {
+            margin-right: 1em;
+          }
+
+          &::after {
+            margin-left: 1em;
+          }
+        }
+
+        .logos {
+          width: 100%;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          gap: 60px;
+          padding: 5% 3% 0;
+          // filter: overlay-color("#fff");
+
+          img {
+            width: 100px;
+          }
+          // img {
+          //   width: 100px;
+          //   height: 100px;
+
+          //   -webkit-mask-image: url(../../images/homePage/logo1.png);
+          //   -webkit-mask-size: contain;
+          //   -webkit-mask-repeat: no-repeat;
+          //   -webkit-mask-position: center;
+
+          //   mask-image: url(../../images/homePage/logo1.png);
+          //   mask-size: contain;
+          //   mask-repeat: no-repeat;
+          //   mask-position: center;
+
+          //   /*変更したい色をここに書く*/
+          //   background-color: #535353;
+          // }
+        }
+      }
+    }
+
+    #star {
+      background-color: #fae9e7;
+      font-family: "Baskervville", serif;
+      // font-size: 80px;
+      text-align: center;
+      color: #5e4a49;
+
+      .star-intro {
+        margin-bottom: 50px;
+        h1 {
+          padding: 5% 15%;
+          font-size: 60px;
+          // width: 100%;
+          font-weight: 100;
+
+          &::before {
+            content: "";
+            border-top: solid 1px #ae7872;
+          }
+        }
+
+        p {
+          line-height: 27px;
+          width: 25%;
+          margin: 0 auto;
+        }
+
+        button {
+          @include btn(#5e4a49);
+          margin-top: 5%;
+        }
+      }
+
+      .star-characters {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 10px;
+        // width: 100%;
+        justify-content: space-between;
+      }
+
+      .star-description {
+        // width: 50%;
+        // margin: 0 auto;
+        padding: 5% 25%;
+        h5 {
+          font-size: 32px;
+          line-height: 41.6px;
+        }
+
+        // img {
+        //   &::before {
+        //     background-image: url(../../images/homePage/leftarrow.png);
+        //   }
+        // }
+      }
+    }
+
+    #makeup {
+      color: #5e4a49;
+      text-align: center;
+      // padding: 0 10%;
+      margin-bottom: 5%;
+
+      .makeup-title {
+        padding: 0 25% 10%;
+
+        h1 {
+          font-size: 80px;
+          font-weight: 100;
+          line-height: 104px;
+
+          &::after {
+            border-bottom: solid 1px black;
+          }
+        }
+
+        p {
+          margin-bottom: 50px;
+        }
+
+        button {
+          @include btn(#5e4a49);
+        }
+      }
+
+      .offer-images-container {
+        display: flex;
+        align-items: center;
+        padding: 0 3%;
+        gap: 2rem;
+        justify-content: center;
+        .offer-card {
+          position: relative;
+
+          .offer-image {
+            width: 90%;
+          }
+
+          &:nth-child(2)::before {
+            content: "";
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            width: 100%;
+            height: 100%;
+            border: solid 1px red;
+            z-index: -1;
+          }
+
+          h1 {
+            position: absolute;
+            bottom: 20px;
+            left: -40px;
+            color: #b99692;
+            font-size: 5rem;
+            font-weight: 100;
+          }
+
+          h2 {
+            position: absolute;
+            bottom: 20px;
+            left: -10px;
+            color: #b99692;
+            font-size: 3rem;
+            font-weight: 100;
+          }
+        }
+      }
+    }
+
+    #makeup101 {
+      margin: 0 3%;
+      padding: 5%;
+      background-color: #fae9e7;
+      color: #725a58;
+      font-weight: 100;
+
+      h1 {
+        font-size: 80px;
+        font-weight: 100;
+        text-align: center;
+      }
+
+      #makeup101-container {
+        display: flex;
+
+        aside {
+          .makeup101-btn {
+            color: #725a58;
+            font-family: "Baskervville", serif;
+            background-color: rgba(255, 255, 255, 0);
+            border: none;
+          }
+
+          .makeup-btn {
+            width: 90%;
+            text-align: left;
+
+            &:hover {
+              background-color: yellow;
+            }
+
+            h2 {
+              &::before {
+                padding-left: 20px;
+                // line-height: 20px;
+                background: url(../../images/homePage/Vector.png);
+              }
+            }
+
+            p {
+              color: #000;
+            }
+          }
+
+          .allclasses {
+            @include btn(#725a58);
+
+            &:hover {
+              background-color: yellow;
+            }
+          }
+        }
+
+        .makeupProImage {
+          position: relative;
+          z-index: 1;
+
+          &::before {
+            content: "";
+            position: absolute;
+            width: 90%;
+            height: 90%;
+            border: solid 1px #fff;
+            z-index: -1;
+          }
+        }
+      }
+    }
+
+    #diy {
+      color: #725a58;
+      text-align: center;
+      padding: 5% 10%;
+      h1 {
+        font-size: 48px;
+        font-weight: 100;
+      }
+
+      .diy-container {
+        display: flex;
+        // gap: 10px;
+        margin-bottom: 50px;
+
+        img {
+          width: 300px;
+          justify-content: space-between;
+        }
+      }
+
+      button {
+        margin-top: 50px;
+        @include btn(#725a58);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 360px) {
+  body {
+    font-size: 16px;
+
+    #hero {
+      .signature {
+        width: 200px;
+      }
+    }
+
+    #artist {
+      #artist-img-container {
+        display: flex;
+        flex-direction: column-reverse;
+      }
+
+      .artist-description-container {
+        .artist-btn-sign {
+          display: flex;
+          flex-direction: column-reverse;
+        }
+      }
+    }
+
+    #makeup101 {
+      #makeup101-container {
+        flex-direction: column;
       }
     }
   }
