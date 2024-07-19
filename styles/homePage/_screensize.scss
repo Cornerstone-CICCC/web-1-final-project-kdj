@@ -1,0 +1,95 @@
+// @media screen and (max-width: 360px) {
+@media (max-width: 360px) {
+  body {
+    margin: 0;
+    padding: 0;
+    font-size: 16px !important;
+
+    #hero {
+      .home-container {
+        padding-top: 350px !important;
+        .signature {
+          width: 300px !important;
+        }
+
+        p {
+          width: 90% !important;
+        }
+
+        button {
+          padding: 20px 32px !important;
+        }
+      }
+    }
+
+    #artist {
+      padding: 5% !important;
+      #artist-img-container {
+        display: flex;
+        flex-direction: column-reverse !important;
+        margin-top: 400px;
+        text-align: center;
+
+        .artist-card {
+          img {
+            justify-content: center;
+            width: 90%;
+            position: relative;
+          }
+
+          .card-text {
+            width: 300.37px;
+            text-align: center;
+            position: absolute;
+            left: 19px;
+            // background-color: red !important;
+          }
+        }
+
+        &::before {
+          width: 100% !important;
+          height: auto !important;
+          border: solid 1px black !important;
+        }
+      }
+
+      .artist-description-container {
+        width: 100% !important;
+        .artist-description {
+          //   padding: 10% 5%;
+
+          h3 {
+            font-size: 32px !important;
+            line-height: 41.6px;
+          }
+
+          p {
+            width: 80%;
+            margin: 0 auto;
+            line-height: 25.6px !important;
+          }
+        }
+
+        .artist-btn-sign {
+          display: flex;
+          flex-direction: column-reverse !important;
+          margin: 0 auto;
+
+          img {
+            transform: rotate(7deg) !important;
+          }
+
+          button {
+            padding: 20px 32px !important;
+          }
+        }
+      }
+    }
+
+    #makeup101 {
+      #makeup101-container {
+        flex-direction: column !important;
+      }
+    }
+  }
+}
