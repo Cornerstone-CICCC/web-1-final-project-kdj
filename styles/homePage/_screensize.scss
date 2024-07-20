@@ -110,9 +110,6 @@
 
           &::before,
           &::after {
-            // color: #5e4a49;
-            // border-top: 1px solid;
-            // content: "";
             width: 5em !important;
             margin: 0 auto;
           }
@@ -275,23 +272,32 @@
       }
 
       .offer-images-container {
+        flex-direction: column;
+
         .offer-card {
           position: relative;
           z-index: 2;
+          width: 90%;
 
-          // .offer-image {
-          &:nth-child(even) {
+          &:nth-child(even)::before {
             width: 84%;
+            border: none !important;
           }
-          // }
+
+          h1 {
+            font-size: 3.5rem !important;
+            color: #fff !important;
+            position: absolute;
+            bottom: -15% !important;
+            left: 20% !important;
+          }
 
           h2 {
             position: absolute;
-            content: "Wedding";
-            color: #fff;
-            bottom: 0;
-            left: 35%;
-            // z-index: -1;
+            color: #fff !important;
+            bottom: -15% !important;
+            left: 8% !important;
+            font-size: 3.5rem !important;
           }
         }
       }
@@ -301,11 +307,25 @@
 
       h1 {
         margin: 0 !important;
+        font-size: 40px !important;
+        padding: 10% 0;
       }
 
       #makeup101-container {
         // flex-direction: column;
         flex-direction: column !important;
+
+        aside {
+          text-align: center;
+
+          .makeup-title-container {
+            display: flex;
+          }
+
+          img {
+            text-align: center;
+          }
+        }
       }
     }
   }

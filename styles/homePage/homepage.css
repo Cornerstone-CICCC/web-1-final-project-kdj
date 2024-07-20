@@ -170,28 +170,51 @@
   body #makeup .makeup-title button {
     padding: 20px 32px !important;
   }
+  body #makeup .offer-images-container {
+    flex-direction: column;
+  }
   body #makeup .offer-images-container .offer-card {
     position: relative;
     z-index: 2;
+    width: 90%;
   }
-  body #makeup .offer-images-container .offer-card:nth-child(even) {
+  body #makeup .offer-images-container .offer-card:nth-child(even)::before {
     width: 84%;
+    border: none !important;
+  }
+  body #makeup .offer-images-container .offer-card h1 {
+    font-size: 3.5rem !important;
+    color: #fff !important;
+    position: absolute;
+    bottom: -15% !important;
+    left: 20% !important;
   }
   body #makeup .offer-images-container .offer-card h2 {
     position: absolute;
-    content: "Wedding";
-    color: #fff;
-    bottom: 0;
-    left: 35%;
+    color: #fff !important;
+    bottom: -15% !important;
+    left: 8% !important;
+    font-size: 3.5rem !important;
   }
   body #makeup101 {
     margin: 0 !important;
   }
   body #makeup101 h1 {
     margin: 0 !important;
+    font-size: 40px !important;
+    padding: 10% 0;
   }
   body #makeup101 #makeup101-container {
     flex-direction: column !important;
+  }
+  body #makeup101 #makeup101-container aside {
+    text-align: center;
+  }
+  body #makeup101 #makeup101-container aside .makeup-title-container {
+    display: flex;
+  }
+  body #makeup101 #makeup101-container aside img {
+    text-align: center;
   }
 }
 body {
