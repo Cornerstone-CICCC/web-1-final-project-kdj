@@ -68,18 +68,21 @@ body {
   margin-left: 5%;
 }
 
-.contactFormContainer, .bridalFormContainer {
+.contactFormContainer, .bridalFormContainer, .partyFormContainer, .thanksFormContainer {
+  margin-top: 10%;
+  margin-left: 30%;
+  margin-bottom: 10%;
   background-color: #FAE9E7;
   padding: 20px;
   width: 600px;
 }
 
-.contactTabs, .bridalTabs {
+.contactTabs, .bridalTabs, .partyTabs, .thanksTabs {
   text-align: center;
   margin-bottom: 20px;
 }
 
-.contactTab, .bridalTab {
+.contactTab, .bridalTab, .backButton, .partyTab, .thanksTab {
   font-family: "Baskervville", serif;
   background-color: transparent;
   border: none;
@@ -92,12 +95,12 @@ body {
   border-bottom: 3px solid #A3A3A3;
 }
 
-.contactTab:hover, .bridalTab:hover {
+.contactTab:hover, .bridalTab:hover, .partyTab:hover, .thanksTab:hover {
   color: black;
   border-bottom: 3px solid black;
 }
 
-.contactTab.active, .bridalTab.active {
+.contactTab.active, .bridalTab.active, .partyTab.active, .thanksTab.active {
   color: black;
   border-bottom: 3px solid black;
 }
@@ -174,7 +177,7 @@ body {
   flex-wrap: wrap;
 }
 
-.eventDate label:nth-child(1), .eventTime label, .eventName label {
+.eventDate label:nth-child(1), .eventTime label, .eventName label, .bridalLocation label, .premiumServices label {
   font-family: "Baskervville", serif;
   font-size: 1.5em;
   display: block;
@@ -182,22 +185,22 @@ body {
   margin-top: 10px;
 }
 
-.datePicker {
+.datePicker, .locationPicker {
   position: relative;
   display: inline-block;
 }
 
-.datePicker .calendar {
+.datePicker .calendar, .locationPicker .search {
   position: absolute;
   right: 10px;
-  top: 50%;
+  top: 40%;
   transform: translateY(-50%);
   width: 24px;
   height: auto;
   pointer-events: none;
 }
 
-.eventDate #date, .eventTime #eventSelect, .eventName #name {
+.eventDate #date, .eventTime #eventSelect, .eventName #name, .bridalLocation #locationInput {
   font-family: "Baskervville", serif;
   font-size: 1.3em;
   padding: 10px 20px;
@@ -221,9 +224,13 @@ body {
   padding: 10px 40px 10px 20px;
 }
 
-.eventName #name {
+.eventName #name, .bridalLocation #locationInput {
   width: 520px;
   margin-bottom: 20px;
+}
+
+.bridalLocation #locationInput {
+  margin-bottom: 0px;
 }
 
 .notDecided {
@@ -232,7 +239,7 @@ body {
   margin-top: 10px;
 }
 
-.notDecided input {
+.notDecided input, .premiumServiceItem input, .serviceOptions input, .serviceOptions2 input {
   appearance: none;
   background-color: white;
   margin-right: 10px;
@@ -241,12 +248,12 @@ body {
   border: 2px solid #E3B6B1;
 }
 
-.notDecided input:checked {
+.notDecided input:checked, .premiumServiceItem input:checked, .serviceOptions input:checked, .serviceOptions2 input:checked {
   background-color: #E3B6B1;
   border: 2px solid white;
 }
 
-.notDecided label {
+.notDecided label, .premiumServiceItem label {
   font-size: 1.2em;
   font-family: "Baskervville", serif;
   font-weight: lighter;
@@ -451,8 +458,158 @@ body {
 }
 
 .bridalButton {
-  width: 50%;
+  width: 45%;
   color: black;
+}
+
+.premiumGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+}
+
+.premiumServiceItem {
+  display: flex;
+  align-items: center;
+}
+
+.premiumServices, .bridalLocation {
+  margin-top: 20px;
+}
+
+.backButton {
+  color: #725A58;
+  font-size: 1.3em;
+  border-bottom: 0;
+}
+
+.makehair {
+  margin-top: 10px;
+}
+
+.serviceRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 10px 0;
+  background-color: white;
+  margin-bottom: 20px;
+}
+
+.serviceRow:last-child {
+  border-bottom: none;
+}
+
+.serviceName {
+  font-family: "Baskervville", serif;
+  flex: 1;
+  font-weight: lighter;
+  font-size: 1.3em;
+  margin-left: 20px;
+}
+
+.serviceControls {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  background-color: #FAE9E7;
+}
+
+.serviceControls button {
+  background-color: #FAE9E7;
+  padding: 5px;
+  border: 1px solid #FAE9E7;
+  cursor: pointer;
+}
+
+.serviceControls input {
+  background-color: #FAE9E7;
+  width: 40px;
+  text-align: center;
+  border: 1px solid #FAE9E7;
+  margin: 0 5px;
+}
+
+.serviceRow {
+  display: grid;
+  grid-template-columns: 150px 100px 1px 300px;
+  gap: 10px;
+}
+
+.serviceRow > div {
+  padding: 10px;
+}
+
+.serviceOptions input[type=checkbox], .serviceOptions2 input[type=checkbox] {
+  margin-right: 10px;
+  margin-left: 30px;
+  transform: translateY(8px);
+}
+
+.serviceOptions input, .serviceOptions2 input {
+  margin-right: 5px;
+}
+
+.serviceOptions {
+  margin-bottom: 15px;
+}
+
+.serviceOptions2 {
+  margin-left: 120px;
+  margin-bottom: 10px;
+}
+
+.serviceOptions input:checked::before, .serviceOptions2 input:checked::before {
+  content: "✔";
+  color: white;
+  font-size: 14px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.serviceRow .separator {
+  padding: 0;
+  width: 2px;
+  background-color: #FAE9E7;
+  height: 100%;
+  margin: 0 10px;
+}
+
+.messageSection {
+  margin-top: 20px;
+}
+
+.messageSection label {
+  font-family: "Baskervville", serif;
+  display: block;
+  font-weight: lighter;
+  font-size: 1.5em;
+  margin-bottom: 5px;
+}
+
+.messageSection textarea {
+  width: 100%;
+  height: 150px;
+  padding: 10px;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  resize: none;
+  font-family: inherit;
+  margin-bottom: 20px;
+}
+
+.bridalFormContainer, .partyFormContainer, .thanksFormContainer {
+  display: none;
+}
+
+.thankfulMessage h2 {
+  font-family: "Baskervville", serif;
+  color: #725A58;
+  font-size: 2.5em;
+  font-weight: lighter;
 }
 
 /*# sourceMappingURL=contact.css.map */

@@ -147,3 +147,86 @@ document.getElementById('smsNumber').addEventListener('input', function (e) {
     }
     e.target.value = value;
 });
+
+function initSearchBox() {
+    var input = document.getElementById('locationInput');
+    var searchBox = new google.maps.places.SearchBox(input);
+
+    searchBox.addListener('places_changed', function() {
+        var places = searchBox.getPlaces();
+
+        if (places.length == 0) {
+            return;
+        }
+
+        places.forEach(function(place) {
+            if (!place.geometry) {
+                console.log("Returned place contains no geometry");
+                return;
+            }
+
+            console.log("Place found:", place.name);
+        });
+    });
+}
+
+google.maps.event.addDomListener(window, 'load', initSearchBox);
+
+document.addEventListener('DOMContentLoaded', function() {
+    const contactForm = document.querySelector('.contact-form');
+    const bridalFormContainer = document.querySelector('.bridalFormContainer');
+    const partyFormContainer = document.querySelector('.partyFormContainer');
+    const thanksFormContainer= document.querySelector('.thanksFormContainer')
+    
+    contactForm.addEventListener('submit', function(event) {
+        event.preventDefault(); 
+        const selectedEventType = document.querySelector('.eventButton.selected');
+        if (selectedEventType) {
+            switch (selectedEventType.id) {
+                case 'button1': 
+                    bridalFormContainer.style.display = 'block';
+                    break;
+                case 'button2': 
+                    partyFormContainer.style.display = 'block';
+                    break;
+                case 'button3':
+                    break;
+            }
+            contactForm.parentElement.style.display = 'none';
+        }
+    });
+const bridalForm = bridalFormContainer.querySelector('form');
+    if (bridalForm) {
+        bridalForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            thanksFormContainer.style.display = 'block';
+            bridalForm.parentElement.style.display = 'none';
+        });
+    }
+
+    const partyForm = partyFormContainer.querySelector('form');
+    if (partyForm) {
+        partyForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            thanksFormContainer.style.display = 'block';
+            partyForm.parentElement.style.display = 'none';
+        });
+    }
+});
+
+function updateThankYouMessage() {
+    var name = document.getElementById('name').value;
+    document.getElementById('userName').textContent = name;
+}
+document.querySelector('.contact-form').addEventListener('submit', function(event) {
+    event.preventDefault(); 
+    updateThankYouMessage();
+});
+function updatecallMessage() {
+    var number = document.getElementById('phoneNumber').value;
+    document.getElementById('userNumber').textContent = number;
+}
+document.querySelector('.contact-form').addEventListener('submit', function(event) {
+    event.preventDefault(); 
+    updatecallMessage();
+});
