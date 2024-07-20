@@ -1,46 +1,121 @@
 body {
-    margin: 0;
-    font-family: "Baskervville", serif;
-  }
-  
-  .container {
-    text-align: center;
-  }
+  margin: 0;
+  font-family: "Baskervville", serif;
+}
+
+.container {
+  text-align: center;
+}
 
 .servicesTitle h1 {
-    font-family: "Baskervville", serif;
-    color: #725A58;
-    font-weight: lighter;
-    letter-spacing: 0.15em;
-    font-size: 4em;
-    margin: 20px 0;
-    margin-bottom: 0px;
-  }
-  
-  .servicesTitle hr {
-    margin-top: 0px;
-    width: 40%;
-    border: 1px solid #E3B6B1;
-    margin-top: 20px;
-  }
-  
-  .servicesTitle p {
-    font-size: 1.2em;
-    margin-bottom: 20px;
-    color: black;
+  font-family: "Baskervville", serif;
+  color: #725a58;
+  font-weight: lighter;
+  letter-spacing: 0.15em;
+  font-size: 4em;
+  margin: 20px 0;
+  margin-bottom: 0px;
+}
+
+.servicesTitle hr {
+  margin-top: 0px;
+  width: 40%;
+  border: 1px solid #e3b6b1;
+  margin-top: 20px;
+}
+
+.servicesTitle p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  color: black;
+}
+
+.servicesContainer {
+  margin-top: 0px;
+  background-color: #fae9e7;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.servicesColumns {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  grid-template-rows: 33% 33% 33%;
+  margin-bottom: 150px;
+}
+
+.servicesColumns #picture {
+  margin-top: 70px;
+  width: 300px;
+  height: auto;
+  gap: 50px;
+}
+
+span {
+  font-size: 1.1em;
+}
+
+.service-details {
+  margin-top: 50px;
+  width: 100%;
+  margin-left: 120px;
+  font-size: 1.5em;
+}
+
+.service-details h2 {
+  font-family: "Baskervville", serif;
+  color: #725a58;
+  font-weight: lighter;
+  margin: 0;
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+.service-details p {
+  margin: 0;
+  width: 100%;
+}
+.service-details .description {
+  margin-top: 20px;
+  font-family: "Baskervville", serif;
+  font-size: 1.5em;
+}
+.quote-btn {
+  padding: 10px 20px;
+  font-family: "Baskervville", serif;
+  font-size: 1em;
+  background-color: transparent;
+  color: #725a58;
+  border: 2px solid #725a58;
+  cursor: pointer;
+  margin-top: 10px;
+  width: 20%;
+  height: 15%;
+}
+
+@media (max-width: 768px) {
+  .servicesColumns {
+    display: block;
   }
 
-  .servicesContainer{
+  .servicesColumns #picture {
+    margin-top: 20px;
+    width: 100%;
+  }
+
+  .service-details .description {
     margin-top: 0px;
-    background-color: #FAE9E7;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
   }
-  
-  .servicesColumns{
-    display: grid;
-	grid-template-columns: 30% 70%;
-	grid-template-rows: 33% 33% 33%;
+
+  .service-details {
+    margin-left: 5%;
+    margin-top: 10px;
+    text-align: left;
   }
+  .quote-btn {
+    width: 80%;
+    height: 8%;
+    margin-left: 10%;
+  }
+}
