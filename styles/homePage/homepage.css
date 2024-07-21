@@ -201,6 +201,7 @@
     position: relative;
     z-index: 2;
     width: 90%;
+    justify-content: center;
   }
   body #makeup .offer-images-container .offer-card:nth-child(even)::before {
     width: 84%;
@@ -209,14 +210,12 @@
   body #makeup .offer-images-container .offer-card h1 {
     font-size: 3.5rem !important;
     color: #fff !important;
-    position: absolute;
-    bottom: -15% !important;
+    position: absolute !important;
     left: 20% !important;
   }
   body #makeup .offer-images-container .offer-card h2 {
-    position: absolute;
+    position: absolute !important;
     color: #fff !important;
-    bottom: -15% !important;
     left: 8% !important;
     font-size: 3.5rem !important;
   }
@@ -436,13 +435,15 @@ body main #artist #artist-img-container .artist-description-container .artist-de
   margin-bottom: 8px;
 }
 body main #artist #artist-img-container .artist-description-container .artist-description h3 {
-  font-weight: 400;
+  font-weight: 300;
   font-size: 48px;
   margin: 0;
 }
 body main #artist #artist-img-container .artist-description-container .artist-description p {
   font-size: 18px;
   line-height: 27px;
+  color: #535353;
+  width: 80%;
 }
 body main #artist #artist-img-container .artist-description-container .artist-btn-sign {
   display: flex;
@@ -461,12 +462,8 @@ body main #artist #artist-img-container .artist-description-container .artist-bt
   box-sizing: border-box;
 }
 body main #artist #artist-img-container .artist-description-container .artist-btn-sign button:hover {
-  transition: all 0.5s;
-  background-color: #5e4a49;
+  background-color: #bb9995;
   color: #fff;
-}
-body main #artist #artist-img-container .artist-description-container .artist-btn-sign button img {
-  transform: rotate(10deg);
 }
 body main #artist #brand-logo {
   font-size: 18px;
@@ -526,10 +523,19 @@ body main #star .star-intro h1 {
   padding: 5% 15%;
   font-size: 60px;
   font-weight: 100;
+  position: relative;
 }
 body main #star .star-intro h1::before {
   content: "";
-  border-top: solid 1px #ae7872;
+  position: absolute;
+  left: 50%;
+  bottom: -15px;
+  display: inline-block;
+  width: 200px;
+  height: 1px;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  background-color: #e3b6b1;
 }
 body main #star .star-intro p {
   line-height: 27px;
@@ -546,6 +552,11 @@ body main #star .star-intro button {
   color: #5e4a49;
   box-sizing: border-box;
   margin-top: 5%;
+  font-weight: 100;
+}
+body main #star .star-intro button:hover {
+  background-color: #bb9995;
+  color: #fff;
 }
 body main #star .star-characters {
   display: grid;
@@ -589,12 +600,19 @@ body main #makeup .makeup-title button {
   color: #5e4a49;
   box-sizing: border-box;
 }
+body main #makeup .makeup-title button:hover {
+  background-color: #bb9995;
+  color: #fff;
+}
 body main #makeup .offer-images-container {
   display: flex;
   align-items: center;
   padding: 0 3%;
   gap: 2rem;
   justify-content: center;
+}
+body main #makeup .offer-images-container:first-childhover {
+  width: 100%;
 }
 body main #makeup .offer-images-container .offer-card {
   display: flex;
@@ -612,16 +630,6 @@ body main #makeup .offer-images-container .offer-card:nth-child(2)::before {
   border: solid 1px #e3b6b1;
   z-index: -1;
 }
-body main #makeup .offer-images-container .offer-card:nth-child(odd)::beforehover {
-  content: "";
-  position: absolute;
-  top: -20px;
-  right: -20px;
-  width: 100%;
-  height: 100%;
-  border: solid 1px #e3b6b1;
-  z-index: 1;
-}
 body main #makeup .offer-images-container .offer-card .offer-image {
   width: 90%;
 }
@@ -632,6 +640,7 @@ body main #makeup .offer-images-container .offer-card h1 {
   color: #b99692;
   font-size: 5rem;
   font-weight: 100;
+  margin: 0;
 }
 body main #makeup .offer-images-container .offer-card h2 {
   position: absolute;
@@ -640,6 +649,7 @@ body main #makeup .offer-images-container .offer-card h2 {
   color: #b99692;
   font-size: 3rem;
   font-weight: 100;
+  margin: 0;
 }
 body main #makeup101 {
   margin: 0 3%;

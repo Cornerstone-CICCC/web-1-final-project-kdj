@@ -200,6 +200,7 @@
     position: relative;
     z-index: 2;
     width: 90%;
+    justify-content: center;
   }
   body #makeup .offer-images-container .offer-card:nth-child(even)::before {
     width: 84%;
@@ -208,14 +209,12 @@
   body #makeup .offer-images-container .offer-card h1 {
     font-size: 3.5rem !important;
     color: #fff !important;
-    position: absolute;
-    bottom: -15% !important;
+    position: absolute !important;
     left: 20% !important;
   }
   body #makeup .offer-images-container .offer-card h2 {
-    position: absolute;
+    position: absolute !important;
     color: #fff !important;
-    bottom: -15% !important;
     left: 8% !important;
     font-size: 3.5rem !important;
   }
