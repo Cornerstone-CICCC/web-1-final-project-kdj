@@ -32,16 +32,33 @@
     }
 
     #artist {
-      // padding: 5%;
       padding: 5% !important;
+      margin-top: 23rem;
+
       #artist-img-container {
-        display: flex;
-        // flex-direction: column-reverse;
         flex-direction: column-reverse !important;
-        margin-top: 400px;
         text-align: center;
 
         .artist-card {
+          position: relative !important;
+          z-index: 2;
+          // width: 285px;
+          // height: 398px;
+
+          &::before {
+            content: "";
+            position: absolute;
+            // width: 100%;
+            width: 285px;
+            // height: auto;
+            height: 398px;
+            // border: solid 1px black;
+            top: -15px;
+            right: 5px;
+            border: solid 1px #e3b6b1;
+            z-index: -1;
+          }
+
           img {
             justify-content: center;
             width: 90%;
@@ -54,15 +71,6 @@
             position: absolute;
             left: 19px;
           }
-        }
-
-        &::before {
-          // width: 100%;
-          width: 100% !important;
-          // height: auto;
-          height: auto !important;
-          // border: solid 1px black;
-          border: solid 1px black !important;
         }
       }
 
@@ -304,6 +312,7 @@
     }
     #makeup101 {
       margin: 0 !important;
+      padding: 0 !important;
 
       h1 {
         margin: 0 !important;
@@ -317,15 +326,114 @@
 
         aside {
           text-align: center;
+          padding: 5%;
 
-          .makeup-title-container {
-            display: flex;
+          .makeup101-btn {
+            padding-top: 2rem;
+            .makeup-title-container {
+              display: flex;
+              flex-direction: column;
+
+              h2 {
+                font-size: 32px !important;
+                font-weight: 100;
+              }
+
+              img {
+                // text-align: center;
+                margin: 0 auto;
+                justify-content: center;
+                width: 20px !important;
+              }
+
+              p {
+                font-size: 16px;
+                line-height: 25.6px;
+                width: 80% !important;
+                margin: 0 auto;
+              }
+            }
+
+            .makeup-btn-guide {
+              display: flex;
+              justify-content: center;
+
+              p {
+                font-size: 20px;
+              }
+            }
           }
 
-          img {
-            text-align: center;
+          .allclasses {
+            padding: 20px 32px !important;
+            width: 95%;
+            font-weight: 100;
+            margin: 2rem 0;
           }
         }
+
+        .makeupProImage-container {
+          position: relative;
+
+          &::before {
+            content: "" !important;
+            border: solid 1px #fff !important;
+            width: 90% !important;
+            height: 90% !important;
+            position: absolute !important;
+            top: 4% !important;
+            left: 5% !important;
+            z-index: 2 !important;
+          }
+
+          .makeupProImage {
+            width: 100%;
+            // z-index: 2;
+          }
+        }
+      }
+    }
+
+    #diy {
+      padding: 5% !important;
+      h1 {
+        font-size: 32px !important;
+      }
+
+      .video-container {
+        overflow-x: scroll !important;
+        -webkit-overflow-scrolling: touch !important;
+        // justify-content: center;
+        // display: -ms-flexbox;
+
+        img {
+          padding: 0 1rem !important;
+        }
+      }
+
+      button {
+        @include btnSm();
+      }
+    }
+
+    #letstalk {
+      color: #725a58;
+
+      h1 {
+        font-size: 40px;
+        line-height: 48px;
+        font-weight: 100;
+        width: 100%;
+        // margin: 0 auto;
+        text-align: center;
+        letter-spacing: 0.5rem;
+      }
+
+      p {
+        font-size: 16px;
+        width: 90%;
+        text-align: center;
+        margin: 2rem auto;
       }
     }
   }

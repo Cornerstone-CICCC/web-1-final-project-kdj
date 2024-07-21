@@ -17,12 +17,25 @@
   }
   body #artist {
     padding: 5% !important;
+    margin-top: 23rem;
   }
   body #artist #artist-img-container {
-    display: flex;
     flex-direction: column-reverse !important;
-    margin-top: 400px;
     text-align: center;
+  }
+  body #artist #artist-img-container .artist-card {
+    position: relative !important;
+    z-index: 2;
+  }
+  body #artist #artist-img-container .artist-card::before {
+    content: "";
+    position: absolute;
+    width: 285px;
+    height: 398px;
+    top: -15px;
+    right: 5px;
+    border: solid 1px #e3b6b1;
+    z-index: -1;
   }
   body #artist #artist-img-container .artist-card img {
     justify-content: center;
@@ -34,11 +47,6 @@
     text-align: center;
     position: absolute;
     left: 19px;
-  }
-  body #artist #artist-img-container::before {
-    width: 100% !important;
-    height: auto !important;
-    border: solid 1px black !important;
   }
   body #artist .artist-description-container {
     width: 100% !important;
@@ -198,6 +206,7 @@
   }
   body #makeup101 {
     margin: 0 !important;
+    padding: 0 !important;
   }
   body #makeup101 h1 {
     margin: 0 !important;
@@ -209,12 +218,91 @@
   }
   body #makeup101 #makeup101-container aside {
     text-align: center;
+    padding: 5%;
   }
-  body #makeup101 #makeup101-container aside .makeup-title-container {
+  body #makeup101 #makeup101-container aside .makeup101-btn {
+    padding-top: 2rem;
+  }
+  body #makeup101 #makeup101-container aside .makeup101-btn .makeup-title-container {
     display: flex;
+    flex-direction: column;
   }
-  body #makeup101 #makeup101-container aside img {
+  body #makeup101 #makeup101-container aside .makeup101-btn .makeup-title-container h2 {
+    font-size: 32px !important;
+    font-weight: 100;
+  }
+  body #makeup101 #makeup101-container aside .makeup101-btn .makeup-title-container img {
+    margin: 0 auto;
+    justify-content: center;
+    width: 20px !important;
+  }
+  body #makeup101 #makeup101-container aside .makeup101-btn .makeup-title-container p {
+    font-size: 16px;
+    line-height: 25.6px;
+    width: 80% !important;
+    margin: 0 auto;
+  }
+  body #makeup101 #makeup101-container aside .makeup101-btn .makeup-btn-guide {
+    display: flex;
+    justify-content: center;
+  }
+  body #makeup101 #makeup101-container aside .makeup101-btn .makeup-btn-guide p {
+    font-size: 20px;
+  }
+  body #makeup101 #makeup101-container aside .allclasses {
+    padding: 20px 32px !important;
+    width: 95%;
+    font-weight: 100;
+    margin: 2rem 0;
+  }
+  body #makeup101 #makeup101-container .makeupProImage-container {
+    position: relative;
+  }
+  body #makeup101 #makeup101-container .makeupProImage-container::before {
+    content: "" !important;
+    border: solid 1px #fff !important;
+    width: 90% !important;
+    height: 90% !important;
+    position: absolute !important;
+    top: 4% !important;
+    left: 5% !important;
+    z-index: 2 !important;
+  }
+  body #makeup101 #makeup101-container .makeupProImage-container .makeupProImage {
+    width: 100%;
+  }
+  body #diy {
+    padding: 5% !important;
+  }
+  body #diy h1 {
+    font-size: 32px !important;
+  }
+  body #diy .video-container {
+    overflow-x: scroll !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+  body #diy .video-container img {
+    padding: 0 1rem !important;
+  }
+  body #diy button {
+    padding: 20px 32px !important;
+  }
+  body #letstalk {
+    color: #725a58;
+  }
+  body #letstalk h1 {
+    font-size: 40px;
+    line-height: 48px;
+    font-weight: 100;
+    width: 100%;
     text-align: center;
+    letter-spacing: 0.5rem;
+  }
+  body #letstalk p {
+    font-size: 16px;
+    width: 90%;
+    text-align: center;
+    margin: 2rem auto;
   }
 }
 
