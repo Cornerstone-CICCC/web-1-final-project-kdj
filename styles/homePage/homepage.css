@@ -29,14 +29,14 @@
     z-index: 2;
   }
   body #artist #artist-img-container .artist-card::before {
-    content: "";
-    position: absolute;
-    width: 285px;
-    height: 398px;
-    top: -15px;
-    right: 5px;
-    border: solid 1px #e3b6b1;
-    z-index: -1;
+    content: "" !important;
+    position: absolute !important;
+    width: 285px !important;
+    height: 398px !important;
+    top: -15px !important;
+    right: 5px !important;
+    border: solid 1px #e3b6b1 !important;
+    z-index: -1 !important;
   }
   body #artist #artist-img-container .artist-card img {
     justify-content: center;
@@ -87,9 +87,24 @@
     margin-left: 1em;
   }
   body #artist #brand-logo .logos {
-    padding: 10% 0 0 !important;
     gap: 15px !important;
     justify-content: space-around !important;
+  }
+  body #artist #brand-logo .logos .logo-ray1 {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1.5rem 0 0 !important;
+  }
+  body #artist #brand-logo .logos .logo-ray1 .logo {
+    padding: 1rem 0;
+  }
+  body #artist #brand-logo .logos .logo-ray2 {
+    flex-wrap: wrap;
+    width: 79%;
+    margin: 0 auto;
+  }
+  body #artist #brand-logo .logos .logo-ray2 .logo {
+    padding: 1rem 0;
   }
   body #star .star-intro {
     padding: 5% 3%;
@@ -223,16 +238,20 @@
   }
   body #makeup101 #makeup101-container aside .makeup101-btn {
     padding-top: 2rem;
+    flex-direction: column;
   }
   body #makeup101 #makeup101-container aside .makeup101-btn .makeup-title-container {
     display: flex;
     flex-direction: column;
   }
-  body #makeup101 #makeup101-container aside .makeup101-btn .makeup-title-container h2 {
+  body #makeup101 #makeup101-container aside .makeup101-btn .makeup-title-container .icon-title {
+    flex-direction: column !important;
+  }
+  body #makeup101 #makeup101-container aside .makeup101-btn .makeup-title-container .icon-title h2 {
     font-size: 32px !important;
     font-weight: 100;
   }
-  body #makeup101 #makeup101-container aside .makeup101-btn .makeup-title-container img {
+  body #makeup101 #makeup101-container aside .makeup101-btn .makeup-title-container .icon-title img {
     margin: 0 auto;
     justify-content: center;
     width: 20px !important;
@@ -242,13 +261,16 @@
     line-height: 25.6px;
     width: 80% !important;
     margin: 0 auto;
+    text-align: center !important;
   }
   body #makeup101 #makeup101-container aside .makeup101-btn .makeup-btn-guide {
     display: flex;
     justify-content: center;
+    margin: 0 auto !important;
   }
   body #makeup101 #makeup101-container aside .makeup101-btn .makeup-btn-guide p {
     font-size: 20px;
+    display: flex !important;
   }
   body #makeup101 #makeup101-container aside .allclasses {
     padding: 20px 32px !important;
@@ -352,7 +374,7 @@ body main #hero .home-container button:hover {
   color: #000;
 }
 body main #artist {
-  padding: 5% 15%;
+  padding: 5% 15% 0;
 }
 body main #artist #artist-img-container {
   background-color: #f8f6f4;
@@ -372,6 +394,16 @@ body main #artist #artist-img-container .artist-card img {
   width: 285px;
   height: 321px;
   object-fit: cover;
+}
+body main #artist #artist-img-container .artist-card::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  width: 100%;
+  height: 100%;
+  border: solid 2px #e3b6b1;
+  z-index: -1;
 }
 body main #artist #artist-img-container .artist-card .card-text {
   position: absolute;
@@ -463,15 +495,23 @@ body main #artist #brand-logo .our-brand::after {
   margin-left: 1em;
 }
 body main #artist #brand-logo .logos {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 60px;
-  padding: 5% 3% 0;
+  padding: 5% 0;
 }
-body main #artist #brand-logo .logos img {
-  width: 100px;
+body main #artist #brand-logo .logos .logo-ray1 {
+  display: flex;
+  justify-content: space-around;
+  padding: 1.5rem 0;
+  flex-wrap: wrap;
+}
+body main #artist #brand-logo .logos .logo-ray2 {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 1.5rem 0;
+}
+body main #artist #brand-logo .logos .logo {
+  fill: red;
+  padding: 1rem 0;
 }
 body main #star {
   background-color: #fae9e7;
@@ -509,9 +549,9 @@ body main #star .star-intro button {
 }
 body main #star .star-characters {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 10px;
-  justify-content: space-between;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 67px;
+  justify-content: space-evenly;
 }
 body main #star .star-description {
   padding: 5% 25%;
@@ -557,10 +597,10 @@ body main #makeup .offer-images-container {
   justify-content: center;
 }
 body main #makeup .offer-images-container .offer-card {
+  display: flex;
+  flex-direction: row;
   position: relative;
-}
-body main #makeup .offer-images-container .offer-card .offer-image {
-  width: 90%;
+  z-index: 3;
 }
 body main #makeup .offer-images-container .offer-card:nth-child(2)::before {
   content: "";
@@ -569,8 +609,21 @@ body main #makeup .offer-images-container .offer-card:nth-child(2)::before {
   right: -20px;
   width: 100%;
   height: 100%;
-  border: solid 1px red;
+  border: solid 1px #e3b6b1;
   z-index: -1;
+}
+body main #makeup .offer-images-container .offer-card:nth-child(odd)::beforehover {
+  content: "";
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  width: 100%;
+  height: 100%;
+  border: solid 1px #e3b6b1;
+  z-index: 1;
+}
+body main #makeup .offer-images-container .offer-card .offer-image {
+  width: 90%;
 }
 body main #makeup .offer-images-container .offer-card h1 {
   position: absolute;
@@ -602,12 +655,39 @@ body main #makeup101 h1 {
 }
 body main #makeup101 #makeup101-container {
   display: flex;
+  justify-content: space-around;
 }
 body main #makeup101 #makeup101-container aside .makeup101-btn {
   color: #725a58;
   font-family: "Baskervville", serif;
   background-color: rgba(255, 255, 255, 0);
   border: none;
+  display: flex;
+  margin-bottom: 1rem;
+}
+body main #makeup101 #makeup101-container aside .makeup101-btn:hover {
+  background-color: #f5dbd8;
+}
+body main #makeup101 #makeup101-container aside .makeup101-btn .makeup-title-container:nth-child(2) {
+  width: 400px;
+}
+body main #makeup101 #makeup101-container aside .makeup101-btn .makeup-title-container .icon-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+body main #makeup101 #makeup101-container aside .makeup101-btn .makeup-title-container .icon-title h2 {
+  padding-left: 10px;
+}
+body main #makeup101 #makeup101-container aside .makeup101-btn .makeup-title-container p {
+  text-align: start;
+  width: 90%;
+}
+body main #makeup101 #makeup101-container aside .makeup101-btn .makeup-btn-guide {
+  margin: auto 0;
+}
+body main #makeup101 #makeup101-container aside .makeup101-btn .makeup-btn-guide p {
+  display: none;
 }
 body main #makeup101 #makeup101-container aside .makeup-btn {
   width: 90%;
@@ -634,7 +714,8 @@ body main #makeup101 #makeup101-container aside .allclasses {
   box-sizing: border-box;
 }
 body main #makeup101 #makeup101-container aside .allclasses:hover {
-  background-color: yellow;
+  background-color: #bb9995;
+  color: #fff;
 }
 body main #makeup101 #makeup101-container .makeupProImage {
   position: relative;
@@ -659,14 +740,17 @@ body main #diy h1 {
 }
 body main #diy .video-container {
   display: flex;
+  gap: 10px;
   margin-bottom: 50px;
-}
-body main #diy .video-container .video-container {
-  overflow-x: scroll;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 body main #diy .video-container img {
   width: 300px;
   justify-content: space-between;
+}
+body main #diy .video-container img:hover {
+  opacity: 0.9;
 }
 body main #diy button {
   margin-top: 50px;
@@ -678,6 +762,29 @@ body main #diy button {
   background-color: rgba(255, 255, 255, 0);
   color: #725a58;
   box-sizing: border-box;
+}
+body main #diy button:hover {
+  background-color: #bb9995;
+  color: #fff;
+}
+body main #letstalk .letstalk-container {
+  color: #725a58;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  margin: 3rem 0;
+}
+body main #letstalk .letstalk-container h1 {
+  font-size: 80px;
+  margin: 0;
+  letter-spacing: 1rem;
+  margin: 1rem 0;
+}
+body main #letstalk .letstalk-container p {
+  font-size: 18px;
+  width: 60%;
+  margin: 0 auto;
+  line-height: 27px;
 }
 
 .container {

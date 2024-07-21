@@ -56,7 +56,7 @@ body {
     }
 
     #artist {
-      padding: 5% 15%;
+      padding: 5% 15% 0;
 
       #artist-img-container {
         background-color: #f8f6f4;
@@ -84,16 +84,16 @@ body {
             object-fit: cover;
           }
 
-          // &::before {
-          //   content: "";
-          //   position: absolute;
-          //   top: -20px;
-          //   right: -20px;
-          //   width: 100%;
-          //   height: 100%;
-          //   border: solid 2px #e3b6b1;
-          //   z-index: -1;
-          // }
+          &::before {
+            content: "";
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            width: 100%;
+            height: 100%;
+            border: solid 2px #e3b6b1;
+            z-index: -1;
+          }
 
           .card-text {
             position: absolute;
@@ -204,34 +204,31 @@ body {
         }
 
         .logos {
-          width: 100%;
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: space-between;
-          gap: 60px;
-          padding: 5% 3% 0;
-          // filter: overlay-color("#fff");
+          // width: 100%;
+          // display: flex;
+          // flex-wrap: wrap;
+          // justify-content: space-between;
+          // gap: 60px;
+          padding: 5% 0;
 
-          img {
-            width: 100px;
+          .logo-ray1 {
+            display: flex;
+            justify-content: space-around;
+            padding: 1.5rem 0;
+            flex-wrap: wrap;
           }
-          // img {
-          //   width: 100px;
-          //   height: 100px;
 
-          //   -webkit-mask-image: url(../../images/homePage/logo1.png);
-          //   -webkit-mask-size: contain;
-          //   -webkit-mask-repeat: no-repeat;
-          //   -webkit-mask-position: center;
+          .logo-ray2 {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            padding: 1.5rem 0;
+          }
 
-          //   mask-image: url(../../images/homePage/logo1.png);
-          //   mask-size: contain;
-          //   mask-repeat: no-repeat;
-          //   mask-position: center;
-
-          //   /*変更したい色をここに書く*/
-          //   background-color: #535353;
-          // }
+          .logo {
+            fill: red;
+            padding: 1rem 0;
+          }
         }
       }
     }
@@ -271,13 +268,15 @@ body {
 
       .star-characters {
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 10px;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 67px;
         // width: 100%;
-        justify-content: space-between;
+        justify-content: space-evenly;
 
         img {
           // width: 100px;
+          // width: 440px;
+          // height: 430px;
         }
       }
 
@@ -332,12 +331,12 @@ body {
         padding: 0 3%;
         gap: 2rem;
         justify-content: center;
-        .offer-card {
-          position: relative;
 
-          .offer-image {
-            width: 90%;
-          }
+        .offer-card {
+          display: flex;
+          flex-direction: row;
+          position: relative;
+          z-index: 3;
 
           &:nth-child(2)::before {
             content: "";
@@ -346,8 +345,25 @@ body {
             right: -20px;
             width: 100%;
             height: 100%;
-            border: solid 1px red;
+            border: solid 1px #e3b6b1;
             z-index: -1;
+          }
+
+          &:nth-child(odd)::before {
+            &hover {
+              content: "";
+              position: absolute;
+              top: -20px;
+              right: -20px;
+              width: 100%;
+              height: 100%;
+              border: solid 1px #e3b6b1;
+              z-index: 1;
+            }
+          }
+
+          .offer-image {
+            width: 90%;
           }
 
           h1 {
@@ -386,6 +402,7 @@ body {
 
       #makeup101-container {
         display: flex;
+        justify-content: space-around;
 
         aside {
           .makeup101-btn {
@@ -393,8 +410,40 @@ body {
             font-family: "Baskervville", serif;
             background-color: rgba(255, 255, 255, 0);
             border: none;
+            display: flex;
+            margin-bottom: 1rem;
+
+            &:hover {
+              background-color: #f5dbd8;
+            }
 
             .makeup-title-container {
+              &:nth-child(2) {
+                width: 400px;
+              }
+
+              .icon-title {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+
+                h2 {
+                  padding-left: 10px;
+                }
+              }
+
+              p {
+                text-align: start;
+                width: 90%;
+              }
+            }
+
+            .makeup-btn-guide {
+              margin: auto 0;
+
+              p {
+                display: none;
+              }
             }
           }
 
@@ -423,7 +472,8 @@ body {
             @include btn(#725a58);
 
             &:hover {
-              background-color: yellow;
+              background-color: lighten(#b99692, 1%);
+              color: #fff;
             }
           }
         }
@@ -455,22 +505,53 @@ body {
 
       .video-container {
         display: flex;
-        // gap: 10px;
+        gap: 10px;
         margin-bottom: 50px;
-
-        .video-container {
-          overflow-x: scroll;
-        }
+        flex-wrap: wrap;
+        justify-content: center;
 
         img {
           width: 300px;
           justify-content: space-between;
+
+          &:hover {
+            opacity: 0.9;
+          }
         }
       }
 
       button {
         margin-top: 50px;
         @include btn(#725a58);
+
+        &:hover {
+          background-color: lighten(#b99692, 1%);
+          color: #fff;
+        }
+      }
+    }
+
+    #letstalk {
+      .letstalk-container {
+        color: #725a58;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        margin: 3rem 0;
+
+        h1 {
+          font-size: 80px;
+          margin: 0;
+          letter-spacing: 1rem;
+          margin: 1rem 0;
+        }
+
+        p {
+          font-size: 18px;
+          width: 60%;
+          margin: 0 auto;
+          line-height: 27px;
+        }
       }
     }
   }

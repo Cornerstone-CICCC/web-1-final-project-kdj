@@ -46,17 +46,17 @@
           // height: 398px;
 
           &::before {
-            content: "";
-            position: absolute;
+            content: "" !important  ;
+            position: absolute !important ;
             // width: 100%;
-            width: 285px;
+            width: 285px !important ;
             // height: auto;
-            height: 398px;
+            height: 398px !important  ;
             // border: solid 1px black;
-            top: -15px;
-            right: 5px;
-            border: solid 1px #e3b6b1;
-            z-index: -1;
+            top: -15px !important ;
+            right: 5px !important ;
+            border: solid 1px #e3b6b1 !important  ;
+            z-index: -1 !important  ;
           }
 
           img {
@@ -132,41 +132,29 @@
         }
 
         .logos {
-          padding: 10% 0 0 !important;
+          // padding: 10% 0 0 !important;
           gap: 15px !important;
           justify-content: space-around !important;
 
-          // .logo1 {
-          //   width: 101px;
-          // }
+          .logo-ray1 {
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 1.5rem 0 0 !important;
 
-          // .logo2 {
-          //   width: 112px;
-          // }
+            .logo {
+              padding: 1rem 0;
+            }
+          }
 
-          // .logo3 {
-          //   width: 119px !important;
-          // }
+          .logo-ray2 {
+            flex-wrap: wrap;
+            width: 79%;
+            margin: 0 auto;
 
-          // .logo4 {
-          //   width: 110.47px !important;
-          // }
-
-          // .logo5 {
-          //   width: 90.48px !important;
-          // }
-
-          // .logo6 {
-          //   width: 81.09px !important;
-          // }
-
-          // .logo7 {
-          //   width: 118px !important;
-          // }
-
-          // .logo8 {
-          //   width: 86px !important;
-          // }
+            .logo {
+              padding: 1rem 0;
+            }
+          }
         }
       }
     }
@@ -330,20 +318,27 @@
 
           .makeup101-btn {
             padding-top: 2rem;
+            flex-direction: column;
+
             .makeup-title-container {
               display: flex;
               flex-direction: column;
 
-              h2 {
-                font-size: 32px !important;
-                font-weight: 100;
-              }
+              .icon-title {
+                // display: flex;
+                flex-direction: column !important;
 
-              img {
-                // text-align: center;
-                margin: 0 auto;
-                justify-content: center;
-                width: 20px !important;
+                h2 {
+                  font-size: 32px !important;
+                  font-weight: 100;
+                }
+
+                img {
+                  // text-align: center;
+                  margin: 0 auto;
+                  justify-content: center;
+                  width: 20px !important;
+                }
               }
 
               p {
@@ -351,15 +346,17 @@
                 line-height: 25.6px;
                 width: 80% !important;
                 margin: 0 auto;
+                text-align: center !important;
               }
             }
 
             .makeup-btn-guide {
               display: flex;
               justify-content: center;
-
+              margin: 0 auto !important;
               p {
                 font-size: 20px;
+                display: flex !important;
               }
             }
           }
