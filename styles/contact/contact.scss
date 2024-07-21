@@ -172,7 +172,7 @@ body {
   flex-wrap: wrap;
 }
 
-.eventDate label:nth-child(1), .eventTime label, .eventName label, .bridalLocation label, .premiumServices label{
+.eventDate label:nth-child(1), .eventTime label, .eventName label, .bridalLocation label, .premiumServices label,.thanksServices h3{
   font-family: "Baskervville", serif;
   font-size:1.5em;
   display: block;
@@ -411,7 +411,7 @@ body {
   margin-left: 0px;
 }
 
-.submit-btn {
+.submit-btn,.thanksFooter div .submit-button {
     width: 100%;
     padding: 10px;
     border: 1px solid #a65c5c;
@@ -600,9 +600,93 @@ margin-bottom: 20px;
   display: none;
 }
 
-.thankfulMessage h2{
+.thankfulMessage h2, .thanksContainer h2{
   font-family: "Baskervville", serif;
   color:#725A58;
   font-size: 2.5em;
   font-weight:lighter;
+}
+
+.thankfulMessage p, .thanksContainer p{
+  font-family: "Baskervville", serif;
+}
+
+.thanksContainer{
+  border: 2px solid #725A58;
+}
+
+.typhoon-list li::before {
+  content: '-';
+  position: absolute;
+  left: 0;
+  color: #555;
+}
+
+.thanksServices h3{
+  font-weight: lighter;
+}
+
+.thanksServices {
+  display: flex;
+  justify-content: space-between;
+}
+.thanksServices div {
+  flex: 1;
+  margin: 0 10px;
+}
+
+.thanksFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.thanksFooter .contacticons {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Alinea el contenido al principio del contenedor */
+  margin: 0;
+}
+
+.thanksFooter .contacticons img {
+  margin: 0; /* Elimina cualquier margen del logo */
+  padding: 0; /* Elimina cualquier padding del logo */
+  display: block; /* Asegura que el logo se trate como un bloque */
+}
+
+.thanksFooter .social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Espacio entre los iconos de WhatsApp e Instagram */
+}
+
+.thanksFooter .social-icons a {
+  display: flex;
+  align-items: center;
+  gap: 5px; /* Espacio entre el icono y el texto */
+  text-align: center;
+}
+
+.thanksFooter div {
+  flex: 1;
+  margin: 0 10px;
+  text-align: center;
+}
+
+.thanksFooter div .submit-button {
+  display: block;
+  width: 50%;
+  height: auto; /* Ajusta la altura automáticamente */
+  margin-left: auto;
+  margin-top: 90px;
+  margin-right: 0;
+}
+
+.contacticons .smallLogo {
+  width: 25%;
+  height: auto; /* Mantiene la proporción del logo */
+  margin-right: 50px; /* Ajusta el espaciado del logo a la derecha */
+  margin-bottom: 0; /* Elimina el espacio debajo del logo */
 }
