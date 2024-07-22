@@ -32,16 +32,33 @@
     }
 
     #artist {
-      // padding: 5%;
       padding: 5% !important;
+      margin-top: 23rem;
+
       #artist-img-container {
-        display: flex;
-        // flex-direction: column-reverse;
         flex-direction: column-reverse !important;
-        margin-top: 400px;
         text-align: center;
 
         .artist-card {
+          position: relative !important;
+          z-index: 2;
+          // width: 285px;
+          // height: 398px;
+
+          &::before {
+            content: "" !important  ;
+            position: absolute !important ;
+            // width: 100%;
+            width: 285px !important ;
+            // height: auto;
+            height: 398px !important  ;
+            // border: solid 1px black;
+            top: -15px !important ;
+            right: 5px !important ;
+            border: solid 1px #e3b6b1 !important  ;
+            z-index: -1 !important  ;
+          }
+
           img {
             justify-content: center;
             width: 90%;
@@ -54,15 +71,6 @@
             position: absolute;
             left: 19px;
           }
-        }
-
-        &::before {
-          // width: 100%;
-          width: 100% !important;
-          // height: auto;
-          height: auto !important;
-          // border: solid 1px black;
-          border: solid 1px black !important;
         }
       }
 
@@ -110,9 +118,6 @@
 
           &::before,
           &::after {
-            // color: #5e4a49;
-            // border-top: 1px solid;
-            // content: "";
             width: 5em !important;
             margin: 0 auto;
           }
@@ -127,41 +132,29 @@
         }
 
         .logos {
-          padding: 10% 0 0 !important;
+          // padding: 10% 0 0 !important;
           gap: 15px !important;
           justify-content: space-around !important;
 
-          // .logo1 {
-          //   width: 101px;
-          // }
+          .logo-ray1 {
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 1.5rem 0 0 !important;
 
-          // .logo2 {
-          //   width: 112px;
-          // }
+            .logo {
+              padding: 1rem 0;
+            }
+          }
 
-          // .logo3 {
-          //   width: 119px !important;
-          // }
+          .logo-ray2 {
+            flex-wrap: wrap;
+            width: 79%;
+            margin: 0 auto;
 
-          // .logo4 {
-          //   width: 110.47px !important;
-          // }
-
-          // .logo5 {
-          //   width: 90.48px !important;
-          // }
-
-          // .logo6 {
-          //   width: 81.09px !important;
-          // }
-
-          // .logo7 {
-          //   width: 118px !important;
-          // }
-
-          // .logo8 {
-          //   width: 86px !important;
-          // }
+            .logo {
+              padding: 1rem 0;
+            }
+          }
         }
       }
     }
@@ -275,37 +268,172 @@
       }
 
       .offer-images-container {
+        flex-direction: column;
+
         .offer-card {
           position: relative;
           z-index: 2;
+          width: 90%;
+          justify-content: center;
 
-          // .offer-image {
-          &:nth-child(even) {
+          &:nth-child(even)::before {
             width: 84%;
+            border: none !important;
           }
-          // }
+
+          h1 {
+            font-size: 3.5rem !important;
+            color: #fff !important;
+            position: absolute !important;
+            // bottom: -15% !important;
+            left: 20% !important;
+          }
 
           h2 {
-            position: absolute;
-            content: "Wedding";
-            color: #fff;
-            bottom: 0;
-            left: 35%;
-            // z-index: -1;
+            position: absolute !important;
+            color: #fff !important;
+            // bottom: -2% !important;
+            left: 8% !important;
+            font-size: 3.5rem !important;
           }
         }
       }
     }
     #makeup101 {
       margin: 0 !important;
+      padding: 0 !important;
 
       h1 {
         margin: 0 !important;
+        font-size: 40px !important;
+        padding: 10% 0;
       }
 
       #makeup101-container {
         // flex-direction: column;
         flex-direction: column !important;
+
+        aside {
+          text-align: center;
+          padding: 5%;
+
+          .makeup101-btn {
+            padding-top: 2rem;
+            flex-direction: column;
+
+            .makeup-title-container {
+              display: flex;
+              flex-direction: column;
+
+              .icon-title {
+                // display: flex;
+                flex-direction: column !important;
+
+                h2 {
+                  font-size: 32px !important;
+                  font-weight: 100;
+                }
+
+                img {
+                  // text-align: center;
+                  margin: 0 auto;
+                  justify-content: center;
+                  width: 20px !important;
+                }
+              }
+
+              p {
+                font-size: 16px;
+                line-height: 25.6px;
+                width: 80% !important;
+                margin: 0 auto;
+                text-align: center !important;
+              }
+            }
+
+            .makeup-btn-guide {
+              display: flex;
+              justify-content: center;
+              margin: 0 auto !important;
+              p {
+                font-size: 20px;
+                display: flex !important;
+              }
+            }
+          }
+
+          .allclasses {
+            padding: 20px 32px !important;
+            width: 95%;
+            font-weight: 100;
+            margin: 2rem 0;
+            // text-align: center !important;
+            justify-content: center !important;
+          }
+        }
+
+        .makeupProImage-container {
+          position: relative;
+
+          &::before {
+            content: "" !important;
+            border: solid 1px #fff !important;
+            width: 90% !important;
+            height: 90% !important;
+            position: absolute !important;
+            top: 4% !important;
+            left: 5% !important;
+            z-index: 2 !important;
+          }
+
+          .makeupProImage {
+            width: 100%;
+            // z-index: 2;
+          }
+        }
+      }
+    }
+
+    #diy {
+      padding: 5% !important;
+      h1 {
+        font-size: 32px !important;
+      }
+
+      .video-container {
+        overflow-x: scroll !important;
+        -webkit-overflow-scrolling: touch !important;
+        flex-wrap: nowrap !important;
+        justify-content: center !important;
+
+        img {
+          padding: 0 1rem !important;
+        }
+      }
+
+      button {
+        @include btnSm();
+      }
+    }
+
+    #letstalk {
+      color: #725a58;
+
+      h1 {
+        font-size: 40px !important;
+        line-height: 48px !important;
+        font-weight: 100 !important;
+        width: 100% !important;
+        // margin: 0 auto;
+        text-align: center;
+        letter-spacing: 0.5rem !important;
+      }
+
+      p {
+        font-size: 16px !important;
+        width: 90% !important;
+        text-align: center !important;
+        margin: 2rem auto !important;
       }
     }
   }
