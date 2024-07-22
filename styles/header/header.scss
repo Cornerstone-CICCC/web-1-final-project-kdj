@@ -1,43 +1,150 @@
 body {
   margin: 0;
 }
-html {
+html{
+  
   box-sizing: border-box;
 
   *,
   *::before,
-  *::after {
-    box-sizing: inherit;
+  *::after{
+      box-sizing: inherit;
   }
 }
 
 header {
   font-family: "Baskervville", serif;
   background-color: #f8f6f4;
+  
+ 
+  
 }
 
-.container {
+
+
+.ul_header_mobile{
+  display: none;
+}
+
+.container{
   display: flex;
   justify-content: space-around;
   align-items: center;
+  
+  
+}
+#button-ul{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
 }
 
-.ul_header {
+#menu li{
+  font-size: 1,5rem;
+   padding: 3%;
+  // font-size: 0,5em;
+  list-style: none;
+}
+
+
+.ul_header_web{
   display: flex;
   align-items: center;
+  justify-content: space-around;
   list-style: none;
   text-decoration-line: none;
-  width: 1, 440px;
+  width: 1000%;
   height: 196px;
-  padding: 32px 0px 32px 0px;
-  gap: 80px;
-  opacity: 0px;
+  // padding: 32px 0px 32px 0px;
+  
+  
+
+
 }
 
-.ul_header a {
+.ul_header_web a{
   text-decoration: none;
-  color: #725a58;
+  color: #725A58;
   font-weight: 400;
   size: 40px;
   line-height: 30px;
+}
+
+@media screen and (max-width: 768px) {
+
+  .ul_header_mobile{
+      display: flex;
+      list-style: none;
+      visibility: visible;
+      justify-content:space-between;
+      align-items: center;
+      width: 100%;
+      
+      
+      
+  }
+
+  .ul_header_web{
+      display: none;
+  }
+
+  .ul_header_web{
+      justify-items: center ;
+      flex-direction: row;
+      background-color: #f8f6f4;
+      justify-content: center;
+      align-items: center;
+      position: fixed;
+      
+      height: 100%;
+      width: 50%;
+      z-index: 1;
+      bottom: 100px;
+     
+      font-size: 20px;
+      padding-top: 20%;
+      
+     
+  }
+  .ul_header_mobile.active{
+      display: flex;
+      flex-direction: column;
+
+  }
+
+  
+
+  .ul_header_web.active{
+      display: flex;
+      flex-direction: column;
+      #logo-imge{
+          display: none;
+          
+      }
+      
+  }
+
+  #button-ul{
+    display: flex;
+    flex-direction: column;
+   align-items: center;
+    width: 100%;
+    font-size: 1,5rem;
+    font-weight: bold;
+  }
+
+  #button-ul li{
+    padding-top: 20%;
+  }
+
+
+  
+
+  
+
+
+
+
+
+  
 }
