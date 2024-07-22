@@ -1,0 +1,45 @@
+body {
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+html *,
+html *::before,
+html *::after {
+  box-sizing: inherit;
+}
+
+header {
+  font-family: "Baskervville", serif;
+  background-color: #f8f6f4;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.ul_header {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  text-decoration-line: none;
+  width: 1, 440px;
+  height: 196px;
+  padding: 32px 0px 32px 0px;
+  gap: 80px;
+  opacity: 0px;
+}
+
+.ul_header a {
+  text-decoration: none;
+  color: #725a58;
+  font-weight: 400;
+  size: 40px;
+  line-height: 30px;
+}
+
+/*# sourceMappingURL=header.css.map */
