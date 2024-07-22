@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,167 +8,169 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <title>Document</title>
 </head>
+
 <body>
     <div id="header"></div>
     <div class="contactContainer">
-    <div class="contactTitle">
-        <h1>CONTACT</h1>
-        <hr>
-        <p>Get a quote and book a free consultation for your</p>
-        <p>special day or our academy services</p>
-      </div> 
-      <div class="contacticons">
-        <a href="#"
-          ><img src="../../images/contact/phone.png" alt="Phone Icon"
-        />+1 0000000000</a>
-        <a href="#"
-          ><img src="../../images/contact/whatsapp.png" alt="Whatsapp Icon"
-        />+1 0000000000</a>
-        <a href="#"
-          ><img src="../../images/contact/instagram.png" alt="Instagram Icon"
-        />carlabeatrizs</a>
-    </div>
-    <div class="contactFormContainer">
-        <div class="contactTabs">
-            <button class="contactTab active">Services</button>
-            <button class="contactTab">Classes</button>
+        <div class="contactTitle">
+            <h1>CONTACT</h1>
+            <hr>
+            <p>Get a quote and book a free consultation for your</p>
+            <p>special day or our academy services</p>
         </div>
-        <form class="contact-form">
-            <div class="event">
-                <label for="eventType">Event Type</label>
-                <div id="eventSelector" class="radio-group">
-                    <button type="button" class="eventButton" id="button1" onclick="toggleSelect(this)">Wedding<span class="circle"></span></button>
-        <button type="button" class="eventButton" id="button2" onclick="toggleSelect(this)">Party<span class="circle"></span></button>
-        <button type="button" class="eventButton" id="button3" onclick="toggleSelect(this)">Photoshoot<span class="circle"></span></button>
-                </div>
-            </div>
-            <div id="wedding">
-            <div class="dateTime">
-            <div class="eventDate">
-                <label for="dateLabel">Event Date</label>
-                <div class="datePicker">
-                <input type="text" id="date" name="event-date" placeholder="Select date" readonly>
-                <img src="../../images/contact/calendar.png" alt="Calendar Icon" class="calendar">
-            </div>
-            <div class="notDecided">
-                    <input type="checkbox" name="date-not-decided"> 
-                    <label>Not decided</label>
-            </div>
-            </div>
-            <div class="eventTime">
-                <label for="timeLabel">Event Time</label>
-                <select id="eventSelect" name="eventSelect">
-                    <option value="full-day">Full day</option>
-                    <option value="morning">Morning</option>
-                    <option value="afternoon">Afternoon</option>
-                    <option value="evening">Evening</option>
-                </select>
-                <div class="notDecided">
-                    <input type="checkbox" name="date-not-decided"> 
-                    <label>Not decided</label>
-            </div>
-            </div>
+        <div class="contacticons">
+            <a href="#"><img src="../../images/contact/phone.png" alt="Phone Icon" />+1 0000000000</a>
+            <a href="#"><img src="../../images/contact/whatsapp.png" alt="Whatsapp Icon" />+1 0000000000</a>
+            <a href="#"><img src="../../images/contact/instagram.png" alt="Instagram Icon" />carlabeatrizs</a>
         </div>
-            <div class="eventName">
-                <label for="nameLabel">Name</label>
-                <input type="text" id="name" name="name" placeholder="Your name">
+        <div class="contactFormContainer">
+            <div class="contactTabs">
+                <button class="contactTab active">Services</button>
+                <button class="contactTab">Classes</button>
             </div>
-            <fieldset class="group">
-                <legend>Contact</legend>
-                    <div id="marginme">
-                        <div>
-                    <input type="radio" id="call" name="contactMethod" value="call">
-                    <label for="call">Call</label>
+            <form class="contact-form">
+                <div class="event">
+                    <label for="eventType">Event Type</label>
+                    <div id="eventSelector" class="radio-group">
+                        <button type="button" class="eventButton" id="button1" onclick="toggleSelect(this)">Wedding<span
+                                class="circle"></span></button>
+                        <button type="button" class="eventButton" id="button2" onclick="toggleSelect(this)">Party<span
+                                class="circle"></span></button>
+                        <button type="button" class="eventButton" id="button3"
+                            onclick="toggleSelect(this)">Photoshoot<span class="circle"></span></button>
                     </div>
-                    <div class="contactInfoInput" id="callInput">
-                        <div class="phone-wrapper">
-                            <div class="country-code-wrapper">
-                                <select id="countryCode" name="countryCode">
-                                    <option value="+1">(+1)</option>
-                                    <option value="+57">(+57)</option>
-                                    <option value="+34">(+34)</option>
-                                    <option value="+81">(+81)</option>
-                                    <option value="+506">(+506)</option>
-                                </select>
+                </div>
+                <div id="wedding">
+                    <div class="dateTime">
+                        <div class="eventDate">
+                            <label for="dateLabel">Event Date</label>
+                            <div class="datePicker">
+                                <input type="text" id="date" name="event-date" placeholder="Select date" readonly>
+                                <img src="../../images/contact/calendar.png" alt="Calendar Icon" class="calendar">
                             </div>
-                            <input type="tel" id="phoneNumber" name="phoneNumber"  maxlength="12"  placeholder="Your phone number" required>
+                            <div class="notDecided">
+                                <input type="checkbox" name="date-not-decided">
+                                <label>Not decided</label>
+                            </div>
+                        </div>
+                        <div class="eventTime">
+                            <label for="timeLabel">Event Time</label>
+                            <select id="eventSelect" name="eventSelect">
+                                <option value="full-day">Full day</option>
+                                <option value="morning">Morning</option>
+                                <option value="afternoon">Afternoon</option>
+                                <option value="evening">Evening</option>
+                            </select>
+                            <div class="notDecided">
+                                <input type="checkbox" name="date-not-decided">
+                                <label>Not decided</label>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div id="marginme">
-                <div>
-                    <input type="radio" id="whatsapp" name="contactMethod" value="whatsapp">
-                    <label for="whatsapp">Whatsapp</label>
+                    <div class="eventName">
+                        <label for="nameLabel">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your name">
                     </div>
-                    <div class="contactInfoInput" id="whatsappInput">
-                        <div class="phone-wrapper">
-                            <div class="country-code-wrapper">
-                                <select id="countryCode" name="countryCode">
-                                    <option value="+1">(+1)</option>
-                                    <option value="+57">(+57)</option>
-                                    <option value="+34">(+34)</option>
-                                    <option value="+81">(+81)</option>
-                                    <option value="+506">(+506)</option>
-                                </select>
+                    <fieldset class="group">
+                        <legend>Contact</legend>
+                        <div id="marginme">
+                            <div>
+                                <input type="radio" id="call" name="contactMethod" value="call">
+                                <label for="call">Call</label>
                             </div>
-                        <input type="tel" id="whatsappNumber"  maxlength="12" name="whatsappNumber" placeholder="Your Whatsapp number">
-                    </div>
-                </div>
-                </div>
-                <div id="marginme">
-                <div>
-                    <input type="radio" id="sms" name="contactMethod" value="sms">
-                    <label for="sms">SMS</label>
-                    </div>
-                    <div class="contactInfoInput" id="smsInput">
-                        <div class="phone-wrapper">
-                            <div class="country-code-wrapper">
-                                <select id="countryCode" name="countryCode">
-                                    <option value="+1">(+1)</option>
-                                    <option value="+57">(+57)</option>
-                                    <option value="+34">(+34)</option>
-                                    <option value="+81">(+81)</option>
-                                    <option value="+506">(+506)</option>
-                                </select>
+                            <div class="contactInfoInput" id="callInput">
+                                <div class="phone-wrapper">
+                                    <div class="country-code-wrapper">
+                                        <select id="countryCode" name="countryCode">
+                                            <option value="+1">(+1)</option>
+                                            <option value="+57">(+57)</option>
+                                            <option value="+34">(+34)</option>
+                                            <option value="+81">(+81)</option>
+                                            <option value="+506">(+506)</option>
+                                        </select>
+                                    </div>
+                                    <input type="tel" id="phoneNumber" name="phoneNumber" maxlength="12"
+                                        placeholder="Your phone number" required>
+                                </div>
                             </div>
-                        <input type="tel" id="smsNumber" name="smsNumber"  maxlength="12"  placeholder="Your SMS number">
-                    </div>
-                </div>
-                </div>
-                <div id="marginme">
-                <div>
-                    <input type="radio" id="email" name="contactMethod" value="email">
-                    <label for="email">Email</label>
-                </div>
-                    <div class="contactInfoInput" id="emailInput">
-                        <input type="email" id="emailAddress" name="emailAddress" placeholder="Your email address">
-                    </div>
-                </div>
-            </fieldset>            
-            <fieldset class="groupCall">
-                <legend id="timeCallQuestion">When do you want us to call?</legend>
-                <div>
-                    <input type="radio" id="Callanytime" name="call_time" value="anytime" checked>
-                    <label for="anytime">I don't mind</label>
-                </div>
-                <div>
-                    <input type="radio" id="Callmorning" name="call_time" value="morning">
-                    <label for="morning">Morning</label>
-                </div>
-                <div>
-                    <input type="radio" id="Callafternoon" name="call_time" value="afternoon">
-                    <label for="afternoon">Afternoon</label>
-                </div>
-                <div>
-                    <input type="radio" id="Callevening" name="call_time" value="evening">
-                    <label for="evening">Evening</label>
-                </div>
-            </fieldset>
-            <button type="submit" class="submit-btn">Next</button>
-        </form>
-    </div>  
-    </div>   
-</div>
+                        </div>
+                        <div id="marginme">
+                            <div>
+                                <input type="radio" id="whatsapp" name="contactMethod" value="whatsapp">
+                                <label for="whatsapp">Whatsapp</label>
+                            </div>
+                            <div class="contactInfoInput" id="whatsappInput">
+                                <div class="phone-wrapper">
+                                    <div class="country-code-wrapper">
+                                        <select id="countryCode" name="countryCode">
+                                            <option value="+1">(+1)</option>
+                                            <option value="+57">(+57)</option>
+                                            <option value="+34">(+34)</option>
+                                            <option value="+81">(+81)</option>
+                                            <option value="+506">(+506)</option>
+                                        </select>
+                                    </div>
+                                    <input type="tel" id="whatsappNumber" maxlength="12" name="whatsappNumber"
+                                        placeholder="Your Whatsapp number">
+                                </div>
+                            </div>
+                        </div>
+                        <div id="marginme">
+                            <div>
+                                <input type="radio" id="sms" name="contactMethod" value="sms">
+                                <label for="sms">SMS</label>
+                            </div>
+                            <div class="contactInfoInput" id="smsInput">
+                                <div class="phone-wrapper">
+                                    <div class="country-code-wrapper">
+                                        <select id="countryCode" name="countryCode">
+                                            <option value="+1">(+1)</option>
+                                            <option value="+57">(+57)</option>
+                                            <option value="+34">(+34)</option>
+                                            <option value="+81">(+81)</option>
+                                            <option value="+506">(+506)</option>
+                                        </select>
+                                    </div>
+                                    <input type="tel" id="smsNumber" name="smsNumber" maxlength="12"
+                                        placeholder="Your SMS number">
+                                </div>
+                            </div>
+                        </div>
+                        <div id="marginme">
+                            <div>
+                                <input type="radio" id="email" name="contactMethod" value="email">
+                                <label for="email">Email</label>
+                            </div>
+                            <div class="contactInfoInput" id="emailInput">
+                                <input type="email" id="emailAddress" name="emailAddress"
+                                    placeholder="Your email address">
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset class="groupCall">
+                        <legend id="timeCallQuestion">When do you want us to call?</legend>
+                        <div>
+                            <input type="radio" id="Callanytime" name="call_time" value="anytime" checked>
+                            <label for="anytime">I don't mind</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="Callmorning" name="call_time" value="morning">
+                            <label for="morning">Morning</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="Callafternoon" name="call_time" value="afternoon">
+                            <label for="afternoon">Afternoon</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="Callevening" name="call_time" value="evening">
+                            <label for="evening">Evening</label>
+                        </div>
+                    </fieldset>
+                    <button type="submit" class="submit-btn">Next</button>
+            </form>
+        </div>
+    </div>
+    </div>
     <div class="bridalFormContainer">
         <div class="bridalTabs">
             <button class="bridalTab active">Services</button>
@@ -177,141 +180,147 @@
             <div class="makehair">
                 <label for="bridalServices">Bridal Services</label>
                 <div id="bridalSelector" class="radio-group">
-                    <button type="button" class="bridalButton" id="bridalButton1">Makeup<span class="circle"></span></button>
-        <button type="button" class="bridalButton" id="bridalButton2">Hairstyle<span class="circle"></span></button>
+                    <button type="button" class="bridalButton" id="bridalButton1">Makeup<span
+                            class="circle"></span></button>
+                    <button type="button" class="bridalButton" id="bridalButton2">Hairstyle<span
+                            class="circle"></span></button>
                 </div>
             </div>
             <div id="wedding">
-            <div class="dateTime">
-            <div class="eventDate">
-                <label for="dateLabel">Event Date</label>
-                <div class="datePicker">
-                <input type="text" id="date" name="event-date" placeholder="Select date" readonly>
-                <img src="../../images/contact/calendar.png" alt="Calendar Icon" class="calendar">
-            </div>
-            <div class="notDecided">
-                    <input type="checkbox" name="date-not-decided"> 
-                    <label>Not decided</label>
-            </div>
-            </div>
-            <div class="eventTime">
-                <label for="timeLabel">Event Time</label>
-                <select id="eventSelect" name="eventSelect">
-                    <option value="full-day">Full day</option>
-                    <option value="morning">Morning</option>
-                    <option value="afternoon">Afternoon</option>
-                    <option value="evening">Evening</option>
-                </select>
-                <div class="notDecided">
-                    <input type="checkbox" name="date-not-decided"> 
-                    <label>Not decided</label>
-            </div>
-            </div>
-        </div>
-            <div class="eventName">
-                <label for="nameLabel">Name</label>
-                <input type="text" id="name" name="name" placeholder="Your name">
-            </div>
-            <fieldset class="group">
-                <legend>Contact</legend>
-                    <div id="marginme">
-                        <div>
-                    <input type="radio" id="call" name="contactMethod" value="call">
-                    <label for="call">Call</label>
+                <div class="dateTime">
+                    <div class="eventDate">
+                        <label for="dateLabel">Event Date</label>
+                        <div class="datePicker">
+                            <input type="text" id="date" name="event-date" placeholder="Select date" readonly>
+                            <img src="../../images/contact/calendar.png" alt="Calendar Icon" class="calendar">
+                        </div>
+                        <div class="notDecided">
+                            <input type="checkbox" name="date-not-decided">
+                            <label>Not decided</label>
+                        </div>
                     </div>
-                    <div class="contactInfoInput" id="callInput">
-                        <div class="phone-wrapper">
-                            <div class="country-code-wrapper">
-                                <select id="countryCode" name="countryCode">
-                                    <option value="+1">(+1)</option>
-                                    <option value="+57">(+57)</option>
-                                    <option value="+34">(+34)</option>
-                                    <option value="+81">(+81)</option>
-                                    <option value="+506">(+506)</option>
-                                </select>
-                            </div>
-                            <input type="tel" id="phoneNumber" name="phoneNumber"  maxlength="12"  placeholder="Your phone number" required>
+                    <div class="eventTime">
+                        <label for="timeLabel">Event Time</label>
+                        <select id="eventSelect" name="eventSelect">
+                            <option value="full-day">Full day</option>
+                            <option value="morning">Morning</option>
+                            <option value="afternoon">Afternoon</option>
+                            <option value="evening">Evening</option>
+                        </select>
+                        <div class="notDecided">
+                            <input type="checkbox" name="date-not-decided">
+                            <label>Not decided</label>
                         </div>
                     </div>
                 </div>
-                <div id="marginme">
-                <div>
-                    <input type="radio" id="whatsapp" name="contactMethod" value="whatsapp">
-                    <label for="whatsapp">Whatsapp</label>
-                    </div>
-                    <div class="contactInfoInput" id="whatsappInput">
-                        <div class="phone-wrapper">
-                            <div class="country-code-wrapper">
-                                <select id="countryCode" name="countryCode">
-                                    <option value="+1">(+1)</option>
-                                    <option value="+57">(+57)</option>
-                                    <option value="+34">(+34)</option>
-                                    <option value="+81">(+81)</option>
-                                    <option value="+506">(+506)</option>
-                                </select>
+                <div class="eventName">
+                    <label for="nameLabel">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your name">
+                </div>
+                <fieldset class="group">
+                    <legend>Contact</legend>
+                    <div id="marginme">
+                        <div>
+                            <input type="radio" id="call" name="contactMethod" value="call">
+                            <label for="call">Call</label>
+                        </div>
+                        <div class="contactInfoInput" id="callInput">
+                            <div class="phone-wrapper">
+                                <div class="country-code-wrapper">
+                                    <select id="countryCode" name="countryCode">
+                                        <option value="+1">(+1)</option>
+                                        <option value="+57">(+57)</option>
+                                        <option value="+34">(+34)</option>
+                                        <option value="+81">(+81)</option>
+                                        <option value="+506">(+506)</option>
+                                    </select>
+                                </div>
+                                <input type="tel" id="phoneNumber" name="phoneNumber" maxlength="12"
+                                    placeholder="Your phone number" required>
                             </div>
-                        <input type="tel" id="whatsappNumber"  maxlength="12" name="whatsappNumber" placeholder="Your Whatsapp number">
+                        </div>
                     </div>
-                </div>
-                </div>
-                <div id="marginme">
-                <div>
-                    <input type="radio" id="sms" name="contactMethod" value="sms">
-                    <label for="sms">SMS</label>
-                    </div>
-                    <div class="contactInfoInput" id="smsInput">
-                        <div class="phone-wrapper">
-                            <div class="country-code-wrapper">
-                                <select id="countryCode" name="countryCode">
-                                    <option value="+1">(+1)</option>
-                                    <option value="+57">(+57)</option>
-                                    <option value="+34">(+34)</option>
-                                    <option value="+81">(+81)</option>
-                                    <option value="+506">(+506)</option>
-                                </select>
+                    <div id="marginme">
+                        <div>
+                            <input type="radio" id="whatsapp" name="contactMethod" value="whatsapp">
+                            <label for="whatsapp">Whatsapp</label>
+                        </div>
+                        <div class="contactInfoInput" id="whatsappInput">
+                            <div class="phone-wrapper">
+                                <div class="country-code-wrapper">
+                                    <select id="countryCode" name="countryCode">
+                                        <option value="+1">(+1)</option>
+                                        <option value="+57">(+57)</option>
+                                        <option value="+34">(+34)</option>
+                                        <option value="+81">(+81)</option>
+                                        <option value="+506">(+506)</option>
+                                    </select>
+                                </div>
+                                <input type="tel" id="whatsappNumber" maxlength="12" name="whatsappNumber"
+                                    placeholder="Your Whatsapp number">
                             </div>
-                        <input type="tel" id="smsNumber" name="smsNumber"  maxlength="12"  placeholder="Your SMS number">
+                        </div>
                     </div>
-                </div>
-                </div>
-                <div id="marginme">
-                <div>
-                    <input type="radio" id="email" name="contactMethod" value="email">
-                    <label for="email">Email</label>
-                </div>
-                    <div class="contactInfoInput" id="emailInput">
-                        <input type="email" id="emailAddress" name="emailAddress" placeholder="Your email address">
+                    <div id="marginme">
+                        <div>
+                            <input type="radio" id="sms" name="contactMethod" value="sms">
+                            <label for="sms">SMS</label>
+                        </div>
+                        <div class="contactInfoInput" id="smsInput">
+                            <div class="phone-wrapper">
+                                <div class="country-code-wrapper">
+                                    <select id="countryCode" name="countryCode">
+                                        <option value="+1">(+1)</option>
+                                        <option value="+57">(+57)</option>
+                                        <option value="+34">(+34)</option>
+                                        <option value="+81">(+81)</option>
+                                        <option value="+506">(+506)</option>
+                                    </select>
+                                </div>
+                                <input type="tel" id="smsNumber" name="smsNumber" maxlength="12"
+                                    placeholder="Your SMS number">
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </fieldset>            
-            <fieldset class="groupCall">
-                <legend id="timeCallQuestion">When do you want us to call?</legend>
-                <div>
-                    <input type="radio" id="Callanytime" name="call_time" value="anytime" checked>
-                    <label for="anytime">I don't mind</label>
-                </div>
-                <div>
-                    <input type="radio" id="Callmorning" name="call_time" value="morning">
-                    <label for="morning">Morning</label>
-                </div>
-                <div>
-                    <input type="radio" id="Callafternoon" name="call_time" value="afternoon">
-                    <label for="afternoon">Afternoon</label>
-                </div>
-                <div>
-                    <input type="radio" id="Callevening" name="call_time" value="evening">
-                    <label for="evening">Evening</label>
-                </div>
-            </fieldset>
-            <button type="submit" class="submit-btn">Next</button>
+                    <div id="marginme">
+                        <div>
+                            <input type="radio" id="email" name="contactMethod" value="email">
+                            <label for="email">Email</label>
+                        </div>
+                        <div class="contactInfoInput" id="emailInput">
+                            <input type="email" id="emailAddress" name="emailAddress" placeholder="Your email address">
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset class="groupCall">
+                    <legend id="timeCallQuestion">When do you want us to call?</legend>
+                    <div>
+                        <input type="radio" id="Callanytime" name="call_time" value="anytime" checked>
+                        <label for="anytime">I don't mind</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="Callmorning" name="call_time" value="morning">
+                        <label for="morning">Morning</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="Callafternoon" name="call_time" value="afternoon">
+                        <label for="afternoon">Afternoon</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="Callevening" name="call_time" value="evening">
+                        <label for="evening">Evening</label>
+                    </div>
+                </fieldset>
+                <button type="submit" class="submit-btn">Next</button>
         </form>
-    </div>  
-    </div>   
-</div>
-    <div id="footer"></div> 
+    </div>
+    </div>
+    </div>
+    <div id="footer"></div>
     <script src="./components/header/header.js"></script>
     <script src="./components/footer/footer.js"></script>
     <script src="contact.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 </body>
+
 </html>
