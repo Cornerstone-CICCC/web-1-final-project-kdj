@@ -165,7 +165,7 @@
                     <label for="evening">Evening</label>
                 </div>
             </fieldset>
-            <button type="submit" class="submit-btn">Next</button>
+            <button type="submit" class="submit-btn" id="next">Next</button>
         </form>
     </div>  
     </div>   
@@ -238,14 +238,14 @@
             <div class="serviceRow">
                 <div class="serviceName">Groom</div>
                 <div class="serviceControls">
-                    <button class="decrement">-</button>
-                    <input type="text" value="0">
-                    <button class="increment">+</button>
+                    <button onclick="updateTotal('total1', 1)" class="decrement">-</button>
+                    <span id="total1">0</span>
+                    <button onclick="updateTotal('total1', -1)" class="increment">+</button>                    
                 </div>
                 <div class="separator"></div>
                 <div class="serviceOptions2">
                     <label>
-                        <input type="checkbox">
+                        <input type="checkbox" class="groomCheckbox" value="Makeup" data-category="Groom">
                         Makeup
                     </label>
                 </div>
@@ -253,37 +253,38 @@
             <div class="serviceRow">
                 <div class="serviceName">Bridesmaid</div>
                 <div class="serviceControls">
-                    <button class="decrement">-</button>
-                    <input type="text" value="0">
-                    <button class="increment">+</button>
+                    <button onclick="updateTotal('total2', 1)" class="decrement">-</button>
+                    <span id="total2">0</span>
+                    <button onclick="updateTotal('total2', -1)" class="increment">+</button>
+                    
                 </div>
                 <div class="separator"></div>
                 <div class="serviceOptions">
                     <label>
-                        <input type="checkbox">
+                        <input type="checkbox" class="brideCheckbox" value="Hairstyle" data-category="Bride">
                         Hairstyle
                     </label>
                     <label>
-                        <input type="checkbox">
-                        Makeup
+                        <input type="checkbox" id="makeupCheckbox1" data-category="Bride" value="Makeup">
+                        <label for="makeupCheckbox1">Makeup</label>
                     </label>
                 </div>
             </div>
             <div class="serviceRow">
                 <div class="serviceName">Flower girl</div>
                 <div class="serviceControls">
-                    <button class="decrement">-</button>
-                    <input type="text" value="0">
-                    <button class="increment">+</button>
+                    <button onclick="updateTotal('total3', 1)" class="decrement">-</button>
+                    <span id="total3">0</span>
+                    <button onclick="updateTotal('total3', -1)" class="increment">+</button>                    
                 </div>
                 <div class="separator"></div>
                 <div class="serviceOptions">
                     <label>
-                        <input type="checkbox">
+                        <input type="checkbox" class="flowerCheckbox" value="Hairstyle" data-category="FlowerGirl">
                         Hairstyle
                     </label>
                     <label>
-                        <input type="checkbox">
+                        <input type="checkbox" class="flowerCheckbox" value="Makeup" data-category="FlowerGirl">
                         Makeup
                     </label>
                 </div>
@@ -366,18 +367,19 @@
     <div class="serviceRow">
         <div class="serviceName">Woman</div>
         <div class="serviceControls">
-            <button class="decrement">-</button>
-            <input type="text" value="0">
-            <button class="increment">+</button>
+            <button onclick="updateTotal('total4', 1)" class="decrement">-</button>
+<span id="total4">0</span>
+<button onclick="updateTotal('total4', -1)" class="increment">+</button>
+
         </div>
         <div class="separator"></div>
         <div class="serviceOptions">
             <label>
-                <input type="checkbox">
+                <input type="checkbox" class="womanCheckbox" value="Hairstyle" data-category="Woman">
                 Hairstyle
             </label>
             <label>
-                <input type="checkbox">
+                <input type="checkbox" class="womanCheckbox" value="Makeup" data-category="Woman">
                 Makeup
             </label>
         </div>
@@ -385,14 +387,14 @@
         <div class="serviceRow">
             <div class="serviceName">Man</div>
             <div class="serviceControls">
-                <button class="decrement">-</button>
-                <input type="text" value="0">
-                <button class="increment">+</button>
+                <button onclick="updateTotal('total5', 1)" class="decrement">-</button>
+                <span id="total5">0</span>
+                <button onclick="updateTotal('total5', -1)" class="increment">+</button>                
             </div>
             <div class="separator"></div>
             <div class="serviceOptions2">
                 <label>
-                    <input type="checkbox">
+                    <input type="checkbox" class="manCheckbox" value="Makeup" data-category="Man">
                     Makeup
                 </label>
             </div>
@@ -401,121 +403,11 @@
         <label for="message">Anything you want us to know?</label>
         <textarea id="message" placeholder="Your message"></textarea>
     </div>
-        <button type="submit" class="submit-btn">Submit</button>
+        <button type="submit" class="submit-btn" id="submit">Submit</button>
     </form>
 </div>  
 </div>   
 </div>
-
-<div class="partyFormContainer">
-    <div class="partyTabs">
-        <button class="partyTab active">Services</button>
-        <button class="partyTab">Classes</button>
-    </div>
-    <div class="backButtonContainer">
-        <button class="backButton" type="button">&lt  &nbsp  Back</button>
-    </div>
-    <form class="party-form">
-        <div class="makehair">
-            <label for="partyServices">Service</label>
-            <div id="bridalSelector" class="radio-group">
-                <button type="button" class="bridalButton" id="bridalButton1">Makeup<span class="circle"></span></button>
-    <button type="button" class="bridalButton" id="bridalButton2">Hairstyle<span class="circle"></span></button>
-            </div>
-        </div>
-        <div id="Party">
-        <div class="bridalLocation">
-            <label for="locationLabel">Event Location</label>
-            <div class="locationPicker">
-            <input id="locationInput" type="text" placeholder="Search address"> 
-            <img src="../../images/contact/search.png" alt="Calendar Icon" class="search">
-            </div>
-        <div class="notDecided">
-                <input type="checkbox" name="date-not-decided"> 
-                <label>Not decided</label>
-        </div>
-        </div>
-        <div class="premiumServices">
-        <label for="premiumLabel">Premium Service</label>
-        <div class="premiumGrid">
-        <div class="premiumServiceItem">
-            <input type="checkbox" name="premium1"> 
-            <label>Deep skin cleaning</label>
-        </div>
-        <div class="premiumServiceItem">
-            <input type="checkbox" name="premium2"> 
-            <label>Hydromassage</label>
-        </div>
-        <div class="premiumServiceItem">
-            <input type="checkbox" name="premium3"> 
-            <label>Waxing</label>
-        </div>
-        <div class="premiumServiceItem">
-            <input type="checkbox" name="premium4"> 
-            <label>Relaxing massage</label>
-        </div>
-        <div class="premiumServiceItem">
-            <input type="checkbox" name="premium5"> 
-            <label>Bleach body hair</label>
-        </div>
-        <div class="premiumServiceItem">
-            <input type="checkbox" name="premium6"> 
-            <label>Hair Moisture</label>
-        </div>
-        <div class="premiumServiceItem">
-            <input type="checkbox" name="premium7"> 
-            <label>Foot and hand SPA</label>
-        </div>
-        <div class="premiumServiceItem">
-            <input type="checkbox" name="premium8"> 
-            <label>Gommage (body exfoliation and hydration)</label>
-        </div>
-        </div>
-    </div>
-    <div class="serviceRow">
-        <div class="serviceName">Woman</div>
-        <div class="serviceControls">
-            <button class="decrement">-</button>
-            <input type="text" value="0">
-            <button class="increment">+</button>
-        </div>
-        <div class="separator"></div>
-        <div class="serviceOptions">
-            <label>
-                <input type="checkbox">
-                Hairstyle
-            </label>
-            <label>
-                <input type="checkbox">
-                Makeup
-            </label>
-        </div>
-    </div>
-        <div class="serviceRow">
-            <div class="serviceName">Man</div>
-            <div class="serviceControls">
-                <button class="decrement">-</button>
-                <input type="text" value="0">
-                <button class="increment">+</button>
-            </div>
-            <div class="separator"></div>
-            <div class="serviceOptions2">
-                <label>
-                    <input type="checkbox">
-                    Makeup
-                </label>
-            </div>
-        </div>
-    <div class="messageSection">
-        <label for="message">Anything you want us to know?</label>
-        <textarea id="message" placeholder="Your message"></textarea>
-    </div>
-        <button type="submit" class="submit-btn">Submit</button>
-    </form>
-</div>  
-</div>   
-</div>
-
 <div class="thanksFormContainer">
     <div class="thanksTabs">
         <button class="thanksTab active">Services</button>
@@ -549,14 +441,21 @@
                     </div>
                     <div>
                         <h3>Premium services</h3>
-                        <ul>
-                            <li>Deep skin cleansing</li>
-                            <li>Waxing</li>
-                        </ul>
+                        <div id="selectedPremiumContainer">
+                            <ul id="selectedPremium"></ul>
+                        </div>
                         <h3>Additional attendees</h3>
                         <ul>
-                            <li>Groom (makeup + hairstyle)</li>
-                            <li>Bridesmaid * 2 (hairstyle)</li>
+                            <li id="Groom" data-category="Groom">Bridesmaid * 0 (hairstyle)</li>
+                             <p id="selectedServices"></p>
+                            <li id="Bridesmaid" data-category="Bride">Groomsmen * 0 (suit)</li> 
+                            <p id="selectedServices"></p>
+                            <li id="FlowerGirl" data-category="FlowerGirl">Flower Girl * 0 (dress)</li>
+                             <p id="selectedServices"></p>
+                            <li id="Woman" data-category="Woman">Man * 0 (suit)</li> 
+                            <p id="selectedServices"></p>
+                            <li id="Man" data-category="Man">Woman * 0 (dress)</li>
+                             <p id="selectedServices"></p>
                         </ul>
                     </div>
                     </div>
@@ -576,6 +475,38 @@
                           <button type="submit" class="submit-button">Share</button>
                         </div>
                       </div>
+        </div>
+        </div>
+        <div class="photoThanksFormContainer">
+            <div class="thanksTabs">
+                <button class="thanksTab active">Services</button>
+                <button class="thanksTab">Classes</button>
+            </div>
+            <div class="thankfulMessage">
+                <h2 id="thankYouMessage">Thanks <span id="userName">xxx</span>,</h2>
+           <h2>we will contact you soon!</h2>
+           <p id="callMessage">We will call +1 <span id="userNumber">xxx</span> to confirm the appointment details with you</p>
+        </div>
+                <div class="thanksContainer">
+                    <img src="../../images/contact/nail.png" alt="nail" class="nail">
+                            <div class="thanksFooter">
+                                <div class="contacticons">
+                                  <img src="../../images/contact/logo.png" alt="Logo Icon" class="smallLogo"/>
+                                  <div class="social-icons">
+                                    <a href="#">
+                                      <img src="../../images/contact/whatsapp.png" alt="Whatsapp Icon"/>+1 0000000000
+                                    </a>
+                                    <a href="#">
+                                      <img src="../../images/contact/instagram.png" alt="Instagram Icon"/>carlabeatrizs
+                                    </a>
+                                  </div>
+                                </div>
+                                <div>
+                                  <button type="submit" class="submit-button">Share</button>
+                                </div>
+                              </div>
+                </div>
+                </div>
     <div id="footer"></div> 
     <script src="./components/header/header.js"></script>
     <script src="./components/footer/footer.js"></script>
