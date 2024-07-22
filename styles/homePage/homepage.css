@@ -276,6 +276,7 @@
     width: 95%;
     font-weight: 100;
     margin: 2rem 0;
+    justify-content: center !important;
   }
   body #makeup101 #makeup101-container .makeupProImage-container {
     position: relative;
@@ -302,6 +303,8 @@
   body #diy .video-container {
     overflow-x: scroll !important;
     -webkit-overflow-scrolling: touch !important;
+    flex-wrap: nowrap !important;
+    justify-content: center !important;
   }
   body #diy .video-container img {
     padding: 0 1rem !important;
@@ -313,18 +316,18 @@
     color: #725a58;
   }
   body #letstalk h1 {
-    font-size: 40px;
-    line-height: 48px;
-    font-weight: 100;
-    width: 100%;
+    font-size: 40px !important;
+    line-height: 48px !important;
+    font-weight: 100 !important;
+    width: 100% !important;
     text-align: center;
-    letter-spacing: 0.5rem;
+    letter-spacing: 0.5rem !important;
   }
   body #letstalk p {
-    font-size: 16px;
-    width: 90%;
-    text-align: center;
-    margin: 2rem auto;
+    font-size: 16px !important;
+    width: 90% !important;
+    text-align: center !important;
+    margin: 2rem auto !important;
   }
 }
 body {
@@ -492,6 +495,7 @@ body main #artist #brand-logo .our-brand::after {
   margin-left: 1em;
 }
 body main #artist #brand-logo .logos {
+  filter: brightness(0) saturate(100%) invert(55%) sepia(1%) saturate(480%) hue-rotate(323deg) brightness(98%) contrast(92%);
   padding: 5% 0;
 }
 body main #artist #brand-logo .logos .logo-ray1 {
@@ -611,12 +615,40 @@ body main #makeup .offer-images-container {
   gap: 2rem;
   justify-content: center;
 }
-body main #makeup .offer-images-container:first-childhover {
-  width: 100%;
-}
 body main #makeup .offer-images-container .offer-card {
   display: flex;
   flex-direction: row;
+  position: relative;
+  z-index: 3;
+}
+body main #makeup .offer-images-container .offer-card:first-child:hover {
+  width: 386px;
+  position: relative;
+}
+body main #makeup .offer-images-container .offer-card:first-child:hover::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  width: 100% !important;
+  height: 100% !important;
+  border: solid 1px #e3b6b1;
+  z-index: -1;
+}
+body main #makeup .offer-images-container .offer-card:last-child:hover {
+  width: 386px;
+}
+body main #makeup .offer-images-container .offer-card:last-child:hover::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  width: 100% !important;
+  height: 100% !important;
+  border: solid 1px #e3b6b1;
+  z-index: -1;
+}
+body main #makeup .offer-images-container .offer-card:nth-child(2) {
   position: relative;
   z-index: 3;
 }
@@ -743,6 +775,7 @@ body main #diy {
   color: #725a58;
   text-align: center;
   padding: 5% 10%;
+  position: relative;
 }
 body main #diy h1 {
   font-size: 48px;
@@ -758,9 +791,7 @@ body main #diy .video-container {
 body main #diy .video-container img {
   width: 300px;
   justify-content: space-between;
-}
-body main #diy .video-container img:hover {
-  opacity: 0.9;
+  z-index: 3;
 }
 body main #diy button {
   margin-top: 50px;
@@ -776,6 +807,41 @@ body main #diy button {
 body main #diy button:hover {
   background-color: #bb9995;
   color: #fff;
+}
+body main .youtube-container {
+  display: none;
+  opacity: 0;
+  z-index: 4;
+}
+body main .youtube-container .modal {
+  width: 90vw;
+  position: relative;
+  padding-top: 56.25%;
+  margin: 2em 0;
+}
+body main .youtube-container .youtube {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  width: 100vw;
+  height: 100vh;
+  backdrop-filter: blur(5px);
+  overflow-y: scroll;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  transition: opacity 0.4s linear;
+  justify-content: center;
+  z-index: 5;
+}
+body main .youtube-container .youtube iframe {
+  position: absolute;
+  top: 3vw;
+  left: 10vh;
+  border: none;
+  width: 90%;
+  height: 90%;
 }
 body main #letstalk .letstalk-container {
   color: #725a58;

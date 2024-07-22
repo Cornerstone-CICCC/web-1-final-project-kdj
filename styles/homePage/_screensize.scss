@@ -367,6 +367,8 @@
             width: 95%;
             font-weight: 100;
             margin: 2rem 0;
+            // text-align: center !important;
+            justify-content: center !important;
           }
         }
 
@@ -401,8 +403,8 @@
       .video-container {
         overflow-x: scroll !important;
         -webkit-overflow-scrolling: touch !important;
-        // justify-content: center;
-        // display: -ms-flexbox;
+        flex-wrap: nowrap !important;
+        justify-content: center !important;
 
         img {
           padding: 0 1rem !important;
@@ -418,20 +420,20 @@
       color: #725a58;
 
       h1 {
-        font-size: 40px;
-        line-height: 48px;
-        font-weight: 100;
-        width: 100%;
+        font-size: 40px !important;
+        line-height: 48px !important;
+        font-weight: 100 !important;
+        width: 100% !important;
         // margin: 0 auto;
         text-align: center;
-        letter-spacing: 0.5rem;
+        letter-spacing: 0.5rem !important;
       }
 
       p {
-        font-size: 16px;
-        width: 90%;
-        text-align: center;
-        margin: 2rem auto;
+        font-size: 16px !important;
+        width: 90% !important;
+        text-align: center !important;
+        margin: 2rem auto !important;
       }
     }
   }

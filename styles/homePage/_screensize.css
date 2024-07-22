@@ -275,6 +275,7 @@
     width: 95%;
     font-weight: 100;
     margin: 2rem 0;
+    justify-content: center !important;
   }
   body #makeup101 #makeup101-container .makeupProImage-container {
     position: relative;
@@ -301,6 +302,8 @@
   body #diy .video-container {
     overflow-x: scroll !important;
     -webkit-overflow-scrolling: touch !important;
+    flex-wrap: nowrap !important;
+    justify-content: center !important;
   }
   body #diy .video-container img {
     padding: 0 1rem !important;
@@ -312,18 +315,18 @@
     color: #725a58;
   }
   body #letstalk h1 {
-    font-size: 40px;
-    line-height: 48px;
-    font-weight: 100;
-    width: 100%;
+    font-size: 40px !important;
+    line-height: 48px !important;
+    font-weight: 100 !important;
+    width: 100% !important;
     text-align: center;
-    letter-spacing: 0.5rem;
+    letter-spacing: 0.5rem !important;
   }
   body #letstalk p {
-    font-size: 16px;
-    width: 90%;
-    text-align: center;
-    margin: 2rem auto;
+    font-size: 16px !important;
+    width: 90% !important;
+    text-align: center !important;
+    margin: 2rem auto !important;
   }
 }
 
