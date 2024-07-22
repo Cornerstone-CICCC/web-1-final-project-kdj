@@ -195,7 +195,7 @@ body {
 .dateTime {
   display: flex;
   gap: 20px;
-  flex-wrap: wrap;
+  flex-direction: row;
 }
 
 .eventDate label:nth-child(1),
@@ -215,6 +215,10 @@ body {
 .locationPicker {
   position: relative;
   display: inline-block;
+}
+
+.datepicker {
+  width: 100px;
 }
 
 .datePicker .calendar,

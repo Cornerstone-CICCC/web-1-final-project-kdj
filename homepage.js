@@ -220,3 +220,248 @@ document.getElementById("smsNumber").addEventListener("input", function (e) {
   }
   e.target.value = value;
 });
+
+function initSearchBox() {
+  var input = document.getElementById("locationInput");
+  var searchBox = new google.maps.places.SearchBox(input);
+
+  searchBox.addListener("places_changed", function () {
+    var places = searchBox.getPlaces();
+
+    if (places.length == 0) {
+      return;
+    }
+
+    places.forEach(function (place) {
+      if (!place.geometry) {
+        console.log("Returned place contains no geometry");
+        return;
+      }
+
+      console.log("Place found:", place.name);
+    });
+  });
+}
+
+google.maps.event.addDomListener(window, "load", initSearchBox);
+
+document.addEventListener("DOMContentLoaded", function () {
+  const contactForm = document.querySelector(".contact-form");
+  const bridalFormContainer = document.querySelector(".bridalFormContainer");
+  const partyFormContainer = document.querySelector(".partyFormContainer");
+  const thanksFormContainer = document.querySelector(".thanksFormContainer");
+  const photoThanksFormContainer = document.querySelector(
+    ".photoThanksFormContainer"
+  );
+
+  contactForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+    const selectedEventType = document.querySelector(".eventButton.selected");
+    if (selectedEventType) {
+      switch (selectedEventType.id) {
+        case "button1":
+          bridalFormContainer.style.display = "block";
+          break;
+        case "button2":
+          partyFormContainer.style.display = "block";
+          break;
+        case "button3":
+          photoThanksFormContainer.style.display = "block";
+          break;
+      }
+      contactForm.parentElement.style.display = "none";
+    }
+  });
+  const bridalForm = bridalFormContainer.querySelector("form");
+  if (bridalForm) {
+    bridalForm.addEventListener("submit", function (event) {
+      event.preventDefault();
+      thanksFormContainer.style.display = "block";
+      bridalForm.parentElement.style.display = "none";
+    });
+  }
+
+  const partyForm = partyFormContainer.querySelector("form");
+  if (partyForm) {
+    partyForm.addEventListener("submit", function (event) {
+      event.preventDefault();
+      thanksFormContainer.style.display = "block";
+      partyForm.parentElement.style.display = "none";
+    });
+  }
+});
+
+function updateThankYouMessage() {
+  var name = document.getElementById("name").value;
+  document.getElementById("userName").textContent = name;
+}
+document
+  .querySelector(".contact-form")
+  .addEventListener("submit", function (event) {
+    event.preventDefault();
+    updateThankYouMessage();
+  });
+function updatecallMessage() {
+  var number = document.getElementById("phoneNumber").value;
+  document.getElementById("userNumber").textContent = number;
+}
+document
+  .querySelector(".contact-form")
+  .addEventListener("submit", function (event) {
+    event.preventDefault();
+    updatecallMessage();
+  });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const handleIncrementDecrement = (event) => {
+    event.preventDefault();
+    const button = event.target;
+    const serviceRow = button.closest(".serviceRow");
+    const input = serviceRow.querySelector('input[type="text"]');
+    let value = parseInt(input.value, 10);
+
+    if (button.classList.contains("increment")) {
+      value++;
+    } else if (button.classList.contains("decrement")) {
+      value = value > 0 ? value - 1 : 0;
+    }
+
+    input.value = value;
+  };
+  const incrementButtons = document.querySelectorAll(".increment");
+  const decrementButtons = document.querySelectorAll(".decrement");
+
+  incrementButtons.forEach((button) => {
+    button.addEventListener("click", handleIncrementDecrement);
+  });
+
+  decrementButtons.forEach((button) => {
+    button.addEventListener("click", handleIncrementDecrement);
+  });
+});
+
+function updateTotal(spanId, amount) {
+  var totalSpan = document.getElementById(spanId);
+  var currentTotal = parseInt(totalSpan.textContent);
+  var newTotal = currentTotal - amount;
+  if (newTotal < 0) {
+    newTotal = 0;
+  }
+  totalSpan.textContent = newTotal;
+
+  var spanToItems = {
+    total1: ["Groom"],
+    total2: ["Bridesmaid"],
+    total3: ["FlowerGirl"],
+    total4: ["Woman"],
+    total5: ["Man"],
+  };
+
+  var itemIds = spanToItems[spanId];
+
+  if (itemIds) {
+    itemIds.forEach((id) => {
+      var liElement = document.getElementById(id);
+      if (liElement) {
+        if (newTotal > 0) {
+          liElement.innerText = `${id} * ${newTotal}`;
+          liElement.style.display = "none";
+        } else {
+          liElement.style.display = "none";
+        }
+      }
+    });
+  }
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  const selectedServices = document.getElementById("selectedServices");
+
+  function updateSelectedServices() {
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    const services = {};
+    checkboxes.forEach((checkbox) => {
+      if (checkbox.checked) {
+        const category = checkbox.dataset.category;
+        const value = checkbox.value;
+
+        if (!services[category]) {
+          services[category] = [];
+        }
+        services[category].push(value);
+      }
+    });
+    let serviceText = "";
+    for (const [category, items] of Object.entries(services)) {
+      const liElement = document.querySelector(
+        `li[data-category="${category}"]`
+      );
+      if (liElement) {
+        serviceText += `${liElement.innerText}: ${items.join(" + ")}\n`;
+      } else {
+        serviceText += `${category}: ${items.join(" + ")} on sale\n`;
+      }
+    }
+
+    selectedServices.textContent = serviceText.trim() || "No services selected";
+  }
+
+  document.querySelectorAll('input[type="checkbox"]').forEach((checkbox) => {
+    checkbox.addEventListener("change", updateSelectedServices);
+  });
+  updateSelectedServices();
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const selectedPremium = document.getElementById("selectedPremium");
+
+  function updateSelectedPremium() {
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    const services = [];
+    checkboxes.forEach((checkbox) => {
+      if (checkbox.checked) {
+        const label = checkbox.nextElementSibling.textContent;
+        services.push(label);
+      }
+    });
+    selectedPremium.innerHTML = "";
+    services.forEach((service) => {
+      const li = document.createElement("li");
+      li.textContent = service;
+      selectedPremium.appendChild(li);
+    });
+  }
+  document.querySelectorAll('input[type="checkbox"]').forEach((checkbox) => {
+    checkbox.addEventListener("change", updateSelectedPremium);
+  });
+  updateSelectedPremium();
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const backButtons = document.querySelectorAll(".backButton");
+
+  backButtons.forEach((button) => {
+    button.addEventListener("click", function () {
+      document.querySelector(".bridalFormContainer").style.display = "none";
+      document.querySelector(".partyFormContainer").style.display = "none";
+      document.querySelector(".thanksFormContainer").style.display = "none";
+      document.querySelector(".contactFormContainer").style.display = "block";
+    });
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const photoshootNextButton = document.getElementById("photoshootNext");
+  const photoThanksFormContainer = document.getElementById(
+    "photoThanksFormContainer"
+  );
+  photoshootNextButton.addEventListener("click", function (event) {
+    event.preventDefault();
+    document.querySelector(".contactFormContainer").style.display = "none";
+    document.querySelector(".bridalFormContainer").style.display = "none";
+    document.querySelector(".partyFormContainer").style.display = "none";
+    document.querySelector(".thanksFormContainer").style.display = "none";
+    photoThanksFormContainer.style.display = "block";
+  });
+});
+
