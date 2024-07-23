@@ -102,6 +102,7 @@
     flex-wrap: wrap;
     width: 79%;
     margin: 0 auto;
+    padding: 0 0 1.5rem !important;
   }
   body #artist #brand-logo .logos .logo-ray2 .logo {
     padding: 1rem 0;
@@ -139,12 +140,28 @@
   }
   body #star .star-characters {
     grid-template-columns: 1fr 1fr !important;
-    grid-template-rows: 1fr 1fr !important;
-    grid-auto-flow: column;
+    padding: 3% !important;
+    gap: 10px !important;
   }
-  body #star .star-characters img {
-    width: 100%;
-    height: 100%;
+  body #star .star-characters img:first-child {
+    width: 160px !important;
+    height: 210px !important;
+    object-fit: cover;
+  }
+  body #star .star-characters img:nth-child(2) {
+    width: 160px !important;
+    height: 210px !important;
+    object-fit: cover;
+  }
+  body #star .star-characters img:nth-child(3) {
+    width: 160px !important;
+    height: 210px !important;
+    object-fit: cover;
+  }
+  body #star .star-characters img:last-child {
+    width: 160px !important;
+    height: 210px !important;
+    object-fit: cover;
   }
   body #star .star-description {
     padding: 5% 3% !important;
@@ -202,6 +219,9 @@
     z-index: 2;
     width: 90%;
     justify-content: center;
+  }
+  body #makeup .offer-images-container .offer-card:hover {
+    width: 100% !important;
   }
   body #makeup .offer-images-container .offer-card:nth-child(even)::before {
     width: 84%;
@@ -304,7 +324,7 @@
     overflow-x: scroll !important;
     -webkit-overflow-scrolling: touch !important;
     flex-wrap: nowrap !important;
-    justify-content: center !important;
+    justify-content: start !important;
   }
   body #diy .video-container img {
     padding: 0 1rem !important;
@@ -613,8 +633,22 @@ body main #star .star-intro button:hover {
 body main #star .star-characters {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 67px;
-  justify-content: space-evenly;
+  gap: 20px;
+}
+body main #star .star-characters img:first-child {
+  width: 350px;
+  height: 434px;
+  object-fit: cover;
+}
+body main #star .star-characters img:nth-child(2) {
+  width: 350px;
+  height: 434px;
+  object-fit: cover;
+}
+body main #star .star-characters img:last-child {
+  width: 350px;
+  height: 434px;
+  object-fit: cover;
 }
 body main #star .star-description {
   padding: 5% 25%;
@@ -807,17 +841,19 @@ body main #makeup101 #makeup101-container aside .allclasses:hover {
   background-color: #bb9995;
   color: #fff;
 }
-body main #makeup101 #makeup101-container .makeupProImage {
+body main #makeup101 #makeup101-container .makeupProImage-container .makeupProImage {
   position: relative;
   z-index: 1;
 }
-body main #makeup101 #makeup101-container .makeupProImage::before {
+body main #makeup101 #makeup101-container .makeupProImage-container .makeupProImage::after {
   content: "";
   position: absolute;
   width: 90%;
   height: 90%;
+  top: 0;
+  left: 0;
   border: solid 1px #fff;
-  z-index: -1;
+  z-index: 3;
 }
 body main #diy {
   color: #725a58;
@@ -1108,6 +1144,7 @@ body {
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
+  flex-direction: column;
 }
 
 .eventDate label:nth-child(1),

@@ -76,9 +76,11 @@ body {
 
           img {
             // background-image: linear-gradient(to left, #ae7872 0%, #ae7872 50%);
-            background-image: linear-gradient(45deg,
-                lighten(#ae7872, 0%),
-                lighten(#ae7872, 50%));
+            background-image: linear-gradient(
+              45deg,
+              lighten(#ae7872, 0%),
+              lighten(#ae7872, 50%)
+            );
             width: 285px;
             height: 321px;
             object-fit: cover;
@@ -209,7 +211,8 @@ body {
         }
 
         .logos {
-          filter: brightness(0) saturate(100%) invert(55%) sepia(1%) saturate(480%) hue-rotate(323deg) brightness(98%) contrast(92%);
+          filter: brightness(0) saturate(100%) invert(55%) sepia(1%)
+            saturate(480%) hue-rotate(323deg) brightness(98%) contrast(92%);
           padding: 5% 0;
 
           .logo-ray1 {
@@ -286,14 +289,25 @@ body {
       .star-characters {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 67px;
-        // width: 100%;
-        justify-content: space-evenly;
+        gap: 20px;
 
         img {
-          // width: 100px;
-          // width: 440px;
-          // height: 430px;
+          &:first-child {
+            width: 350px;
+            height: 434px;
+            object-fit: cover;
+          }
+          &:nth-child(2) {
+            width: 350px;
+            height: 434px;
+            object-fit: cover;
+          }
+
+          &:last-child {
+            width: 350px;
+            height: 434px;
+            object-fit: cover;
+          }
         }
       }
 
@@ -528,17 +542,23 @@ body {
           }
         }
 
-        .makeupProImage {
-          position: relative;
-          z-index: 1;
+        .makeupProImage-container {
+          // position: relative;
 
-          &::before {
-            content: "";
-            position: absolute;
-            width: 90%;
-            height: 90%;
-            border: solid 1px #fff;
-            z-index: -1;
+          .makeupProImage {
+            position: relative;
+            z-index: 1;
+
+            &::after {
+              content: "";
+              position: absolute;
+              width: 90%;
+              height: 90%;
+              top: 0;
+              left: 0;
+              border: solid 1px #fff;
+              z-index: 3;
+            }
           }
         }
       }
@@ -585,7 +605,6 @@ body {
         }
       }
     }
-
 
     .youtube-container {
       display: none;
@@ -852,6 +871,7 @@ body {
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
+  flex-direction: column;
 }
 
 .eventDate label:nth-child(1),
@@ -1241,7 +1261,7 @@ body {
   gap: 10px;
 }
 
-.serviceRow>div {
+.serviceRow > div {
   padding: 10px;
 }
 
