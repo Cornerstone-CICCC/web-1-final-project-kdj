@@ -435,6 +435,71 @@
         text-align: center !important;
         margin: 2rem auto !important;
       }
+
+      .contactFormContainer {
+        width: 360px;
+        .contactTabs {
+          width: 340px;
+        }
+
+        .contact-form {
+          .event {
+            margin-bottom: 2rem;
+            #eventSelector {
+              display: flex;
+              flex-direction: column !important;
+
+              .eventButton {
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+
+      #wedding {
+        .dateTime {
+          margin-bottom: 2rem;
+          .eventDate {
+            width: 100%;
+
+            .datePicker {
+              width: 100%;
+
+              .flatpickr-input {
+                width: 100% !important;
+                padding: 3%;
+              }
+            }
+          }
+        }
+
+        .eventTime {
+          #eventSelect {
+            width: 280px;
+          }
+        }
+
+        .eventName {
+          margin-bottom: 2rem;
+          #name {
+            width: 100%;
+          }
+        }
+
+        .group {
+          margin-bottom: 2rem;
+
+          #marginme {
+            gap: 10px;
+          }
+        }
+      }
+
+      #next {
+        margin: 0;
+        width: 100%;
+      }
     }
   }
 }

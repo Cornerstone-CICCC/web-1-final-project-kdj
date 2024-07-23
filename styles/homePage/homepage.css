@@ -329,6 +329,54 @@
     text-align: center !important;
     margin: 2rem auto !important;
   }
+  body #letstalk .contactFormContainer {
+    width: 360px;
+  }
+  body #letstalk .contactFormContainer .contactTabs {
+    width: 340px;
+  }
+  body #letstalk .contactFormContainer .contact-form .event {
+    margin-bottom: 2rem;
+  }
+  body #letstalk .contactFormContainer .contact-form .event #eventSelector {
+    display: flex;
+    flex-direction: column !important;
+  }
+  body #letstalk .contactFormContainer .contact-form .event #eventSelector .eventButton {
+    width: 100%;
+  }
+  body #letstalk #wedding .dateTime {
+    margin-bottom: 2rem;
+  }
+  body #letstalk #wedding .dateTime .eventDate {
+    width: 100%;
+  }
+  body #letstalk #wedding .dateTime .eventDate .datePicker {
+    width: 100%;
+  }
+  body #letstalk #wedding .dateTime .eventDate .datePicker .flatpickr-input {
+    width: 100% !important;
+    padding: 3%;
+  }
+  body #letstalk #wedding .eventTime #eventSelect {
+    width: 280px;
+  }
+  body #letstalk #wedding .eventName {
+    margin-bottom: 2rem;
+  }
+  body #letstalk #wedding .eventName #name {
+    width: 100%;
+  }
+  body #letstalk #wedding .group {
+    margin-bottom: 2rem;
+  }
+  body #letstalk #wedding .group #marginme {
+    gap: 10px;
+  }
+  body #letstalk #next {
+    margin: 0;
+    width: 100%;
+  }
 }
 body {
   margin: 0;
