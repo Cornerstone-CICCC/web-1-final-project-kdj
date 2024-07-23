@@ -332,6 +332,19 @@
   body #diy button {
     padding: 20px 32px !important;
   }
+  body .youtube-container .modal {
+    width: 30vw !important;
+    height: 50vh !important;
+    left: 3% !important;
+  }
+  body .youtube-container .youtube iframe {
+    position: absolute;
+    top: 50vw !important;
+    left: 2vh !important;
+    border: none;
+    width: 30%;
+    height: 40% !important;
+  }
   body #letstalk {
     color: #725a58;
   }
