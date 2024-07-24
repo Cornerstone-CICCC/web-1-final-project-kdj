@@ -3,3 +3,10 @@ fetch("./components/header/header.html")
   .then((data) => {
     document.querySelector("#header").innerHTML = data;
   });
+
+const menuBTN = document.getElementById("menu-button");
+const menu = document.getElementById("menu");
+
+menuBTN.addEventListener("click", () => {
+  menu.classList.toggle("active");
+});

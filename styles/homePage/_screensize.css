@@ -101,6 +101,7 @@
     flex-wrap: wrap;
     width: 79%;
     margin: 0 auto;
+    padding: 0 0 1.5rem !important;
   }
   body #artist #brand-logo .logos .logo-ray2 .logo {
     padding: 1rem 0;
@@ -138,12 +139,28 @@
   }
   body #star .star-characters {
     grid-template-columns: 1fr 1fr !important;
-    grid-template-rows: 1fr 1fr !important;
-    grid-auto-flow: column;
+    padding: 3% !important;
+    gap: 10px !important;
   }
-  body #star .star-characters img {
-    width: 100%;
-    height: 100%;
+  body #star .star-characters img:first-child {
+    width: 160px !important;
+    height: 210px !important;
+    object-fit: cover;
+  }
+  body #star .star-characters img:nth-child(2) {
+    width: 160px !important;
+    height: 210px !important;
+    object-fit: cover;
+  }
+  body #star .star-characters img:nth-child(3) {
+    width: 160px !important;
+    height: 210px !important;
+    object-fit: cover;
+  }
+  body #star .star-characters img:last-child {
+    width: 160px !important;
+    height: 210px !important;
+    object-fit: cover;
   }
   body #star .star-description {
     padding: 5% 3% !important;
@@ -201,6 +218,9 @@
     z-index: 2;
     width: 90%;
     justify-content: center;
+  }
+  body #makeup .offer-images-container .offer-card:hover {
+    width: 100% !important;
   }
   body #makeup .offer-images-container .offer-card:nth-child(even)::before {
     width: 84%;
@@ -303,13 +323,26 @@
     overflow-x: scroll !important;
     -webkit-overflow-scrolling: touch !important;
     flex-wrap: nowrap !important;
-    justify-content: center !important;
+    justify-content: start !important;
   }
   body #diy .video-container img {
     padding: 0 1rem !important;
   }
   body #diy button {
     padding: 20px 32px !important;
+  }
+  body .youtube-container .modal {
+    width: 30vw !important;
+    height: 50vh !important;
+    left: 3% !important;
+  }
+  body .youtube-container .youtube iframe {
+    position: absolute;
+    top: 50vw !important;
+    left: 2vh !important;
+    border: none;
+    width: 30%;
+    height: 40% !important;
   }
   body #letstalk {
     color: #725a58;
@@ -327,6 +360,54 @@
     width: 90% !important;
     text-align: center !important;
     margin: 2rem auto !important;
+  }
+  body #letstalk .contactFormContainer {
+    width: 360px;
+  }
+  body #letstalk .contactFormContainer .contactTabs {
+    width: 340px;
+  }
+  body #letstalk .contactFormContainer .contact-form .event {
+    margin-bottom: 2rem;
+  }
+  body #letstalk .contactFormContainer .contact-form .event #eventSelector {
+    display: flex;
+    flex-direction: column !important;
+  }
+  body #letstalk .contactFormContainer .contact-form .event #eventSelector .eventButton {
+    width: 100%;
+  }
+  body #letstalk #wedding .dateTime {
+    margin-bottom: 2rem;
+  }
+  body #letstalk #wedding .dateTime .eventDate {
+    width: 100%;
+  }
+  body #letstalk #wedding .dateTime .eventDate .datePicker {
+    width: 100%;
+  }
+  body #letstalk #wedding .dateTime .eventDate .datePicker .flatpickr-input {
+    width: 100% !important;
+    padding: 3%;
+  }
+  body #letstalk #wedding .eventTime #eventSelect {
+    width: 280px;
+  }
+  body #letstalk #wedding .eventName {
+    margin-bottom: 2rem;
+  }
+  body #letstalk #wedding .eventName #name {
+    width: 100%;
+  }
+  body #letstalk #wedding .group {
+    margin-bottom: 2rem;
+  }
+  body #letstalk #wedding .group #marginme {
+    gap: 10px;
+  }
+  body #letstalk #next {
+    margin: 0;
+    width: 100%;
   }
 }
 

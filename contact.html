@@ -1,83 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
+
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../styles/contact/contact.css">
+    <link rel="stylesheet" href="../../styles/homepage/homepage.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <title>Document</title>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDXNCKw3k07Z0QLw2GOuPjajvS0psHVCX0&libraries=places"></script>
 </head>
-<body>
-    <div id="header"></div>
-    <div class="contactContainer">
+<div id="header"></div>
+<div class="contactContainer">
     <div class="contactTitle">
         <h1>CONTACT</h1>
         <hr>
         <p>Get a quote and book a free consultation for your</p>
         <p>special day or our academy services</p>
-      </div> 
-      <div class="contacticons">
-        <a href="#"
-          ><img src="../../images/contact/phone.png" alt="Phone Icon"
-        />+1 0000000000</a>
-        <a href="#"
-          ><img src="../../images/contact/whatsapp.png" alt="Whatsapp Icon"
-        />+1 0000000000</a>
-        <a href="#"
-          ><img src="../../images/contact/instagram.png" alt="Instagram Icon"
-        />carlabeatrizs</a>
     </div>
-    <div class="contactFormContainer">
-        <div class="contactTabs">
-            <button class="contactTab active">Services</button>
-            <button class="contactTab">Classes</button>
+    <div class="contacticons">
+        <a href="#"><img src="../../images/contact/phone.png" alt="Phone Icon" />+1 0000000000</a>
+        <a href="#"><img src="../../images/contact/whatsapp.png" alt="Whatsapp Icon" />+1 0000000000</a>
+        <a href="#"><img src="../../images/contact/instagram.png" alt="Instagram Icon" />carlabeatrizs</a>
+    </div>
+</div>
+<div class="contactFormContainer">
+    <div class="contactTabs">
+        <button class="contactTab active">Services</button>
+        <button class="contactTab">Classes</button>
+    </div>
+    <form class="contact-form">
+        <div class="event">
+            <label for="eventType">Event Type</label>
+            <div id="eventSelector" class="radio-group">
+                <button type="button" class="eventButton" id="button1" onclick="toggleSelect(this)">Wedding<span
+                        class="circle"></span></button>
+                <button type="button" class="eventButton" id="button2" onclick="toggleSelect(this)">Party<span
+                        class="circle"></span></button>
+                <button type="button" class="eventButton" id="button3" onclick="toggleSelect(this)">Photoshoot<span
+                        class="circle"></span></button>
+            </div>
         </div>
-        <form class="contact-form">
-            <div class="event">
-                <label for="eventType">Event Type</label>
-                <div id="eventSelector" class="radio-group">
-                    <button type="button" class="eventButton" id="button1" onclick="toggleSelect(this)">Wedding<span class="circle"></span></button>
-        <button type="button" class="eventButton" id="button2" onclick="toggleSelect(this)">Party<span class="circle"></span></button>
-        <button type="button" class="eventButton" id="button3" onclick="toggleSelect(this)">Photoshoot<span class="circle"></span></button>
+        <div id="wedding">
+            <div class="dateTime">
+                <div class="eventDate">
+                    <label for="dateLabel">Event Date</label>
+                    <div class="datePicker">
+                        <input type="text" id="date" name="event-date" placeholder="Select date" readonly>
+                        <img src="../../images/contact/calendar.png" alt="Calendar Icon" class="calendar">
+                    </div>
+                    <div class="notDecided">
+                        <input type="checkbox" name="date-not-decided">
+                        <label>Not decided</label>
+                    </div>
+                </div>
+                <div class="eventTime">
+                    <label for="timeLabel">Event Time</label>
+                    <select id="eventSelect" name="eventSelect">
+                        <option value="full-day">Full day</option>
+                        <option value="morning">Morning</option>
+                        <option value="afternoon">Afternoon</option>
+                        <option value="evening">Evening</option>
+                    </select>
+                    <div class="notDecided">
+                        <input type="checkbox" name="date-not-decided">
+                        <label>Not decided</label>
+                    </div>
                 </div>
             </div>
-            <div id="wedding">
-            <div class="dateTime">
-            <div class="eventDate">
-                <label for="dateLabel">Event Date</label>
-                <div class="datePicker">
-                <input type="text" id="date" name="event-date" placeholder="Select date" readonly>
-                <img src="../../images/contact/calendar.png" alt="Calendar Icon" class="calendar">
-            </div>
-            <div class="notDecided">
-                    <input type="checkbox" name="date-not-decided"> 
-                    <label>Not decided</label>
-            </div>
-            </div>
-            <div class="eventTime">
-                <label for="timeLabel">Event Time</label>
-                <select id="eventSelect" name="eventSelect">
-                    <option value="full-day">Full day</option>
-                    <option value="morning">Morning</option>
-                    <option value="afternoon">Afternoon</option>
-                    <option value="evening">Evening</option>
-                </select>
-                <div class="notDecided">
-                    <input type="checkbox" name="date-not-decided"> 
-                    <label>Not decided</label>
-            </div>
-            </div>
-        </div>
             <div class="eventName">
                 <label for="nameLabel">Name</label>
                 <input type="text" id="name" name="name" placeholder="Your name">
             </div>
             <fieldset class="group">
                 <legend>Contact</legend>
-                    <div id="marginme">
-                        <div>
-                    <input type="radio" id="call" name="contactMethod" value="call">
-                    <label for="call">Call</label>
+                <div id="marginme">
+                    <div>
+                        <input type="radio" id="call" name="contactMethod" value="call">
+                        <label for="call">Call</label>
                     </div>
                     <div class="contactInfoInput" id="callInput">
                         <div class="phone-wrapper">
@@ -90,14 +91,15 @@
                                     <option value="+506">(+506)</option>
                                 </select>
                             </div>
-                            <input type="tel" id="phoneNumber" name="phoneNumber"  maxlength="12"  placeholder="Your phone number" required>
+                            <input type="tel" id="phoneNumber" name="phoneNumber" maxlength="12"
+                                placeholder="Your phone number">
                         </div>
                     </div>
                 </div>
                 <div id="marginme">
-                <div>
-                    <input type="radio" id="whatsapp" name="contactMethod" value="whatsapp">
-                    <label for="whatsapp">Whatsapp</label>
+                    <div>
+                        <input type="radio" id="whatsapp" name="contactMethod" value="whatsapp">
+                        <label for="whatsapp">Whatsapp</label>
                     </div>
                     <div class="contactInfoInput" id="whatsappInput">
                         <div class="phone-wrapper">
@@ -110,14 +112,15 @@
                                     <option value="+506">(+506)</option>
                                 </select>
                             </div>
-                        <input type="tel" id="whatsappNumber"  maxlength="12" name="whatsappNumber" placeholder="Your Whatsapp number">
+                            <input type="tel" id="whatsappNumber" maxlength="12" name="whatsappNumber"
+                                placeholder="Your Whatsapp number">
+                        </div>
                     </div>
                 </div>
-                </div>
                 <div id="marginme">
-                <div>
-                    <input type="radio" id="sms" name="contactMethod" value="sms">
-                    <label for="sms">SMS</label>
+                    <div>
+                        <input type="radio" id="sms" name="contactMethod" value="sms">
+                        <label for="sms">SMS</label>
                     </div>
                     <div class="contactInfoInput" id="smsInput">
                         <div class="phone-wrapper">
@@ -130,20 +133,21 @@
                                     <option value="+506">(+506)</option>
                                 </select>
                             </div>
-                        <input type="tel" id="smsNumber" name="smsNumber"  maxlength="12"  placeholder="Your SMS number">
+                            <input type="tel" id="smsNumber" name="smsNumber" maxlength="12"
+                                placeholder="Your SMS number">
+                        </div>
                     </div>
                 </div>
-                </div>
                 <div id="marginme">
-                <div>
-                    <input type="radio" id="email" name="contactMethod" value="email">
-                    <label for="email">Email</label>
-                </div>
+                    <div>
+                        <input type="radio" id="email" name="contactMethod" value="email">
+                        <label for="email">Email</label>
+                    </div>
                     <div class="contactInfoInput" id="emailInput">
                         <input type="email" id="emailAddress" name="emailAddress" placeholder="Your email address">
                     </div>
                 </div>
-            </fieldset>            
+            </fieldset>
             <fieldset class="groupCall">
                 <legend id="timeCallQuestion">When do you want us to call?</legend>
                 <div>
@@ -163,155 +167,357 @@
                     <label for="evening">Evening</label>
                 </div>
             </fieldset>
-            <button type="submit" class="submit-btn">Next</button>
-        </form>
-    </div>  
-    </div>   
+            <button type="submit" class="submit-btn" id="next">Next</button>
+    </form>
 </div>
-    <div class="bridalFormContainer">
-        <div class="bridalTabs">
-            <button class="bridalTab active">Services</button>
-            <button class="bridalTab">Classes</button>
+</div>
+</div>
+<div class="bridalFormContainer">
+    <div class="bridalTabs">
+        <button class="bridalTab active">Services</button>
+        <button class="bridalTab">Classes</button>
+    </div>
+    <div class="backButtonContainer">
+        <button class="backButton" type="button">&lt &nbsp Back</button>
+    </div>
+    <form class="bridal-form">
+        <div class="makehair">
+            <label for="bridalServices">Bridal Services</label>
+            <div id="bridalSelector" class="radio-group">
+                <button type="button" class="bridalButton" id="bridalButton1">Makeup<span
+                        class="circle"></span></button>
+                <button type="button" class="bridalButton" id="bridalButton2">Hairstyle<span
+                        class="circle"></span></button>
+            </div>
         </div>
-        <form class="bridal-form">
-            <div class="makehair">
-                <label for="bridalServices">Bridal Services</label>
-                <div id="bridalSelector" class="radio-group">
-                    <button type="button" class="bridalButton" id="bridalButton1">Makeup<span class="circle"></span></button>
-        <button type="button" class="bridalButton" id="bridalButton2">Hairstyle<span class="circle"></span></button>
+        <div id="Bridal">
+            <div class="bridalLocation">
+                <label for="locationLabel">Event Location</label>
+                <div class="locationPicker">
+                    <input id="locationInput" type="text" placeholder="Search address">
+                    <img src="../../images/contact/search.png" alt="Calendar Icon" class="search">
                 </div>
-            </div>
-            <div id="wedding">
-            <div class="dateTime">
-            <div class="eventDate">
-                <label for="dateLabel">Event Date</label>
-                <div class="datePicker">
-                <input type="text" id="date" name="event-date" placeholder="Select date" readonly>
-                <img src="../../images/contact/calendar.png" alt="Calendar Icon" class="calendar">
-            </div>
-            <div class="notDecided">
-                    <input type="checkbox" name="date-not-decided"> 
-                    <label>Not decided</label>
-            </div>
-            </div>
-            <div class="eventTime">
-                <label for="timeLabel">Event Time</label>
-                <select id="eventSelect" name="eventSelect">
-                    <option value="full-day">Full day</option>
-                    <option value="morning">Morning</option>
-                    <option value="afternoon">Afternoon</option>
-                    <option value="evening">Evening</option>
-                </select>
                 <div class="notDecided">
-                    <input type="checkbox" name="date-not-decided"> 
+                    <input type="checkbox" name="date-not-decided">
                     <label>Not decided</label>
+                </div>
             </div>
+            <div class="premiumServices">
+                <label for="premiumLabel">Premium Service</label>
+                <div class="premiumGrid">
+                    <div class="premiumServiceItem">
+                        <input type="checkbox" name="premium1">
+                        <label>Deep skin cleaning</label>
+                    </div>
+                    <div class="premiumServiceItem">
+                        <input type="checkbox" name="premium2">
+                        <label>Hydromassage</label>
+                    </div>
+                    <div class="premiumServiceItem">
+                        <input type="checkbox" name="premium3">
+                        <label>Waxing</label>
+                    </div>
+                    <div class="premiumServiceItem">
+                        <input type="checkbox" name="premium4">
+                        <label>Relaxing massage</label>
+                    </div>
+                    <div class="premiumServiceItem">
+                        <input type="checkbox" name="premium5">
+                        <label>Bleach body hair</label>
+                    </div>
+                    <div class="premiumServiceItem">
+                        <input type="checkbox" name="premium6">
+                        <label>Hair Moisture</label>
+                    </div>
+                    <div class="premiumServiceItem">
+                        <input type="checkbox" name="premium7">
+                        <label>Foot and hand SPA</label>
+                    </div>
+                    <div class="premiumServiceItem">
+                        <input type="checkbox" name="premium8">
+                        <label>Gommage (body exfoliation and hydration)</label>
+                    </div>
+                </div>
+            </div>
+            <div class="serviceRow">
+                <div class="serviceName">Groom</div>
+                <div class="serviceControls">
+                    <button onclick="updateTotal('total1', 1)" class="decrement">-</button>
+                    <span id="total1">0</span>
+                    <button onclick="updateTotal('total1', -1)" class="increment">+</button>
+                </div>
+                <div class="separator"></div>
+                <div class="serviceOptions2">
+                    <label>
+                        <input type="checkbox" class="groomCheckbox" value="Makeup" data-category="Groom">
+                        Makeup
+                    </label>
+                </div>
+            </div>
+            <div class="serviceRow">
+                <div class="serviceName">Bridesmaid</div>
+                <div class="serviceControls">
+                    <button onclick="updateTotal('total2', 1)" class="decrement">-</button>
+                    <span id="total2">0</span>
+                    <button onclick="updateTotal('total2', -1)" class="increment">+</button>
+
+                </div>
+                <div class="separator"></div>
+                <div class="serviceOptions">
+                    <label>
+                        <input type="checkbox" class="brideCheckbox" value="Hairstyle" data-category="Bride">
+                        Hairstyle
+                    </label>
+                    <label>
+                        <input type="checkbox" id="makeupCheckbox1" data-category="Bride" value="Makeup">
+                        <label for="makeupCheckbox1">Makeup</label>
+                    </label>
+                </div>
+            </div>
+            <div class="serviceRow">
+                <div class="serviceName">Flower girl</div>
+                <div class="serviceControls">
+                    <button onclick="updateTotal('total3', 1)" class="decrement">-</button>
+                    <span id="total3">0</span>
+                    <button onclick="updateTotal('total3', -1)" class="increment">+</button>
+                </div>
+                <div class="separator"></div>
+                <div class="serviceOptions">
+                    <label>
+                        <input type="checkbox" class="flowerCheckbox" value="Hairstyle" data-category="FlowerGirl">
+                        Hairstyle
+                    </label>
+                    <label>
+                        <input type="checkbox" class="flowerCheckbox" value="Makeup" data-category="FlowerGirl">
+                        Makeup
+                    </label>
+                </div>
+            </div>
+            <div class="messageSection">
+                <label for="message">Anything you want us to know?</label>
+                <textarea id="message" placeholder="Your message"></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Submit</button>
+    </form>
+</div>
+</div>
+</div>
+
+<div class="partyFormContainer">
+    <div class="partyTabs">
+        <button class="partyTab active">Services</button>
+        <button class="partyTab">Classes</button>
+    </div>
+    <div class="backButtonContainer">
+        <button class="backButton" type="button">&lt &nbsp Back</button>
+    </div>
+    <form class="party-form">
+        <div class="makehair">
+            <label for="partyServices">Service</label>
+            <div id="bridalSelector" class="radio-group">
+                <button type="button" class="bridalButton" id="bridalButton1">Makeup<span
+                        class="circle"></span></button>
+                <button type="button" class="bridalButton" id="bridalButton2">Hairstyle<span
+                        class="circle"></span></button>
             </div>
         </div>
-            <div class="eventName">
-                <label for="nameLabel">Name</label>
-                <input type="text" id="name" name="name" placeholder="Your name">
+        <div id="Party">
+            <div class="bridalLocation">
+                <label for="locationLabel">Event Location</label>
+                <div class="locationPicker">
+                    <input id="locationInput" type="text" placeholder="Search address">
+                    <img src="../../images/contact/search.png" alt="Calendar Icon" class="search">
+                </div>
+                <div class="notDecided">
+                    <input type="checkbox" name="date-not-decided">
+                    <label>Not decided</label>
+                </div>
             </div>
-            <fieldset class="group">
-                <legend>Contact</legend>
-                    <div id="marginme">
-                        <div>
-                    <input type="radio" id="call" name="contactMethod" value="call">
-                    <label for="call">Call</label>
+            <div class="premiumServices">
+                <label for="premiumLabel">Premium Service</label>
+                <div class="premiumGrid">
+                    <div class="premiumServiceItem">
+                        <input type="checkbox" name="premium1">
+                        <label>Deep skin cleaning</label>
                     </div>
-                    <div class="contactInfoInput" id="callInput">
-                        <div class="phone-wrapper">
-                            <div class="country-code-wrapper">
-                                <select id="countryCode" name="countryCode">
-                                    <option value="+1">(+1)</option>
-                                    <option value="+57">(+57)</option>
-                                    <option value="+34">(+34)</option>
-                                    <option value="+81">(+81)</option>
-                                    <option value="+506">(+506)</option>
-                                </select>
-                            </div>
-                            <input type="tel" id="phoneNumber" name="phoneNumber"  maxlength="12"  placeholder="Your phone number" required>
-                        </div>
+                    <div class="premiumServiceItem">
+                        <input type="checkbox" name="premium2">
+                        <label>Hydromassage</label>
                     </div>
-                </div>
-                <div id="marginme">
-                <div>
-                    <input type="radio" id="whatsapp" name="contactMethod" value="whatsapp">
-                    <label for="whatsapp">Whatsapp</label>
+                    <div class="premiumServiceItem">
+                        <input type="checkbox" name="premium3">
+                        <label>Waxing</label>
                     </div>
-                    <div class="contactInfoInput" id="whatsappInput">
-                        <div class="phone-wrapper">
-                            <div class="country-code-wrapper">
-                                <select id="countryCode" name="countryCode">
-                                    <option value="+1">(+1)</option>
-                                    <option value="+57">(+57)</option>
-                                    <option value="+34">(+34)</option>
-                                    <option value="+81">(+81)</option>
-                                    <option value="+506">(+506)</option>
-                                </select>
-                            </div>
-                        <input type="tel" id="whatsappNumber"  maxlength="12" name="whatsappNumber" placeholder="Your Whatsapp number">
+                    <div class="premiumServiceItem">
+                        <input type="checkbox" name="premium4">
+                        <label>Relaxing massage</label>
+                    </div>
+                    <div class="premiumServiceItem">
+                        <input type="checkbox" name="premium5">
+                        <label>Bleach body hair</label>
+                    </div>
+                    <div class="premiumServiceItem">
+                        <input type="checkbox" name="premium6">
+                        <label>Hair Moisture</label>
+                    </div>
+                    <div class="premiumServiceItem">
+                        <input type="checkbox" name="premium7">
+                        <label>Foot and hand SPA</label>
+                    </div>
+                    <div class="premiumServiceItem">
+                        <input type="checkbox" name="premium8">
+                        <label>Gommage (body exfoliation and hydration)</label>
                     </div>
                 </div>
+            </div>
+            <div class="serviceRow">
+                <div class="serviceName">Woman</div>
+                <div class="serviceControls">
+                    <button onclick="updateTotal('total4', 1)" class="decrement">-</button>
+                    <span id="total4">0</span>
+                    <button onclick="updateTotal('total4', -1)" class="increment">+</button>
+
                 </div>
-                <div id="marginme">
-                <div>
-                    <input type="radio" id="sms" name="contactMethod" value="sms">
-                    <label for="sms">SMS</label>
-                    </div>
-                    <div class="contactInfoInput" id="smsInput">
-                        <div class="phone-wrapper">
-                            <div class="country-code-wrapper">
-                                <select id="countryCode" name="countryCode">
-                                    <option value="+1">(+1)</option>
-                                    <option value="+57">(+57)</option>
-                                    <option value="+34">(+34)</option>
-                                    <option value="+81">(+81)</option>
-                                    <option value="+506">(+506)</option>
-                                </select>
-                            </div>
-                        <input type="tel" id="smsNumber" name="smsNumber"  maxlength="12"  placeholder="Your SMS number">
-                    </div>
+                <div class="separator"></div>
+                <div class="serviceOptions">
+                    <label>
+                        <input type="checkbox" class="womanCheckbox" value="Hairstyle" data-category="Woman">
+                        Hairstyle
+                    </label>
+                    <label>
+                        <input type="checkbox" class="womanCheckbox" value="Makeup" data-category="Woman">
+                        Makeup
+                    </label>
                 </div>
+            </div>
+            <div class="serviceRow">
+                <div class="serviceName">Man</div>
+                <div class="serviceControls">
+                    <button onclick="updateTotal('total5', 1)" class="decrement">-</button>
+                    <span id="total5">0</span>
+                    <button onclick="updateTotal('total5', -1)" class="increment">+</button>
                 </div>
-                <div id="marginme">
-                <div>
-                    <input type="radio" id="email" name="contactMethod" value="email">
-                    <label for="email">Email</label>
+                <div class="separator"></div>
+                <div class="serviceOptions2">
+                    <label>
+                        <input type="checkbox" class="manCheckbox" value="Makeup" data-category="Man">
+                        Makeup
+                    </label>
                 </div>
-                    <div class="contactInfoInput" id="emailInput">
-                        <input type="email" id="emailAddress" name="emailAddress" placeholder="Your email address">
-                    </div>
-                </div>
-            </fieldset>            
-            <fieldset class="groupCall">
-                <legend id="timeCallQuestion">When do you want us to call?</legend>
-                <div>
-                    <input type="radio" id="Callanytime" name="call_time" value="anytime" checked>
-                    <label for="anytime">I don't mind</label>
-                </div>
-                <div>
-                    <input type="radio" id="Callmorning" name="call_time" value="morning">
-                    <label for="morning">Morning</label>
-                </div>
-                <div>
-                    <input type="radio" id="Callafternoon" name="call_time" value="afternoon">
-                    <label for="afternoon">Afternoon</label>
-                </div>
-                <div>
-                    <input type="radio" id="Callevening" name="call_time" value="evening">
-                    <label for="evening">Evening</label>
-                </div>
-            </fieldset>
-            <button type="submit" class="submit-btn">Next</button>
-        </form>
-    </div>  
-    </div>   
+            </div>
+            <div class="messageSection">
+                <label for="message">Anything you want us to know?</label>
+                <textarea id="message" placeholder="Your message"></textarea>
+            </div>
+            <button type="submit" class="submit-btn" id="submit">Submit</button>
+    </form>
 </div>
-    <div id="footer"></div> 
-    <script src="./components/header/header.js"></script>
-    <script src="./components/footer/footer.js"></script>
-    <script src="contact.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+</div>
+</div>
+<div class="thanksFormContainer">
+    <div class="thanksTabs">
+        <button class="thanksTab active">Services</button>
+        <button class="thanksTab">Classes</button>
+    </div>
+    <div class="thankfulMessage">
+        <h2 id="thankYouMessage">Thanks <span id="userName">xxx</span>,</h2>
+        <h2>we will contact you soon!</h2>
+        <p id="callMessage">We will call +1 <span id="userNumber">xxx</span> to confirm the appointment details with
+            you</p>
+    </div>
+    <div class="thanksContainer">
+        <img src="../../images/contact/nail.png" alt="nail" class="nail">
+        <p>Your estimated price will be:</p>
+        <h2>CAD 1,000-1,200</h2>
+        <div class="thanksServices">
+            <div>
+                <h3>Basic services</h3>
+                <ul>
+                    <li>Exclusive room</li>
+                    <li>Hairstyle</li>
+                    <li>Hairstyle trial</li>
+                    <li>Makeup</li>
+                    <li>Makeup trial</li>
+                    <li>Manicure</li>
+                    <li>Pedicure</li>
+                    <li>Eyebrow design</li>
+                    <li>Coffee or tea with cake</li>
+                    <li>Bathtub</li>
+                    <li>Help with getting dressed</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Premium services</h3>
+                <div id="selectedPremiumContainer">
+                    <ul id="selectedPremium"></ul>
+                </div>
+                <h3>Additional attendees</h3>
+                <ul>
+                    <li id="Groom" data-category="Groom">Bridesmaid * 0 (hairstyle)</li>
+                    <p id="selectedServices"></p>
+                    <li id="Bridesmaid" data-category="Bride">Groomsmen * 0 (suit)</li>
+                    <p id="selectedServices"></p>
+                    <li id="FlowerGirl" data-category="FlowerGirl">Flower Girl * 0 (dress)</li>
+                    <p id="selectedServices"></p>
+                    <li id="Woman" data-category="Woman">Man * 0 (suit)</li>
+                    <p id="selectedServices"></p>
+                    <li id="Man" data-category="Man">Woman * 0 (dress)</li>
+                    <p id="selectedServices"></p>
+                </ul>
+            </div>
+        </div>
+        <div class="thanksFooter">
+            <div class="contacticons">
+                <img src="../../images/contact/logo.png" alt="Logo Icon" class="smallLogo" />
+                <div class="social-icons">
+                    <a href="#">
+                        <img src="../../images/contact/whatsapp.png" alt="Whatsapp Icon" />+1 0000000000
+                    </a>
+                    <a href="#">
+                        <img src="../../images/contact/instagram.png" alt="Instagram Icon" />carlabeatrizs
+                    </a>
+                </div>
+            </div>
+            <div>
+                <button type="submit" class="submit-button">Share</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="photoThanksFormContainer">
+    <div class="thanksTabs">
+        <button class="thanksTab active">Services</button>
+        <button class="thanksTab">Classes</button>
+    </div>
+    <div class="thankfulMessage">
+        <h2 id="thankYouMessage">Thanks <span id="userName">xxx</span>,</h2>
+        <h2>we will contact you soon!</h2>
+        <p id="callMessage">We will call +1 <span id="userNumber">xxx</span> to confirm the appointment details with
+            you</p>
+    </div>
+    <div class="thanksContainer">
+        <img src="../../images/contact/nail.png" alt="nail" class="nail">
+        <div class="thanksFooter">
+            <div class="contacticons">
+                <img src="../../images/contact/logo.png" alt="Logo Icon" class="smallLogo" />
+                <div class="social-icons">
+                    <a href="#">
+                        <img src="../../images/contact/whatsapp.png" alt="Whatsapp Icon" />+1 0000000000
+                    </a>
+                    <a href="#">
+                        <img src="../../images/contact/instagram.png" alt="Instagram Icon" />carlabeatrizs
+                    </a>
+                </div>
+            </div>
+            <div>
+                <button type="submit" class="submit-button">Share</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="footer"></div>
+<script src="./components/header/header.js"></script>
+<script src="./components/footer/footer.js"></script>
+<script src="contact.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 </body>
-</html>

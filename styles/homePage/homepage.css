@@ -102,6 +102,7 @@
     flex-wrap: wrap;
     width: 79%;
     margin: 0 auto;
+    padding: 0 0 1.5rem !important;
   }
   body #artist #brand-logo .logos .logo-ray2 .logo {
     padding: 1rem 0;
@@ -139,12 +140,28 @@
   }
   body #star .star-characters {
     grid-template-columns: 1fr 1fr !important;
-    grid-template-rows: 1fr 1fr !important;
-    grid-auto-flow: column;
+    padding: 3% !important;
+    gap: 10px !important;
   }
-  body #star .star-characters img {
-    width: 100%;
-    height: 100%;
+  body #star .star-characters img:first-child {
+    width: 160px !important;
+    height: 210px !important;
+    object-fit: cover;
+  }
+  body #star .star-characters img:nth-child(2) {
+    width: 160px !important;
+    height: 210px !important;
+    object-fit: cover;
+  }
+  body #star .star-characters img:nth-child(3) {
+    width: 160px !important;
+    height: 210px !important;
+    object-fit: cover;
+  }
+  body #star .star-characters img:last-child {
+    width: 160px !important;
+    height: 210px !important;
+    object-fit: cover;
   }
   body #star .star-description {
     padding: 5% 3% !important;
@@ -202,6 +219,9 @@
     z-index: 2;
     width: 90%;
     justify-content: center;
+  }
+  body #makeup .offer-images-container .offer-card:hover {
+    width: 100% !important;
   }
   body #makeup .offer-images-container .offer-card:nth-child(even)::before {
     width: 84%;
@@ -304,13 +324,26 @@
     overflow-x: scroll !important;
     -webkit-overflow-scrolling: touch !important;
     flex-wrap: nowrap !important;
-    justify-content: center !important;
+    justify-content: start !important;
   }
   body #diy .video-container img {
     padding: 0 1rem !important;
   }
   body #diy button {
     padding: 20px 32px !important;
+  }
+  body .youtube-container .modal {
+    width: 30vw !important;
+    height: 50vh !important;
+    left: 3% !important;
+  }
+  body .youtube-container .youtube iframe {
+    position: absolute;
+    top: 50vw !important;
+    left: 2vh !important;
+    border: none;
+    width: 30%;
+    height: 40% !important;
   }
   body #letstalk {
     color: #725a58;
@@ -328,6 +361,54 @@
     width: 90% !important;
     text-align: center !important;
     margin: 2rem auto !important;
+  }
+  body #letstalk .contactFormContainer {
+    width: 360px;
+  }
+  body #letstalk .contactFormContainer .contactTabs {
+    width: 340px;
+  }
+  body #letstalk .contactFormContainer .contact-form .event {
+    margin-bottom: 2rem;
+  }
+  body #letstalk .contactFormContainer .contact-form .event #eventSelector {
+    display: flex;
+    flex-direction: column !important;
+  }
+  body #letstalk .contactFormContainer .contact-form .event #eventSelector .eventButton {
+    width: 100%;
+  }
+  body #letstalk #wedding .dateTime {
+    margin-bottom: 2rem;
+  }
+  body #letstalk #wedding .dateTime .eventDate {
+    width: 100%;
+  }
+  body #letstalk #wedding .dateTime .eventDate .datePicker {
+    width: 100%;
+  }
+  body #letstalk #wedding .dateTime .eventDate .datePicker .flatpickr-input {
+    width: 100% !important;
+    padding: 3%;
+  }
+  body #letstalk #wedding .eventTime #eventSelect {
+    width: 280px;
+  }
+  body #letstalk #wedding .eventName {
+    margin-bottom: 2rem;
+  }
+  body #letstalk #wedding .eventName #name {
+    width: 100%;
+  }
+  body #letstalk #wedding .group {
+    margin-bottom: 2rem;
+  }
+  body #letstalk #wedding .group #marginme {
+    gap: 10px;
+  }
+  body #letstalk #next {
+    margin: 0;
+    width: 100%;
   }
 }
 body {
@@ -565,8 +646,22 @@ body main #star .star-intro button:hover {
 body main #star .star-characters {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 67px;
-  justify-content: space-evenly;
+  gap: 20px;
+}
+body main #star .star-characters img:first-child {
+  width: 350px;
+  height: 434px;
+  object-fit: cover;
+}
+body main #star .star-characters img:nth-child(2) {
+  width: 350px;
+  height: 434px;
+  object-fit: cover;
+}
+body main #star .star-characters img:last-child {
+  width: 350px;
+  height: 434px;
+  object-fit: cover;
 }
 body main #star .star-description {
   padding: 5% 25%;
@@ -759,17 +854,19 @@ body main #makeup101 #makeup101-container aside .allclasses:hover {
   background-color: #bb9995;
   color: #fff;
 }
-body main #makeup101 #makeup101-container .makeupProImage {
+body main #makeup101 #makeup101-container .makeupProImage-container {
   position: relative;
   z-index: 1;
 }
-body main #makeup101 #makeup101-container .makeupProImage::before {
+body main #makeup101 #makeup101-container .makeupProImage-container .makeupProImage::after {
   content: "";
   position: absolute;
+  top: 0;
+  left: 0;
   width: 90%;
   height: 90%;
-  border: solid 1px #fff;
-  z-index: -1;
+  border: solid 1px red;
+  z-index: 2;
 }
 body main #diy {
   color: #725a58;
@@ -791,7 +888,11 @@ body main #diy .video-container {
 body main #diy .video-container img {
   width: 300px;
   justify-content: space-between;
-  z-index: 3;
+}
+body main #diy .video-container img:hover {
+  background-color: rgba(10, 0, 0, 0.5);
+  border-radius: 15px;
+  z-index: 1;
 }
 body main #diy button {
   margin-top: 50px;
@@ -863,6 +964,12 @@ body main #letstalk .letstalk-container p {
   line-height: 27px;
 }
 
+body {
+  margin: 0;
+  font-family: "Baskervville", serif;
+  background-color: #f8f6f4;
+}
+
 .container {
   text-align: center;
 }
@@ -928,20 +1035,30 @@ body main #letstalk .letstalk-container p {
 }
 
 .contactFormContainer,
-.bridalFormContainer {
+.bridalFormContainer,
+.partyFormContainer,
+.thanksFormContainer,
+.photoThanksFormContainer,
+.contactFormContainer2 {
+  margin: 10% auto;
   background-color: #fae9e7;
   padding: 20px;
   width: 600px;
 }
 
 .contactTabs,
-.bridalTabs {
+.bridalTabs,
+.partyTabs,
+.thanksTabs {
   text-align: center;
   margin-bottom: 20px;
 }
 
 .contactTab,
-.bridalTab {
+.bridalTab,
+.backButton,
+.partyTab,
+.thanksTab {
   font-family: "Baskervville", serif;
   background-color: transparent;
   border: none;
@@ -955,13 +1072,17 @@ body main #letstalk .letstalk-container p {
 }
 
 .contactTab:hover,
-.bridalTab:hover {
+.bridalTab:hover,
+.partyTab:hover,
+.thanksTab:hover {
   color: black;
   border-bottom: 3px solid black;
 }
 
 .contactTab.active,
-.bridalTab.active {
+.bridalTab.active,
+.partyTab.active,
+.thanksTab.active {
   color: black;
   border-bottom: 3px solid black;
 }
@@ -1031,7 +1152,8 @@ body main #letstalk .letstalk-container p {
   display: flex;
 }
 
-#wedding {
+#wedding,
+#photo {
   display: none;
 }
 
@@ -1039,11 +1161,15 @@ body main #letstalk .letstalk-container p {
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
+  flex-direction: column;
 }
 
 .eventDate label:nth-child(1),
 .eventTime label,
-.eventName label {
+.eventName label,
+.bridalLocation label,
+.premiumServices label,
+.thanksServices h3 {
   font-family: "Baskervville", serif;
   font-size: 1.5em;
   display: block;
@@ -1051,15 +1177,17 @@ body main #letstalk .letstalk-container p {
   margin-top: 10px;
 }
 
-.datePicker {
+.datePicker,
+.locationPicker {
   position: relative;
   display: inline-block;
 }
 
-.datePicker .calendar {
+.datePicker .calendar,
+.locationPicker .search {
   position: absolute;
   right: 10px;
-  top: 50%;
+  top: 40%;
   transform: translateY(-50%);
   width: 24px;
   height: auto;
@@ -1068,7 +1196,8 @@ body main #letstalk .letstalk-container p {
 
 .eventDate #date,
 .eventTime #eventSelect,
-.eventName #name {
+.eventName #name,
+.bridalLocation #locationInput {
   font-family: "Baskervville", serif;
   font-size: 1.3em;
   padding: 10px 20px;
@@ -1092,9 +1221,14 @@ body main #letstalk .letstalk-container p {
   padding: 10px 40px 10px 20px;
 }
 
-.eventName #name {
+.eventName #name,
+.bridalLocation #locationInput {
   width: 520px;
   margin-bottom: 20px;
+}
+
+.bridalLocation #locationInput {
+  margin-bottom: 0px;
 }
 
 .notDecided {
@@ -1103,7 +1237,10 @@ body main #letstalk .letstalk-container p {
   margin-top: 10px;
 }
 
-.notDecided input {
+.notDecided input,
+.premiumServiceItem input,
+.serviceOptions input,
+.serviceOptions2 input {
   appearance: none;
   background-color: white;
   margin-right: 10px;
@@ -1112,12 +1249,16 @@ body main #letstalk .letstalk-container p {
   border: 2px solid #e3b6b1;
 }
 
-.notDecided input:checked {
+.notDecided input:checked,
+.premiumServiceItem input:checked,
+.serviceOptions input:checked,
+.serviceOptions2 input:checked {
   background-color: #e3b6b1;
   border: 2px solid white;
 }
 
-.notDecided label {
+.notDecided label,
+.premiumServiceItem label {
   font-size: 1.2em;
   font-family: "Baskervville", serif;
   font-weight: lighter;
@@ -1284,7 +1425,8 @@ body main #letstalk .letstalk-container p {
   margin-left: 0px;
 }
 
-.submit-btn {
+.submit-btn,
+.thanksFooter div .submit-button {
   width: 100%;
   padding: 10px;
   border: 1px solid #a65c5c;
@@ -1328,36 +1470,268 @@ body main #letstalk .letstalk-container p {
 }
 
 .bridalButton {
-  width: 50%;
+  width: 45%;
   color: black;
 }
 
-@media screen and (max-width: 360px) {
-  .contactContainer {
-    display: block;
-  }
-  .contactContainer .contactFormContainer {
-    width: 100%;
-    padding: 0;
-  }
-  .contactContainer .contactFormContainer .contact-form #eventSelector {
-    flex-direction: column;
-  }
-  .contactContainer .contactFormContainer .contact-form #eventSelector .eventButton {
-    width: 100%;
-  }
-  .contactContainer .datePiker {
-    width: 100px;
-  }
-  .contactContainer .datePiker .calendar {
-    right: -10px;
-  }
-  .contactContainer .eventTime #date {
-    width: 177px;
-  }
-  .contactContainer .eventName #name {
-    width: 88%;
-  }
+.premiumGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+}
+
+.premiumServiceItem {
+  display: flex;
+  align-items: center;
+}
+
+.premiumServices,
+.bridalLocation {
+  margin-top: 20px;
+}
+
+.backButton {
+  color: #725a58;
+  font-size: 1.3em;
+  border-bottom: 0;
+}
+
+.makehair {
+  margin-top: 10px;
+}
+
+.serviceRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 10px 0;
+  background-color: white;
+  margin-bottom: 20px;
+}
+
+.serviceRow:last-child {
+  border-bottom: none;
+}
+
+.serviceName {
+  font-family: "Baskervville", serif;
+  flex: 1;
+  font-weight: lighter;
+  font-size: 1.3em;
+  margin-left: 20px;
+}
+
+.serviceControls {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  background-color: #fae9e7;
+}
+
+.serviceControls button {
+  background-color: #fae9e7;
+  padding: 5px;
+  border: 1px solid #fae9e7;
+  cursor: pointer;
+}
+
+.serviceControls span {
+  background-color: #fae9e7;
+  width: 40px;
+  text-align: center;
+  border: 1px solid #fae9e7;
+  margin: 0 5px;
+}
+
+.serviceRow {
+  display: grid;
+  grid-template-columns: 150px 100px 1px 300px;
+  gap: 10px;
+}
+
+.serviceRow > div {
+  padding: 10px;
+}
+
+.serviceOptions input[type=checkbox],
+.serviceOptions2 input[type=checkbox] {
+  margin-right: 10px;
+  margin-left: 30px;
+  transform: translateY(8px);
+}
+
+.serviceOptions input,
+.serviceOptions2 input {
+  margin-right: 5px;
+}
+
+.serviceOptions {
+  margin-bottom: 15px;
+}
+
+.serviceOptions2 {
+  margin-left: 120px;
+  margin-bottom: 10px;
+}
+
+.serviceOptions input:checked::before,
+.serviceOptions2 input:checked::before {
+  content: "✔";
+  color: white;
+  font-size: 14px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.serviceRow .separator {
+  padding: 0;
+  width: 2px;
+  background-color: #fae9e7;
+  height: 100%;
+  margin: 0 10px;
+}
+
+.messageSection {
+  margin-top: 20px;
+}
+
+.messageSection label {
+  font-family: "Baskervville", serif;
+  display: block;
+  font-weight: lighter;
+  font-size: 1.5em;
+  margin-bottom: 5px;
+}
+
+.messageSection textarea {
+  width: 100%;
+  height: 150px;
+  padding: 10px;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  resize: none;
+  font-family: inherit;
+  margin-bottom: 20px;
+}
+
+.bridalFormContainer,
+.partyFormContainer,
+.thanksFormContainer,
+#Groom,
+#Bridesmaid,
+#FlowerGirl,
+#Man,
+#Woman,
+.photoThanksFormContainer {
+  display: none;
+}
+
+.thankfulMessage h2,
+.thanksContainer h2 {
+  font-family: "Baskervville", serif;
+  color: #725a58;
+  font-size: 2.5em;
+  font-weight: lighter;
+}
+
+.thankfulMessage p,
+.thanksContainer p {
+  font-family: "Baskervville", serif;
+}
+
+.thanksContainer {
+  border: 2px solid #725a58;
+  padding: 20px;
+}
+
+.thanksContainer img {
+  width: 100%;
+}
+
+.typhoon-list li::before {
+  content: "-";
+  position: absolute;
+  left: 0;
+  color: #555;
+}
+
+.thanksServices h3 {
+  font-weight: lighter;
+}
+
+.thanksServices {
+  display: flex;
+  justify-content: space-between;
+}
+
+.thanksServices div {
+  flex: 1;
+  margin: 0 10px;
+}
+
+.thanksFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.thanksFooter .contacticons {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-content: flex-start;
+  margin: 0;
+  gap: 0;
+}
+
+.thanksFooter .contacticons img {
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+
+.thanksFooter .social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.thanksFooter .social-icons a {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  text-align: center;
+}
+
+.thanksFooter div {
+  flex: 1;
+  margin: 0 10px;
+  text-align: center;
+}
+
+.thanksFooter div .submit-button {
+  display: block;
+  width: 70%;
+  height: auto;
+  margin-left: auto;
+  margin-top: 90px;
+  margin-right: 0;
+}
+
+.contacticons .smallLogo {
+  width: 25%;
+  height: auto;
+  margin-right: 50px;
+  margin-bottom: 10px;
+}
+
+.thanksFormContainer {
+  padding: 60px;
 }
 
 /*# sourceMappingURL=homepage.css.map */
