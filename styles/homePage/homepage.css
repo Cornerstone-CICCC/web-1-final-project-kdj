@@ -854,19 +854,19 @@ body main #makeup101 #makeup101-container aside .allclasses:hover {
   background-color: #bb9995;
   color: #fff;
 }
-body main #makeup101 #makeup101-container .makeupProImage-container .makeupProImage {
+body main #makeup101 #makeup101-container .makeupProImage-container {
   position: relative;
   z-index: 1;
 }
 body main #makeup101 #makeup101-container .makeupProImage-container .makeupProImage::after {
   content: "";
   position: absolute;
-  width: 90%;
-  height: 90%;
   top: 0;
   left: 0;
-  border: solid 1px #fff;
-  z-index: 3;
+  width: 90%;
+  height: 90%;
+  border: solid 1px red;
+  z-index: 2;
 }
 body main #diy {
   color: #725a58;
@@ -888,7 +888,11 @@ body main #diy .video-container {
 body main #diy .video-container img {
   width: 300px;
   justify-content: space-between;
-  z-index: 3;
+}
+body main #diy .video-container img:hover {
+  background-color: rgba(10, 0, 0, 0.5);
+  border-radius: 15px;
+  z-index: 1;
 }
 body main #diy button {
   margin-top: 50px;

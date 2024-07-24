@@ -434,7 +434,6 @@ body {
             color: #b99692;
             font-size: 5rem;
             font-weight: 100;
-            // width: 90%;
             margin: 0;
           }
 
@@ -522,7 +521,6 @@ body {
             h2 {
               &::before {
                 padding-left: 20px;
-                // line-height: 20px;
                 background: url(../../images/homePage/Vector.png);
               }
             }
@@ -543,21 +541,19 @@ body {
         }
 
         .makeupProImage-container {
-          // position: relative;
+          position: relative;
+          z-index: 1;
 
           .makeupProImage {
-            position: relative;
-            z-index: 1;
-
             &::after {
               content: "";
               position: absolute;
-              width: 90%;
-              height: 90%;
               top: 0;
               left: 0;
-              border: solid 1px #fff;
-              z-index: 3;
+              width: 90%;
+              height: 90%;
+              border: solid 1px red;
+              z-index: 2;
             }
           }
         }
@@ -585,13 +581,12 @@ body {
         img {
           width: 300px;
           justify-content: space-between;
-          z-index: 3;
 
-          // &:hover {
-          //   background-color: rgba(#000, 0.5);
-          //   border-radius: 15px;
-          //   z-index: 4;
-          // }
+          &:hover {
+            background-color: rgba(10, 0, 0, 0.5);
+            border-radius: 15px;
+            z-index: 1;
+          }
         }
       }
 
